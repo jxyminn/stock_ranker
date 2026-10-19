@@ -1,0 +1,36 @@
+{
+  "run_at": "2026-07-08T00:21:14.224749+00:00",
+  "universe_size": 50,
+  "folds": 6,
+  "step_days": 40,
+  "horizons": {
+    "5": {
+      "mean_ic": 0.017338540174944846,
+      "pct_days_positive_ic": 0.5458333333333333,
+      "mean_top_bottom_spread_pct": 0.3390831486870127,
+      "mean_auc": 0.5184615552220325,
+      "n_folds": 6
+    },
+    "10": {
+      "mean_ic": 0.03379471788715486,
+      "pct_days_positive_ic": 0.5666666666666668,
+      "mean_top_bottom_spread_pct": 1.8052144618926393,
+      "mean_auc": 0.5169057499667874,
+      "n_folds": 6
+    },
+    "15": {
+      "mean_ic": 0.04194797919167667,
+      "pct_days_positive_ic": 0.5750000000000001,
+      "mean_top_bottom_spread_pct": 2.5058072591871716,
+      "mean_auc": 0.523567242185667,
+      "n_folds": 6
+    },
+    "30": {
+      "mean_ic": 0.07285874349739897,
+      "pct_days_positive_ic": 0.6375,
+      "mean_top_bottom_spread_pct": 5.3075086717585656,
+      "mean_auc": 0.5467963775987407,
+      "n_folds": 6
+    }
+  }
+}

@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+
+# Live price/fundamentals/news cache -- regenerates automatically, not needed in the repo.
+cache/
+
+# Raw screenshots the watchlist tickers were extracted from -- not needed to
+# run the app (config.WATCHLIST_SECTIONS already has the extracted tickers)
+# and not something to publish.
+stock_images/
+
+.claude/settings.local.json
