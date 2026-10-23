@@ -11,7 +11,13 @@ from config import CACHE_DIR
 def search_ticker(query: str, max_results: int = 8) -> list[dict]:
     """
     Search for a ticker by company name or partial symbol.
-    Returns a list of {symbol, name, exchange} dicts.
+    Returns a list of {symbol, name, exchange, type, sector, industry} dicts.
+    Search is a separate, public Yahoo API (autocomplete) from quoteSummary
+    (what Ticker.info hits) -- it doesn't need the cookie+crumb handshake
+    that quoteSummary requires, so it keeps working even when that's down.
+    It happens to carry sector/industry for equity results too (absent for
+    ETFs, which don't have one), which fetch_fundamentals() leans on as a
+    fallback classification source when the richer endpoint is unavailable.
     """
     try:
         results = yf.Search(query, max_results=max_results)
@@ -22,6 +28,8 @@ def search_ticker(query: str, max_results: int = 8) -> list[dict]:
                 "name": quote.get("shortname") or quote.get("longname") or "",
                 "exchange": quote.get("exchange", ""),
                 "type": quote.get("quoteType", ""),
+                "sector": quote.get("sector"),
+                "industry": quote.get("industry"),
             })
         return out
     except Exception as e:
@@ -157,17 +165,18 @@ def fetch_fundamentals(ticker: str, use_cache: bool = True) -> dict:
                 pass
 
     # Yahoo's quoteSummary API (what .info and .fast_info both hit) requires
-    # a cookie+crumb auth handshake that can fail structurally -- not just
-    # transiently -- in some hosting environments ("Invalid Crumb" / "User is
-    # unable to access this feature" errors observed from Streamlit Community
-    # Cloud specifically). When that's the case, retrying doesn't help: every
-    # attempt fails the same way, so a long backoff just burns time on every
-    # single ticker across the whole app (My Watchlist, nightly briefing, and
-    # Stock Research all call this per-ticker). One quick attempt each at
-    # .info and .fast_info, then fall through fast to the Search endpoint
-    # (yf.Search -- see search_ticker), which hits a different, public
-    # Yahoo API (autocomplete) that doesn't require the crumb and reliably
-    # still returns quote type + name even when quoteSummary is down.
+    # a cookie+crumb auth handshake, and as of October 2026 Yahoo has stated
+    # outright that API-level access to this data is being deliberately
+    # restricted (not a bug to retry around -- their own error page says so:
+    # bit.ly/yahoo-finance-api-feedback). This seems to bite recognizable
+    # cloud/datacenter IPs (e.g. Streamlit Community Cloud) harder than a
+    # home connection. One quick attempt at .info, then fall through to the
+    # Search endpoint (yf.Search -- see search_ticker), a separate, public
+    # Yahoo API (autocomplete) that doesn't need the crumb and happens to
+    # still carry quote type + sector/industry for equities even when
+    # quoteSummary is unavailable. fast_info is tried last, only if Search
+    # has no match either -- it hits the same quoteSummary family as .info,
+    # so it's no more likely to work, but costs little to try.
     info = None
     try:
         info = yf.Ticker(ticker).info
@@ -182,25 +191,32 @@ def fetch_fundamentals(ticker: str, use_cache: bool = True) -> dict:
             pass  # caching is best-effort, not critical
         return out
 
-    fi = None
-    try:
-        fi = dict(yf.Ticker(ticker).fast_info)
-    except Exception as e:
-        print(f"[fetch_fundamentals] '{ticker}' fast_info failed: {e}")
+    # Search first, not fast_info -- fast_info hits the same quoteSummary
+    # family as .info, so when .info is down (crumb/API-access failures)
+    # fast_info reliably is too. Search carries sector/industry for equities
+    # in addition to quote type, which is what classify_section() actually
+    # needs; fast_info only ever offered quoteType + marketCap even when it
+    # worked, so there's no accuracy lost by trying Search first.
+    hits = search_ticker(ticker, max_results=5)
+    match = next((h for h in hits if h.get("symbol", "").upper() == ticker.upper()), None)
 
-    if fi and fi.get("quoteType"):
+    if match:
+        out = {"long_name": match.get("name"), "quote_type": match.get("type"),
+               "sector": match.get("sector"), "industry": match.get("industry"),
+               "market_cap": None, "dividend_yield": None}
+        print(f"[fetch_fundamentals] '{ticker}': using Search fallback (quoteSummary unavailable).")
+    else:
+        fi = None
+        try:
+            fi = dict(yf.Ticker(ticker).fast_info)
+        except Exception as e:
+            print(f"[fetch_fundamentals] '{ticker}' fast_info failed: {e}")
+        if not fi or not fi.get("quoteType"):
+            print(f"[fetch_fundamentals] '{ticker}': no fundamentals available from any source.")
+            return {}
         out = {"long_name": None, "quote_type": fi.get("quoteType"), "sector": None,
                "industry": None, "market_cap": fi.get("marketCap"), "dividend_yield": None}
         print(f"[fetch_fundamentals] '{ticker}': using fast_info fallback (full info unavailable).")
-    else:
-        hits = search_ticker(ticker, max_results=5)
-        match = next((h for h in hits if h.get("symbol", "").upper() == ticker.upper()), None)
-        if not match:
-            print(f"[fetch_fundamentals] '{ticker}': no fundamentals available from any source.")
-            return {}
-        out = {"long_name": match.get("name"), "quote_type": match.get("type"), "sector": None,
-               "industry": None, "market_cap": None, "dividend_yield": None}
-        print(f"[fetch_fundamentals] '{ticker}': using Search fallback (quoteSummary unavailable).")
 
     # Cache the degraded result too, same 1h freshness window as a full
     # result -- otherwise every repeat call re-pays the same fallback chain
