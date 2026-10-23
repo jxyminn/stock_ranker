@@ -156,50 +156,60 @@ def fetch_fundamentals(ticker: str, use_cache: bool = True) -> dict:
             except Exception:
                 pass
 
-    # Retries with growing backoff: yfinance's full .info scrape occasionally
-    # comes back empty on a hiccup (more common from a shared cloud IP, which
-    # can get rate-limited harder/longer than a home connection) rather than
-    # raising -- that empty dict is indistinguishable from "this ticker
-    # genuinely has no info." Growing the delay (not just a flat 1.5s) gives
-    # a real rate-limit window more chance to actually clear.
+    # Yahoo's quoteSummary API (what .info and .fast_info both hit) requires
+    # a cookie+crumb auth handshake that can fail structurally -- not just
+    # transiently -- in some hosting environments ("Invalid Crumb" / "User is
+    # unable to access this feature" errors observed from Streamlit Community
+    # Cloud specifically). When that's the case, retrying doesn't help: every
+    # attempt fails the same way, so a long backoff just burns time on every
+    # single ticker across the whole app (My Watchlist, nightly briefing, and
+    # Stock Research all call this per-ticker). One quick attempt each at
+    # .info and .fast_info, then fall through fast to the Search endpoint
+    # (yf.Search -- see search_ticker), which hits a different, public
+    # Yahoo API (autocomplete) that doesn't require the crumb and reliably
+    # still returns quote type + name even when quoteSummary is down.
     info = None
-    for attempt, delay in enumerate([0, 2, 5]):
-        if delay:
-            time.sleep(delay)
-        try:
-            candidate = yf.Ticker(ticker).info
-        except Exception as e:
-            candidate = None
-            print(f"[fetch_fundamentals] '{ticker}' attempt {attempt + 1} failed: {e}")
-        if candidate:
-            info = candidate
-            break
-        print(f"[fetch_fundamentals] '{ticker}' attempt {attempt + 1} returned empty info.")
+    try:
+        info = yf.Ticker(ticker).info
+    except Exception as e:
+        print(f"[fetch_fundamentals] '{ticker}' .info failed: {e}")
 
-    if not info:
-        # Full .info failed every attempt -- fall back to fast_info, a
-        # separate (lighter) endpoint that still carries quoteType and
-        # marketCap. Degraded (no sector/industry/dividend_yield), but
-        # enough for classify_section() to at least get the ETF-vs-equity
-        # call right instead of falling back to "no idea" blind.
+    if info:
+        out = {key: info.get(src_key) for key, src_key in FUNDAMENTALS_FIELDS.items()}
         try:
-            fi = dict(yf.Ticker(ticker).fast_info)
-        except Exception as e:
-            print(f"[fetch_fundamentals] '{ticker}' fast_info fallback also failed: {e}")
-            return {}
-        if not fi:
-            return {}
+            pd.DataFrame([out]).to_parquet(cache_file)
+        except Exception:
+            pass  # caching is best-effort, not critical
+        return out
+
+    fi = None
+    try:
+        fi = dict(yf.Ticker(ticker).fast_info)
+    except Exception as e:
+        print(f"[fetch_fundamentals] '{ticker}' fast_info failed: {e}")
+
+    if fi and fi.get("quoteType"):
+        out = {"long_name": None, "quote_type": fi.get("quoteType"), "sector": None,
+               "industry": None, "market_cap": fi.get("marketCap"), "dividend_yield": None}
         print(f"[fetch_fundamentals] '{ticker}': using fast_info fallback (full info unavailable).")
-        return {"long_name": None, "quote_type": fi.get("quoteType"), "sector": None, "industry": None,
-                "market_cap": fi.get("marketCap"), "dividend_yield": None}
+    else:
+        hits = search_ticker(ticker, max_results=5)
+        match = next((h for h in hits if h.get("symbol", "").upper() == ticker.upper()), None)
+        if not match:
+            print(f"[fetch_fundamentals] '{ticker}': no fundamentals available from any source.")
+            return {}
+        out = {"long_name": match.get("name"), "quote_type": match.get("type"), "sector": None,
+               "industry": None, "market_cap": None, "dividend_yield": None}
+        print(f"[fetch_fundamentals] '{ticker}': using Search fallback (quoteSummary unavailable).")
 
-    out = {key: info.get(src_key) for key, src_key in FUNDAMENTALS_FIELDS.items()}
-
+    # Cache the degraded result too, same 1h freshness window as a full
+    # result -- otherwise every repeat call re-pays the same fallback chain
+    # with zero benefit, since a structural auth failure won't fix itself in
+    # the next few minutes anyway.
     try:
         pd.DataFrame([out]).to_parquet(cache_file)
     except Exception:
-        pass  # caching is best-effort, not critical
-
+        pass
     return out
 
 
