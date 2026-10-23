@@ -90,14 +90,24 @@ SECTOR_TO_SECTION = {
 def classify_section(fund: dict) -> str:
     """fund: a data_fetcher.fetch_fundamentals()-shaped dict. Returns the
     best-matching section name, or NEW_ADDITIONS_SECTION if nothing fits."""
+    quote_type = (fund.get("quote_type") or "").upper()
     sector = fund.get("sector")
     industry = fund.get("industry")
     market_cap = fund.get("market_cap") or 0
     dividend_yield = fund.get("dividend_yield") or 0
 
-    # No sector/industry from yfinance almost always means an ETF.
-    if not sector and not industry:
-        return "Dividend & Income ETFs" if dividend_yield > 0.03 else "Broad Market & Core ETFs"
+    # Use yfinance's own quoteType rather than inferring "ETF" from missing
+    # sector/industry -- a *failed* fetch (empty dict, e.g. a transient
+    # rate-limit on a cloud IP) has that exact same shape as a genuine ETF,
+    # which would silently mis-bucket a real equity as an ETF. If quote_type
+    # itself is missing (fetch genuinely failed), fall through to
+    # NEW_ADDITIONS_SECTION instead of guessing.
+    if quote_type == "ETF":
+        # dividend_yield is a percentage NUMBER here (e.g. 0.42 means 0.42%,
+        # not a fraction needing *100 -- confirmed against yfinance's raw
+        # "yield" field, which is consistently this value / 100). Threshold
+        # is in the same units: 2 means 2%.
+        return "Dividend & Income ETFs" if dividend_yield > 2 else "Broad Market & Core ETFs"
 
     if market_cap > MEGA_CAP_MARKET_CAP and sector in MEGA_CAP_SECTORS:
         return "Mega-Cap Tech & Platforms"

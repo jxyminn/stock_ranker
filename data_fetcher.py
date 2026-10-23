@@ -119,6 +119,8 @@ def fetch_earnings(ticker: str, use_cache: bool = True) -> pd.DataFrame:
 
 FUNDAMENTALS_FIELDS = {
     "long_name": "longName",
+    "quote_type": "quoteType",  # "EQUITY" / "ETF" / etc. -- the reliable signal, vs. inferring
+                                # from missing sector/industry (which also happens on a failed fetch)
     "sector": "sector",
     "industry": "industry",
     "market_cap": "marketCap",
