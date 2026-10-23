@@ -4,7 +4,7 @@
     "price": 348.22,
     "day_chg_pct": 1.23,
     "sma_50": 328.6173999023438,
-    "sma_200": 293.6674774932861,
+    "sma_200": 293.66747627258303,
     "golden_cross": true,
     "all_time_high": 348.2200012207031,
     "days_until_earnings": 11.625,
@@ -41,7 +41,7 @@
     "price": 521.08,
     "day_chg_pct": -2.227,
     "sma_50": 507.7833612060547,
-    "sma_200": 435.14712326049806,
+    "sma_200": 435.1471243286133,
     "golden_cross": true,
     "all_time_high": 543.4500122070312,
     "days_until_earnings": 6.666666666666667,
@@ -78,7 +78,7 @@
     "price": 324.22,
     "day_chg_pct": -3.149,
     "sma_50": 343.3954827880859,
-    "sma_200": 340.99085388183596,
+    "sma_200": 340.99085418701173,
     "golden_cross": true,
     "all_time_high": 402.1211853027344,
     "days_until_earnings": 6.666666666666667,
@@ -115,7 +115,7 @@
     "price": 320.76,
     "day_chg_pct": -3.079,
     "sma_50": 340.04681274414065,
-    "sma_200": 339.13044357299805,
+    "sma_200": 339.1304441833496,
     "golden_cross": true,
     "all_time_high": 398.541259765625,
     "days_until_earnings": 6.666666666666667,
@@ -226,7 +226,7 @@
     "price": 212.21,
     "day_chg_pct": -4.397,
     "sma_50": 222.67569427490236,
-    "sma_200": 203.25077880859374,
+    "sma_200": 203.2507787322998,
     "golden_cross": true,
     "all_time_high": 239.24000549316406,
     "days_until_earnings": 26.625,
@@ -300,35 +300,35 @@
     "price": 323.24,
     "day_chg_pct": -4.31,
     "sma_50": 358.3345886230469,
-    "sma_200": 366.83914505004884,
+    "sma_200": 366.83914474487307,
     "golden_cross": false,
     "all_time_high": 479.9350891113281,
     "days_until_earnings": 48.625,
     "news_sentiment": null,
     "predictions": {
       "5": {
-        "pred_return_pct": -2.186,
-        "prob_up": 0.2916
+        "pred_return_pct": -2.205,
+        "prob_up": 0.2836
       },
       "10": {
-        "pred_return_pct": -0.229,
-        "prob_up": 0.5012
+        "pred_return_pct": -0.593,
+        "prob_up": 0.4694
       },
       "15": {
-        "pred_return_pct": 0.276,
-        "prob_up": 0.4508
+        "pred_return_pct": 0.515,
+        "prob_up": 0.4686
       },
       "30": {
-        "pred_return_pct": -0.423,
-        "prob_up": 0.4948
+        "pred_return_pct": 1.452,
+        "prob_up": 0.4903
       },
       "50": {
-        "pred_return_pct": 2.224,
-        "prob_up": 0.5311
+        "pred_return_pct": 2.455,
+        "prob_up": 0.5119
       },
       "200": {
-        "pred_return_pct": 7.266,
-        "prob_up": 0.5599
+        "pred_return_pct": 9.015,
+        "prob_up": 0.5516
       }
     }
   },
@@ -337,9 +337,9 @@
     "price": 125.54,
     "day_chg_pct": -2.78,
     "sma_50": 143.058126373291,
-    "sma_200": 157.77519939422606,
+    "sma_200": 157.77519901275636,
     "golden_cross": false,
-    "all_time_high": 323.4337158203125,
+    "all_time_high": 323.4337463378906,
     "days_until_earnings": 53.625,
     "news_sentiment": null,
     "predictions": {
@@ -374,7 +374,7 @@
     "price": 252.11,
     "day_chg_pct": 0.258,
     "sma_50": 232.71159912109374,
-    "sma_200": 248.33937088012695,
+    "sma_200": 248.33937103271484,
     "golden_cross": false,
     "all_time_high": 326.8851013183594,
     "days_until_earnings": 97.625,
@@ -522,7 +522,7 @@
     "price": 412.35,
     "day_chg_pct": -4.524,
     "sma_50": 433.8413372802734,
-    "sma_200": 395.5390483093262,
+    "sma_200": 395.5390496826172,
     "golden_cross": true,
     "all_time_high": 485.79998779296875,
     "days_until_earnings": 84.29166666666667,
@@ -559,9 +559,9 @@
     "price": 172.83,
     "day_chg_pct": -2.883,
     "sma_50": 175.62419860839844,
-    "sma_200": 168.1242092514038,
+    "sma_200": 168.1242091369629,
     "golden_cross": true,
-    "all_time_high": 248.7425079345703,
+    "all_time_high": 248.74249267578125,
     "days_until_earnings": 13.625,
     "news_sentiment": null,
     "predictions": {
@@ -781,7 +781,7 @@
     "price": 1167.9301,
     "day_chg_pct": -8.992,
     "sma_50": 1293.1237670898438,
-    "sma_200": 1306.0182400512695,
+    "sma_200": 1306.0182418823242,
     "golden_cross": false,
     "all_time_high": 1684.8267822265625,
     "days_until_earnings": 7.666666666666667,
@@ -855,7 +855,7 @@
     "price": 39.05,
     "day_chg_pct": -10.702,
     "sma_50": 49.85325538635254,
-    "sma_200": 57.47714042663574,
+    "sma_200": 57.47714031219483,
     "golden_cross": false,
     "all_time_high": 93.37815856933594,
     "days_until_earnings": 4.666666666666667,
@@ -929,7 +929,7 @@
     "price": 354.19,
     "day_chg_pct": -6.425,
     "sma_50": 435.82355041503905,
-    "sma_200": 413.754397277832,
+    "sma_200": 413.7543975067139,
     "golden_cross": true,
     "all_time_high": 745.990478515625,
     "days_until_earnings": 0.6666666666666666,
@@ -1343,28 +1343,28 @@
     "news_sentiment": null,
     "predictions": {
       "5": {
-        "pred_return_pct": -3.715,
-        "prob_up": 0.2719
+        "pred_return_pct": -3.272,
+        "prob_up": 0.2759
       },
       "10": {
-        "pred_return_pct": -2.544,
-        "prob_up": 0.3356
+        "pred_return_pct": -5.398,
+        "prob_up": 0.3365
       },
       "15": {
-        "pred_return_pct": -1.602,
-        "prob_up": 0.3169
+        "pred_return_pct": -8.232,
+        "prob_up": 0.372
       },
       "30": {
-        "pred_return_pct": -10.73,
-        "prob_up": 0.2596
+        "pred_return_pct": -7.864,
+        "prob_up": 0.2955
       },
       "50": {
-        "pred_return_pct": -15.097,
-        "prob_up": 0.205
+        "pred_return_pct": -9.625,
+        "prob_up": 0.2733
       },
       "200": {
-        "pred_return_pct": -47.397,
-        "prob_up": 0.2213
+        "pred_return_pct": -31.633,
+        "prob_up": 0.1978
       }
     }
   },
@@ -1373,7 +1373,7 @@
     "price": 195.59,
     "day_chg_pct": -7.806,
     "sma_50": 249.52767852783202,
-    "sma_200": 268.85938331604007,
+    "sma_200": 268.85938491821287,
     "golden_cross": false,
     "all_time_high": 376.0595397949219,
     "days_until_earnings": 6.333333333333333,
@@ -1706,7 +1706,7 @@
     "price": 368.99,
     "day_chg_pct": -6.333,
     "sma_50": 418.1867999267578,
-    "sma_200": 393.9902642822266,
+    "sma_200": 393.99026290893556,
     "golden_cross": true,
     "all_time_high": 459.9599914550781,
     "days_until_earnings": 12.291666666666666,
@@ -1743,7 +1743,7 @@
     "price": 127.67,
     "day_chg_pct": -12.633,
     "sma_50": 156.88400024414062,
-    "sma_200": 143.8856078338623,
+    "sma_200": 143.88560794830323,
     "golden_cross": true,
     "all_time_high": 184.09619140625,
     "days_until_earnings": 8.333333333333334,
@@ -2002,7 +2002,7 @@
     "price": 250.29,
     "day_chg_pct": 3.52,
     "sma_50": 233.84442016601562,
-    "sma_200": 198.02742965698243,
+    "sma_200": 198.02743057250976,
     "golden_cross": true,
     "all_time_high": 362.5813293457031,
     "days_until_earnings": 41.625,
@@ -2083,28 +2083,28 @@
     "news_sentiment": null,
     "predictions": {
       "5": {
-        "pred_return_pct": -2.134,
-        "prob_up": 0.2504
+        "pred_return_pct": -2.087,
+        "prob_up": 0.2523
       },
       "10": {
-        "pred_return_pct": -0.26,
-        "prob_up": 0.4666
+        "pred_return_pct": 0.078,
+        "prob_up": 0.4614
       },
       "15": {
-        "pred_return_pct": 1.871,
-        "prob_up": 0.5334
+        "pred_return_pct": 1.787,
+        "prob_up": 0.4917
       },
       "30": {
-        "pred_return_pct": 0.24,
-        "prob_up": 0.4413
+        "pred_return_pct": 2.994,
+        "prob_up": 0.4342
       },
       "50": {
-        "pred_return_pct": 6.795,
-        "prob_up": 0.4862
+        "pred_return_pct": 4.647,
+        "prob_up": 0.4653
       },
       "200": {
-        "pred_return_pct": 29.71,
-        "prob_up": 0.5264
+        "pred_return_pct": 35.124,
+        "prob_up": 0.5731
       }
     }
   },
@@ -2890,9 +2890,9 @@
     "price": 307.94,
     "day_chg_pct": 4.564,
     "sma_50": 274.0946728515625,
-    "sma_200": 236.8341198730469,
+    "sma_200": 236.83412017822266,
     "golden_cross": true,
-    "all_time_high": 314.3806457519531,
+    "all_time_high": 314.38067626953125,
     "days_until_earnings": 6.333333333333333,
     "news_sentiment": null,
     "predictions": {
@@ -2927,9 +2927,9 @@
     "price": 354.9,
     "day_chg_pct": 5.748,
     "sma_50": 320.25642150878906,
-    "sma_200": 366.0988774108887,
+    "sma_200": 366.098875579834,
     "golden_cross": false,
-    "all_time_high": 794.7136840820312,
+    "all_time_high": 794.713623046875,
     "days_until_earnings": 28.625,
     "news_sentiment": null,
     "predictions": {
@@ -3223,35 +3223,35 @@
     "price": 212.51,
     "day_chg_pct": -2.164,
     "sma_50": 202.85381561279297,
-    "sma_200": 146.03357902526855,
+    "sma_200": 146.0335789871216,
     "golden_cross": true,
     "all_time_high": 239.17999267578125,
     "days_until_earnings": 40.625,
     "news_sentiment": null,
     "predictions": {
       "5": {
-        "pred_return_pct": -2.412,
-        "prob_up": 0.2953
+        "pred_return_pct": -2.349,
+        "prob_up": 0.2873
       },
       "10": {
-        "pred_return_pct": -0.839,
-        "prob_up": 0.4034
+        "pred_return_pct": -1.027,
+        "prob_up": 0.4038
       },
       "15": {
-        "pred_return_pct": -0.005,
-        "prob_up": 0.4482
+        "pred_return_pct": -1.103,
+        "prob_up": 0.4451
       },
       "30": {
-        "pred_return_pct": -0.303,
-        "prob_up": 0.4384
+        "pred_return_pct": 1.993,
+        "prob_up": 0.4236
       },
       "50": {
-        "pred_return_pct": -2.938,
-        "prob_up": 0.3829
+        "pred_return_pct": -2.653,
+        "prob_up": 0.4131
       },
       "200": {
-        "pred_return_pct": -1.645,
-        "prob_up": 0.4354
+        "pred_return_pct": 7.614,
+        "prob_up": 0.5293
       }
     }
   },
@@ -3667,7 +3667,7 @@
     "price": 194.71,
     "day_chg_pct": 1.623,
     "sma_50": 197.6811996459961,
-    "sma_200": 194.19668838500976,
+    "sma_200": 194.19668914794923,
     "golden_cross": true,
     "all_time_high": 225.49000549316406,
     "days_until_earnings": 96.29166666666667,
@@ -3704,7 +3704,7 @@
     "price": 350.79,
     "day_chg_pct": 1.764,
     "sma_50": 353.86521789550784,
-    "sma_200": 351.6586442565918,
+    "sma_200": 351.6586444091797,
     "golden_cross": true,
     "all_time_high": 394.06158447265625,
     "days_until_earnings": 8.333333333333334,
@@ -3778,7 +3778,7 @@
     "price": 552.35,
     "day_chg_pct": 2.418,
     "sma_50": 522.2435906982422,
-    "sma_200": 588.8328283691407,
+    "sma_200": 588.8328308105469,
     "golden_cross": false,
     "all_time_high": 761.1927490234375,
     "days_until_earnings": 96.29166666666667,
@@ -3849,10 +3849,10 @@
   },
   "DRO.AX": {
     "name": "DroneShield Limited",
-    "price": 1.432,
-    "day_chg_pct": -5.166,
-    "sma_50": 1.6827400088310243,
-    "sma_200": 2.8150100082159044,
+    "price": 1.44,
+    "day_chg_pct": -4.636,
+    "sma_50": 1.6829000091552735,
+    "sma_200": 2.8150500082969665,
     "golden_cross": false,
     "all_time_high": 6.599999904632568,
     "days_until_earnings": null,
@@ -3860,27 +3860,27 @@
     "predictions": {
       "5": {
         "pred_return_pct": -2.217,
-        "prob_up": 0.2523
+        "prob_up": 0.2471
       },
       "10": {
-        "pred_return_pct": 0.518,
+        "pred_return_pct": 0.253,
         "prob_up": 0.3572
       },
       "15": {
         "pred_return_pct": 5.731,
-        "prob_up": 0.453
+        "prob_up": 0.4498
       },
       "30": {
-        "pred_return_pct": 10.892,
-        "prob_up": 0.5242
+        "pred_return_pct": 10.936,
+        "prob_up": 0.5166
       },
       "50": {
         "pred_return_pct": 12.987,
         "prob_up": 0.5839
       },
       "200": {
-        "pred_return_pct": 72.45,
-        "prob_up": 0.5592
+        "pred_return_pct": 69.661,
+        "prob_up": 0.5611
       }
     }
   },
@@ -4000,9 +4000,9 @@
     "price": 255.21,
     "day_chg_pct": -5.736,
     "sma_50": 274.6757345581055,
-    "sma_200": 281.6851842498779,
+    "sma_200": 281.68518310546875,
     "golden_cross": false,
-    "all_time_high": 401.70440673828125,
+    "all_time_high": 401.7044372558594,
     "days_until_earnings": 18.291666666666668,
     "news_sentiment": null,
     "predictions": {
@@ -4037,7 +4037,7 @@
     "price": 140.83,
     "day_chg_pct": -9.805,
     "sma_50": 145.1969415283203,
-    "sma_200": 153.8710708618164,
+    "sma_200": 153.8710710144043,
     "golden_cross": false,
     "all_time_high": 216.66139221191406,
     "days_until_earnings": 15.291666666666666,
@@ -4259,7 +4259,7 @@
     "price": 77.41,
     "day_chg_pct": -2.037,
     "sma_50": 69.54691635131836,
-    "sma_200": 61.92696128845215,
+    "sma_200": 61.92696117401123,
     "golden_cross": true,
     "all_time_high": 79.0199966430664,
     "days_until_earnings": 12.625,
@@ -4333,9 +4333,9 @@
     "price": 292.3,
     "day_chg_pct": 1.461,
     "sma_50": 279.84373596191404,
-    "sma_200": 274.0726988983154,
+    "sma_200": 274.07269844055173,
     "golden_cross": true,
-    "all_time_high": 305.8773498535156,
+    "all_time_high": 305.87738037109375,
     "days_until_earnings": 5.333333333333333,
     "news_sentiment": null,
     "predictions": {
@@ -4370,7 +4370,7 @@
     "price": 143.23,
     "day_chg_pct": 6.285,
     "sma_50": 134.89860061645507,
-    "sma_200": 130.88178997039796,
+    "sma_200": 130.88179050445558,
     "golden_cross": true,
     "all_time_high": 170.157470703125,
     "days_until_earnings": 6.666666666666667,
@@ -4407,7 +4407,7 @@
     "price": 552.44,
     "day_chg_pct": -8.101,
     "sma_50": 644.0697570800781,
-    "sma_200": 621.2234288024903,
+    "sma_200": 621.2234306335449,
     "golden_cross": true,
     "all_time_high": 784.9856567382812,
     "days_until_earnings": 7.333333333333333,
@@ -4481,9 +4481,9 @@
     "price": 218.31,
     "day_chg_pct": 1.667,
     "sma_50": 212.54240081787108,
-    "sma_200": 229.35195808410646,
+    "sma_200": 229.35195762634277,
     "golden_cross": false,
-    "all_time_high": 257.9405517578125,
+    "all_time_high": 257.9405822753906,
     "days_until_earnings": 0.25,
     "news_sentiment": null,
     "predictions": {
@@ -4888,9 +4888,9 @@
     "price": 57.535,
     "day_chg_pct": 0.586,
     "sma_50": 55.87819717407226,
-    "sma_200": 49.801566219329835,
+    "sma_200": 49.80156627655029,
     "golden_cross": true,
-    "all_time_high": 305.1272277832031,
+    "all_time_high": 305.1272888183594,
     "days_until_earnings": 5.333333333333333,
     "news_sentiment": null,
     "predictions": {
@@ -4925,7 +4925,7 @@
     "price": 414.34,
     "day_chg_pct": 1.591,
     "sma_50": 376.21680236816405,
-    "sma_200": 339.49074005126954,
+    "sma_200": 339.4907392883301,
     "golden_cross": true,
     "all_time_high": 414.3399963378906,
     "days_until_earnings": 5.666666666666667,
@@ -5133,11 +5133,11 @@
         "prob_up": 0.5253
       },
       "50": {
-        "pred_return_pct": 8.327,
-        "prob_up": 0.5529
+        "pred_return_pct": 7.912,
+        "prob_up": 0.5395
       },
       "200": {
-        "pred_return_pct": 31.116,
+        "pred_return_pct": 49.159,
         "prob_up": 0.4708
       }
     }
@@ -5184,7 +5184,7 @@
     "price": 1306.6899,
     "day_chg_pct": 2.828,
     "sma_50": 1185.28099609375,
-    "sma_200": 1081.997808227539,
+    "sma_200": 1081.9978073120117,
     "golden_cross": true,
     "all_time_high": 1306.68994140625,
     "days_until_earnings": 7.333333333333333,
@@ -5221,7 +5221,7 @@
     "price": 285.19,
     "day_chg_pct": 0.137,
     "sma_50": 264.0171481323242,
-    "sma_200": 232.10303421020507,
+    "sma_200": 232.10303451538087,
     "golden_cross": true,
     "all_time_high": 289.0799865722656,
     "days_until_earnings": 8.333333333333334,
@@ -5297,7 +5297,7 @@
     "sma_50": 42.0388304901123,
     "sma_200": 43.87317987442017,
     "golden_cross": false,
-    "all_time_high": 135.66346740722656,
+    "all_time_high": 135.66348266601562,
     "days_until_earnings": 13.291666666666666,
     "news_sentiment": null,
     "predictions": {
@@ -5443,9 +5443,9 @@
     "price": 453.1,
     "day_chg_pct": 2.243,
     "sma_50": 417.4014642333984,
-    "sma_200": 417.3931823730469,
+    "sma_200": 417.39318252563476,
     "golden_cross": true,
-    "all_time_high": 528.1023559570312,
+    "all_time_high": 528.1024169921875,
     "days_until_earnings": 5.333333333333333,
     "news_sentiment": null,
     "predictions": {
@@ -5480,7 +5480,7 @@
     "price": 239.1,
     "day_chg_pct": 4.147,
     "sma_50": 216.26098571777345,
-    "sma_200": 223.19569931030273,
+    "sma_200": 223.19569976806642,
     "golden_cross": false,
     "all_time_high": 243.3985595703125,
     "days_until_earnings": 5.666666666666667,
@@ -5517,7 +5517,7 @@
     "price": 58.18,
     "day_chg_pct": -0.445,
     "sma_50": 58.35019973754883,
-    "sma_200": 55.77241292953491,
+    "sma_200": 55.772412910461426,
     "golden_cross": true,
     "all_time_high": 60.22999954223633,
     "days_until_earnings": 12.291666666666666,
@@ -5554,7 +5554,7 @@
     "price": 336.54,
     "day_chg_pct": 0.403,
     "sma_50": 344.75269470214846,
-    "sma_200": 319.70228561401365,
+    "sma_200": 319.702286529541,
     "golden_cross": true,
     "all_time_high": 363.3671875,
     "days_until_earnings": 84.29166666666667,
@@ -5591,7 +5591,7 @@
     "price": 51.08,
     "day_chg_pct": 0.591,
     "sma_50": 57.89372413635254,
-    "sma_200": 54.65731058120728,
+    "sma_200": 54.65731063842773,
     "golden_cross": true,
     "all_time_high": 64.48101043701172,
     "days_until_earnings": 85.29166666666667,
@@ -5778,7 +5778,7 @@
     "sma_50": 10.16940004348755,
     "sma_200": 10.238949999809265,
     "golden_cross": false,
-    "all_time_high": 30.138378143310547,
+    "all_time_high": 30.13837432861328,
     "days_until_earnings": null,
     "news_sentiment": null,
     "predictions": {
@@ -5813,7 +5813,7 @@
     "price": 332.18,
     "day_chg_pct": 4.584,
     "sma_50": 315.4881195068359,
-    "sma_200": 295.07128837585446,
+    "sma_200": 295.0712899017334,
     "golden_cross": true,
     "all_time_high": 349.5831298828125,
     "days_until_earnings": 7.333333333333333,
@@ -5887,7 +5887,7 @@
     "price": 291.07,
     "day_chg_pct": 8.152,
     "sma_50": 331.7128002929687,
-    "sma_200": 307.8474936676025,
+    "sma_200": 307.84749298095704,
     "golden_cross": true,
     "all_time_high": 426.6837158203125,
     "days_until_earnings": 111.29166666666667,
@@ -5961,7 +5961,7 @@
     "price": 63.79,
     "day_chg_pct": -0.716,
     "sma_50": 66.17140060424805,
-    "sma_200": 69.20162651062012,
+    "sma_200": 69.2016263961792,
     "golden_cross": false,
     "all_time_high": 82.67195129394531,
     "days_until_earnings": 77.29166666666667,
@@ -5998,9 +5998,9 @@
     "price": 20.68,
     "day_chg_pct": 2.834,
     "sma_50": 19.608811798095704,
-    "sma_200": 17.85804518699646,
+    "sma_200": 17.858045229911806,
     "golden_cross": true,
-    "all_time_high": 38.432437896728516,
+    "all_time_high": 38.43244171142578,
     "days_until_earnings": 21.291666666666668,
     "news_sentiment": null,
     "predictions": {
@@ -6035,7 +6035,7 @@
     "price": 58.73,
     "day_chg_pct": 0.41,
     "sma_50": 58.1133999633789,
-    "sma_200": 57.919327640533446,
+    "sma_200": 57.91932771682739,
     "golden_cross": true,
     "all_time_high": 59.04560470581055,
     "days_until_earnings": 8.333333333333334,
@@ -6072,7 +6072,7 @@
     "price": 226.68,
     "day_chg_pct": -0.044,
     "sma_50": 209.56911102294922,
-    "sma_200": 189.02331977844239,
+    "sma_200": 189.02332008361816,
     "golden_cross": true,
     "all_time_high": 226.77999877929688,
     "days_until_earnings": 8.333333333333334,
@@ -6109,7 +6109,7 @@
     "price": 157.5,
     "day_chg_pct": -3.682,
     "sma_50": 184.16989990234376,
-    "sma_200": 233.4926623535156,
+    "sma_200": 233.49266418457032,
     "golden_cross": false,
     "all_time_high": 308.30902099609375,
     "days_until_earnings": 7.333333333333333,
@@ -6146,7 +6146,7 @@
     "price": 65.99,
     "day_chg_pct": 4.963,
     "sma_50": 64.34154327392578,
-    "sma_200": 74.24848388671874,
+    "sma_200": 74.2484836959839,
     "golden_cross": false,
     "all_time_high": 97.29149627685547,
     "days_until_earnings": 18.291666666666668,
@@ -6190,28 +6190,28 @@
     "news_sentiment": null,
     "predictions": {
       "5": {
-        "pred_return_pct": -1.603,
-        "prob_up": 0.3583
+        "pred_return_pct": -1.386,
+        "prob_up": 0.3396
       },
       "10": {
-        "pred_return_pct": 0.185,
-        "prob_up": 0.4213
+        "pred_return_pct": 0.077,
+        "prob_up": 0.418
       },
       "15": {
-        "pred_return_pct": -1.454,
-        "prob_up": 0.3453
+        "pred_return_pct": -1.066,
+        "prob_up": 0.3553
       },
       "30": {
-        "pred_return_pct": -3.226,
-        "prob_up": 0.4138
+        "pred_return_pct": -3.504,
+        "prob_up": 0.4157
       },
       "50": {
-        "pred_return_pct": -1.355,
-        "prob_up": 0.3585
+        "pred_return_pct": -2.236,
+        "prob_up": 0.361
       },
       "200": {
-        "pred_return_pct": -2.242,
-        "prob_up": 0.3886
+        "pred_return_pct": 1.807,
+        "prob_up": 0.456
       }
     }
   },
@@ -6220,7 +6220,7 @@
     "price": 1018.21,
     "day_chg_pct": 1.993,
     "sma_50": 938.0353967285156,
-    "sma_200": 967.0166418457031,
+    "sma_200": 967.0166409301758,
     "golden_cross": false,
     "all_time_high": 1092.5828857421875,
     "days_until_earnings": 49.625,
@@ -6294,7 +6294,7 @@
     "price": 50.48,
     "day_chg_pct": 1.774,
     "sma_50": 56.12798362731934,
-    "sma_200": 52.432481880187986,
+    "sma_200": 52.432481842041014,
     "golden_cross": true,
     "all_time_high": 72.66712188720703,
     "days_until_earnings": 13.625,
@@ -6331,9 +6331,9 @@
     "price": 87.45,
     "day_chg_pct": 4.293,
     "sma_50": 80.48007995605468,
-    "sma_200": 92.07553016662598,
+    "sma_200": 92.07552993774414,
     "golden_cross": false,
-    "all_time_high": 244.5611572265625,
+    "all_time_high": 244.5612030029297,
     "days_until_earnings": 6.666666666666667,
     "news_sentiment": null,
     "predictions": {
@@ -6368,7 +6368,7 @@
     "price": 52.59,
     "day_chg_pct": -2.611,
     "sma_50": 53.93971984863281,
-    "sma_200": 51.107867088317875,
+    "sma_200": 51.10786689758301,
     "golden_cross": true,
     "all_time_high": 55.996734619140625,
     "days_until_earnings": null,
@@ -6405,7 +6405,7 @@
     "price": 57.29,
     "day_chg_pct": -0.105,
     "sma_50": 56.67174926757812,
-    "sma_200": 55.50834655761719,
+    "sma_200": 55.50834642410278,
     "golden_cross": true,
     "all_time_high": 57.43424987792969,
     "days_until_earnings": null,
@@ -6442,7 +6442,7 @@
     "price": 58.42,
     "day_chg_pct": -2.552,
     "sma_50": 59.63627868652344,
-    "sma_200": 56.43640058517456,
+    "sma_200": 56.43640060424805,
     "golden_cross": true,
     "all_time_high": 61.27000045776367,
     "days_until_earnings": null,
@@ -6479,7 +6479,7 @@
     "price": 55.2,
     "day_chg_pct": -2.628,
     "sma_50": 56.56784072875976,
-    "sma_200": 53.111201000213626,
+    "sma_200": 53.111201171875,
     "golden_cross": true,
     "all_time_high": 58.65999984741211,
     "days_until_earnings": null,
@@ -6515,8 +6515,8 @@
     "name": "REX FANG & Innovation Equity Premium Income ETF",
     "price": 40.17,
     "day_chg_pct": -3.251,
-    "sma_50": 41.3289045715332,
-    "sma_200": 38.77733419418335,
+    "sma_50": 41.32890480041504,
+    "sma_200": 38.77733488082886,
     "golden_cross": true,
     "all_time_high": 43.16799545288086,
     "days_until_earnings": null,
@@ -6552,10 +6552,10 @@
     "name": "NEOS ETF Trust - NEOS Bitcoin High Income ETF",
     "price": 32.31,
     "day_chg_pct": -3.35,
-    "sma_50": 31.5030513381958,
-    "sma_200": 29.93658490180969,
+    "sma_50": 31.503051300048828,
+    "sma_200": 29.936585006713866,
     "golden_cross": true,
-    "all_time_high": 47.6838264465332,
+    "all_time_high": 47.683834075927734,
     "days_until_earnings": null,
     "news_sentiment": null,
     "predictions": {
@@ -6590,7 +6590,7 @@
     "price": 41.3,
     "day_chg_pct": -0.578,
     "sma_50": 41.127524032592774,
-    "sma_200": 39.1025786781311,
+    "sma_200": 39.10257863998413,
     "golden_cross": true,
     "all_time_high": 41.68449783325195,
     "days_until_earnings": null,
@@ -6627,7 +6627,7 @@
     "price": 35.4,
     "day_chg_pct": 2.135,
     "sma_50": 33.890413513183596,
-    "sma_200": 31.71217351913452,
+    "sma_200": 31.712173538208006,
     "golden_cross": true,
     "all_time_high": 35.400001525878906,
     "days_until_earnings": null,
@@ -6664,7 +6664,7 @@
     "price": 80.29,
     "day_chg_pct": 1.159,
     "sma_50": 77.91303680419922,
-    "sma_200": 74.31978786468505,
+    "sma_200": 74.31978828430175,
     "golden_cross": true,
     "all_time_high": 80.29000091552734,
     "days_until_earnings": null,
@@ -6738,7 +6738,7 @@
     "price": 162.6,
     "day_chg_pct": 0.712,
     "sma_50": 160.74315856933595,
-    "sma_200": 155.22735244750976,
+    "sma_200": 155.22735290527345,
     "golden_cross": true,
     "all_time_high": 166.10748291015625,
     "days_until_earnings": null,
@@ -6812,7 +6812,7 @@
     "price": 704.47,
     "day_chg_pct": -2.859,
     "sma_50": 725.9783251953126,
-    "sma_200": 675.6858572387696,
+    "sma_200": 675.6858569335938,
     "golden_cross": true,
     "all_time_high": 759.6599731445312,
     "days_until_earnings": null,
@@ -6849,7 +6849,7 @@
     "price": 763.96,
     "day_chg_pct": -1.181,
     "sma_50": 767.2178686523438,
-    "sma_200": 723.6236242675782,
+    "sma_200": 723.6236245727539,
     "golden_cross": true,
     "all_time_high": 779.0900268554688,
     "days_until_earnings": null,
@@ -6923,7 +6923,7 @@
     "price": 767.41,
     "day_chg_pct": -1.19,
     "sma_50": 770.5837231445313,
-    "sma_200": 726.6302438354492,
+    "sma_200": 726.6302462768555,
     "golden_cross": true,
     "all_time_high": 782.5399780273438,
     "days_until_earnings": null,
@@ -6960,7 +6960,7 @@
     "price": 374.9,
     "day_chg_pct": -1.121,
     "sma_50": 377.4551776123047,
-    "sma_200": 356.6361116027832,
+    "sma_200": 356.636111907959,
     "golden_cross": true,
     "all_time_high": 383.33258056640625,
     "days_until_earnings": null,
@@ -6997,7 +6997,7 @@
     "price": 166.4,
     "day_chg_pct": -1.182,
     "sma_50": 167.60466033935546,
-    "sma_200": 158.335336227417,
+    "sma_200": 158.33533546447754,
     "golden_cross": true,
     "all_time_high": 170.23519897460938,
     "days_until_earnings": null,
@@ -7034,7 +7034,7 @@
     "price": 29.33,
     "day_chg_pct": -1.213,
     "sma_50": 29.551045494079588,
-    "sma_200": 27.918145751953126,
+    "sma_200": 27.918145761489868,
     "golden_cross": true,
     "all_time_high": 30.00837516784668,
     "days_until_earnings": null,
@@ -7071,7 +7071,7 @@
     "price": 92.36,
     "day_chg_pct": -1.166,
     "sma_50": 92.84350143432617,
-    "sma_200": 87.76377552032471,
+    "sma_200": 87.76377563476562,
     "golden_cross": true,
     "all_time_high": 94.18437194824219,
     "days_until_earnings": null,
@@ -7108,7 +7108,7 @@
     "price": 156.52,
     "day_chg_pct": -1.305,
     "sma_50": 159.4109619140625,
-    "sma_200": 151.7394184112549,
+    "sma_200": 151.73941947937013,
     "golden_cross": true,
     "all_time_high": 161.973876953125,
     "days_until_earnings": null,
@@ -7219,7 +7219,7 @@
     "price": 82.73,
     "day_chg_pct": -1.512,
     "sma_50": 85.99336395263671,
-    "sma_200": 82.91038429260254,
+    "sma_200": 82.9103840637207,
     "golden_cross": true,
     "all_time_high": 88.25055694580078,
     "days_until_earnings": null,
@@ -7367,7 +7367,7 @@
     "price": 34.94,
     "day_chg_pct": -2.566,
     "sma_50": 35.711183090209964,
-    "sma_200": 33.312865295410155,
+    "sma_200": 33.3128653049469,
     "golden_cross": true,
     "all_time_high": 36.93000030517578,
     "days_until_earnings": null,
@@ -7404,7 +7404,7 @@
     "price": 34.57,
     "day_chg_pct": 0.494,
     "sma_50": 34.192318725585935,
-    "sma_200": 32.72217658042908,
+    "sma_200": 32.72217657089234,
     "golden_cross": true,
     "all_time_high": 35.20127487182617,
     "days_until_earnings": null,
@@ -7441,7 +7441,7 @@
     "price": 87.17,
     "day_chg_pct": -2.516,
     "sma_50": 89.12312576293945,
-    "sma_200": 83.68146812438965,
+    "sma_200": 83.68146789550781,
     "golden_cross": true,
     "all_time_high": 92.63999938964844,
     "days_until_earnings": null,
@@ -7478,7 +7478,7 @@
     "price": 226.55,
     "day_chg_pct": 0.716,
     "sma_50": 222.2274368286133,
-    "sma_200": 209.9235107421875,
+    "sma_200": 209.92351081848145,
     "golden_cross": true,
     "all_time_high": 226.5500030517578,
     "days_until_earnings": null,
@@ -7515,7 +7515,7 @@
     "price": 137.2,
     "day_chg_pct": -2.688,
     "sma_50": 140.94655883789062,
-    "sma_200": 131.34486068725585,
+    "sma_200": 131.34486083984376,
     "golden_cross": true,
     "all_time_high": 146.1199951171875,
     "days_until_earnings": null,
@@ -7552,7 +7552,7 @@
     "price": 239.47,
     "day_chg_pct": 0.597,
     "sma_50": 234.07544708251953,
-    "sma_200": 224.07892837524415,
+    "sma_200": 224.07892784118653,
     "golden_cross": true,
     "all_time_high": 239.47000122070312,
     "days_until_earnings": null,
@@ -7589,7 +7589,7 @@
     "price": 118.76,
     "day_chg_pct": -2.688,
     "sma_50": 122.00149719238281,
-    "sma_200": 113.65080284118652,
+    "sma_200": 113.65080322265625,
     "golden_cross": true,
     "all_time_high": 126.5,
     "days_until_earnings": null,
@@ -7626,7 +7626,7 @@
     "price": 64.13,
     "day_chg_pct": 0.612,
     "sma_50": 62.67768409729004,
-    "sma_200": 59.98244184494018,
+    "sma_200": 59.98244180679321,
     "golden_cross": true,
     "all_time_high": 64.12999725341797,
     "days_until_earnings": null,
@@ -7662,10 +7662,10 @@
     "name": "Vanguard Total Bond Market Index Fund ETF Shares",
     "price": 71.36,
     "day_chg_pct": 0.862,
-    "sma_50": 71.01178390502929,
-    "sma_200": 71.83735649108887,
+    "sma_50": 71.0117837524414,
+    "sma_200": 71.83735675811768,
     "golden_cross": false,
-    "all_time_high": 73.79793548583984,
+    "all_time_high": 73.79791259765625,
     "days_until_earnings": null,
     "news_sentiment": null,
     "predictions": {
@@ -7699,10 +7699,10 @@
     "name": "iShares Core U.S. Aggregate Bond ETF",
     "price": 96.12,
     "day_chg_pct": 0.86,
-    "sma_50": 95.69634140014648,
-    "sma_200": 96.85420043945312,
+    "sma_50": 95.69634124755859,
+    "sma_200": 96.8541994857788,
     "golden_cross": false,
-    "all_time_high": 99.2707748413086,
+    "all_time_high": 99.27075958251953,
     "days_until_earnings": null,
     "news_sentiment": null,
     "predictions": {
@@ -7737,9 +7737,9 @@
     "price": 22.46,
     "day_chg_pct": 0.853,
     "sma_50": 22.365064163208007,
-    "sma_200": 22.63428063392639,
+    "sma_200": 22.634280490875245,
     "golden_cross": false,
-    "all_time_high": 23.281259536743164,
+    "all_time_high": 23.28126335144043,
     "days_until_earnings": null,
     "news_sentiment": null,
     "predictions": {
