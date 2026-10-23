@@ -144,3 +144,15 @@ BRIEFING_PROB_UP_MOVE_PP = 8.0      # chance-of-gain change vs. last run, in per
 BRIEFING_EARNINGS_WITHIN_DAYS = 7   # flag earnings reports due this soon
 BRIEFING_NEAR_ATH_PCT = 2.0         # "near its all-time high" = within this % of it
 BRIEFING_SENTIMENT_EXTREME = 0.35   # |mean headline sentiment score| above this is "notable"
+
+# Forecast accuracy tracker (nightly_briefing.py): every time a ticker's
+# forecast move gets flagged as notable, we log that prediction and check
+# back once its horizon has elapsed to see whether it was actually right.
+# Caps the resolved-history list so the committed JSON file doesn't grow
+# forever -- this is a rolling recent track record, not a permanent archive
+# (backtest.py already covers rigorous historical evaluation).
+FORECAST_LOG_MAX_RESOLVED = 1500
+# Stop waiting on a pending prediction after this many calendar days past
+# its expected resolution date (data gaps, a ticker dropping out of the
+# watchlist, etc. shouldn't let a pending entry linger forever).
+FORECAST_LOG_STALE_AFTER_DAYS = 30

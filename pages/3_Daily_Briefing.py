@@ -12,6 +12,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
+import pandas as pd
 import streamlit as st
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -181,6 +182,44 @@ else:
                 <span class="note-price">{item['name']} — ${item['price']:.2f}{chg_str}</span>
                 <ul class="note-list">{notes_html}</ul>
             </div>""", unsafe_allow_html=True)
+
+st.markdown('<div class="section-heading">📊 Track Record</div>', unsafe_allow_html=True)
+st.caption(
+    "Every time a stock's forecast moved enough to get flagged above, it gets logged and "
+    "checked again once that horizon's time window has passed — this is how that's actually "
+    "turned out, not just the model's training-time stats."
+)
+
+track_record = briefing.get("track_record", {})
+n_pending = briefing.get("track_record_pending", 0)
+
+if not track_record:
+    st.info(f"No forecast flags have had enough time to resolve yet "
+             f"({n_pending} pending). Check back as the briefing accumulates history.")
+else:
+    HORIZON_LABELS = {5: "1 week", 10: "2 weeks", 15: "3 weeks", 30: "1 month",
+                       50: "~2.5 months", 200: "~9.5 months"}
+    rows = []
+    for h_str, stats in track_record.items():
+        h = int(h_str)
+        rows.append({
+            "Horizon": HORIZON_LABELS.get(h, f"{h}d"),
+            "Resolved": stats["n_resolved"],
+            "Direction correct": f"{stats['direction_accuracy'] * 100:.0f}%",
+            "Chance-of-gain correct": f"{stats['classifier_accuracy'] * 100:.0f}%",
+            "Avg error (pp)": stats["mean_abs_error_pp"],
+            "Avg predicted": f"{stats['mean_predicted_pct']:+.1f}%",
+            "Avg actual": f"{stats['mean_actual_pct']:+.1f}%",
+        })
+    st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True)
+    st.caption(
+        f"**Direction correct**: did the stock actually move the same way (up/down) the "
+        f"forecast said? **Chance-of-gain correct**: did the \"chance of a gain\" call end up "
+        f"on the right side of 50%? **{n_pending}** forecasts are still waiting for their "
+        f"horizon to pass. Small sample sizes early on (especially for 50-/200-day horizons, "
+        f"which take months to resolve) will be noisy — a handful of resolved predictions "
+        f"doesn't prove much either way yet."
+    )
 
 st.markdown("---")
 st.caption(

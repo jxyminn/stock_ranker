@@ -5,21 +5,28 @@ and compare against last night's snapshot to flag what actually changed --
 big forecast swings, earnings coming up this week, a moving-average
 crossover that just happened, a new high, or notably one-sided news.
 
-This does NOT retrain the models -- that's a separate, much slower, manual
-step (`python train.py`). This script only refreshes live data and re-runs
-inference with whatever models are already saved in models/.
+This does NOT retrain the models -- that's a separate, much slower job
+(.github/workflows/weekly-retrain.yml / manual `python train.py`). This
+script only refreshes live data and re-runs inference with whatever models
+are already saved in models/.
+
+Also maintains briefing/forecast_log.json: every time a forecast move gets
+flagged as notable, that prediction is logged and checked again once its
+horizon has elapsed, to build an honest running track record of whether
+"notable" forecast flags actually panned out -- see the "Track Record"
+section on the Daily Briefing page.
 
 Meant to run once a day via the GitHub Actions workflow in
-.github/workflows/nightly.yml, which commits briefing/snapshot.json and
-briefing/latest.json back to the repo so the deployed Streamlit app (which
-has no database of its own) can read yesterday's results as a static file.
+.github/workflows/nightly.yml, which commits briefing/*.json back to the
+repo so the deployed Streamlit app (which has no database of its own) can
+read it as a static file.
 
 Usage:
     python nightly_briefing.py
 """
 import json
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 import numpy as np
 import pandas as pd
@@ -27,7 +34,7 @@ import pandas as pd
 from config import (
     BRIEFING_DIR, BRIEFING_EARNINGS_WITHIN_DAYS, BRIEFING_FORECAST_MOVE_PP,
     BRIEFING_NEAR_ATH_PCT, BRIEFING_PROB_UP_MOVE_PP, BRIEFING_SENTIMENT_EXTREME,
-    HORIZONS, MODELS_DIR,
+    FORECAST_LOG_MAX_RESOLVED, FORECAST_LOG_STALE_AFTER_DAYS, HORIZONS, MODELS_DIR,
 )
 from data_fetcher import fetch_fundamentals, fetch_news, fetch_price_stats
 from features import FEATURE_COLUMNS
@@ -37,6 +44,16 @@ from watchlist_store import get_effective_sections
 
 SNAPSHOT_PATH = BRIEFING_DIR / "snapshot.json"
 LATEST_PATH = BRIEFING_DIR / "latest.json"
+FORECAST_LOG_PATH = BRIEFING_DIR / "forecast_log.json"
+
+
+def trading_days_to_calendar_days(trading_days: int) -> int:
+    """Rough trading-day -> calendar-day conversion (5-day weeks, +2 day
+    cushion for holidays). Good enough for "has this forecast's horizon
+    elapsed yet" -- not a precise trading-calendar count, which would need
+    extra data just for this bookkeeping. Errs toward resolving slightly
+    late rather than early."""
+    return round(trading_days * 7 / 5) + 2
 
 
 def all_watchlist_tickers() -> list[str]:
@@ -102,10 +119,15 @@ def pct_from_ath(price: float, ath: float | None) -> float | None:
     return (1 - price / ath) * 100
 
 
-def diff_ticker(ticker: str, name: str, today: dict, yesterday: dict | None) -> dict:
-    """Compare today's snapshot to yesterday's (if any) and return the
-    notable-event flags for this ticker."""
+def diff_ticker(ticker: str, name: str, today: dict, yesterday: dict | None) -> tuple[dict, list[dict]]:
+    """Compare today's snapshot to yesterday's (if any). Returns the
+    notable-event flags for this ticker, plus a separate list of
+    "forecast moved" events (ticker/horizon/prediction) worth logging to
+    the accuracy tracker -- those are the only notes that are actual
+    predictions rather than facts (earnings dates, crossovers, etc. aren't
+    something to check for "accuracy")."""
     notes: list[str] = []
+    forecast_events: list[dict] = []
 
     if yesterday and today.get("predictions") and yesterday.get("predictions"):
         for h in HORIZONS:
@@ -115,12 +137,22 @@ def diff_ticker(ticker: str, name: str, today: dict, yesterday: dict | None) -> 
                 continue
             d_ret = t_pred["pred_return_pct"] - y_pred["pred_return_pct"]
             d_prob = (t_pred["prob_up"] - y_pred["prob_up"]) * 100
+            flagged = False
             if abs(d_ret) >= BRIEFING_FORECAST_MOVE_PP:
                 notes.append(f"{h}d forecast moved {d_ret:+.1f}pp overnight "
                              f"(now {t_pred['pred_return_pct']:+.1f}%)")
+                flagged = True
             if abs(d_prob) >= BRIEFING_PROB_UP_MOVE_PP:
                 notes.append(f"{h}d chance-of-gain moved {d_prob:+.0f}pp overnight "
                              f"(now {t_pred['prob_up'] * 100:.0f}%)")
+                flagged = True
+            if flagged:
+                forecast_events.append({
+                    "ticker": ticker, "horizon": h,
+                    "price_at_log": today["price"],
+                    "pred_return_pct": t_pred["pred_return_pct"],
+                    "prob_up": t_pred["prob_up"],
+                })
 
     if yesterday and today.get("golden_cross") is not None and yesterday.get("golden_cross") is not None:
         if today["golden_cross"] != yesterday["golden_cross"]:
@@ -139,8 +171,70 @@ def diff_ticker(ticker: str, name: str, today: dict, yesterday: dict | None) -> 
         notes.append(f"notably {'positive' if sentiment > 0 else 'negative'} headlines "
                      f"(score {sentiment:+.2f})")
 
-    return {"ticker": ticker, "name": name, "price": today["price"],
+    diff = {"ticker": ticker, "name": name, "price": today["price"],
             "day_chg_pct": today.get("day_chg_pct"), "notes": notes}
+    return diff, forecast_events
+
+
+def update_forecast_log(today_snapshot: dict[str, dict], new_events: list[dict], today: datetime) -> dict:
+    """Resolve any pending predictions whose horizon has elapsed (using
+    today's price for that ticker), log the new ones flagged tonight, and
+    return a per-horizon accuracy scorecard. Mutates nothing on disk itself
+    -- caller writes the returned log."""
+    log = {"pending": [], "resolved": []}
+    if FORECAST_LOG_PATH.exists():
+        try:
+            log = json.loads(FORECAST_LOG_PATH.read_text())
+        except Exception as e:
+            print(f"Warning: couldn't read forecast log ({e}); starting fresh.")
+
+    still_pending = []
+    newly_resolved = []
+    for entry in log.get("pending", []):
+        logged_at_date = datetime.fromisoformat(entry["logged_at"]).date()
+        calendar_days_elapsed = (today.date() - logged_at_date).days
+        needed = trading_days_to_calendar_days(entry["horizon"])
+        current = today_snapshot.get(entry["ticker"])
+
+        if calendar_days_elapsed >= needed and current is not None:
+            actual_return_pct = (current["price"] / entry["price_at_log"] - 1) * 100
+            newly_resolved.append({
+                **entry,
+                "resolved_at": today.date().isoformat(),
+                "price_at_resolution": current["price"],
+                "actual_return_pct": round(actual_return_pct, 3),
+                "direction_correct": (actual_return_pct > 0) == (entry["pred_return_pct"] > 0),
+                "classifier_correct": (actual_return_pct > 0) == (entry["prob_up"] > 0.5),
+            })
+        elif calendar_days_elapsed >= needed + FORECAST_LOG_STALE_AFTER_DAYS:
+            pass  # gave up waiting (ticker likely dropped out of the watchlist) -- just drop it
+        else:
+            still_pending.append(entry)
+
+    for event in new_events:
+        still_pending.append({**event, "logged_at": today.date().isoformat()})
+
+    resolved = (log.get("resolved", []) + newly_resolved)[-FORECAST_LOG_MAX_RESOLVED:]
+    log = {"pending": still_pending, "resolved": resolved}
+    FORECAST_LOG_PATH.write_text(json.dumps(log, indent=2))
+
+    scorecard = {}
+    for h in HORIZONS:
+        rows = [r for r in resolved if r["horizon"] == h]
+        if not rows:
+            continue
+        n = len(rows)
+        scorecard[str(h)] = {
+            "n_resolved": n,
+            "direction_accuracy": round(sum(r["direction_correct"] for r in rows) / n, 3),
+            "classifier_accuracy": round(sum(r["classifier_correct"] for r in rows) / n, 3),
+            "mean_abs_error_pp": round(sum(abs(r["actual_return_pct"] - r["pred_return_pct"]) for r in rows) / n, 2),
+            "mean_predicted_pct": round(sum(r["pred_return_pct"] for r in rows) / n, 2),
+            "mean_actual_pct": round(sum(r["actual_return_pct"] for r in rows) / n, 2),
+        }
+
+    return {"scorecard": scorecard, "n_pending": len(still_pending),
+            "n_newly_resolved": len(newly_resolved)}
 
 
 def main():
@@ -175,18 +269,25 @@ def main():
           f"({len(skipped)} skipped: {skipped[:10]}{'...' if len(skipped) > 10 else ''})")
 
     notable = []
+    all_forecast_events = []
     for t, info in today_snapshot.items():
-        diff = diff_ticker(t, info["name"], info, yesterday_snapshot.get(t))
+        diff, forecast_events = diff_ticker(t, info["name"], info, yesterday_snapshot.get(t))
         if diff["notes"]:
             notable.append(diff)
+        all_forecast_events.extend(forecast_events)
+
+    now = datetime.now(timezone.utc)
+    tracker_result = update_forecast_log(today_snapshot, all_forecast_events, now)
 
     briefing = {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": now.isoformat(),
         "tickers_covered": len(today_snapshot),
         "tickers_skipped": skipped,
         "models_available": not missing_horizons,
         "is_first_run": not bool(yesterday_snapshot),
         "notable": sorted(notable, key=lambda d: len(d["notes"]), reverse=True),
+        "track_record": tracker_result["scorecard"],
+        "track_record_pending": tracker_result["n_pending"],
     }
 
     BRIEFING_DIR.mkdir(exist_ok=True)
@@ -194,7 +295,9 @@ def main():
     LATEST_PATH.write_text(json.dumps(briefing, indent=2, default=str))
 
     print(f"\n{len(notable)} tickers have something notable tonight.")
-    print(f"Wrote {SNAPSHOT_PATH} and {LATEST_PATH}.")
+    print(f"Forecast tracker: {tracker_result['n_newly_resolved']} newly resolved, "
+          f"{tracker_result['n_pending']} still pending.")
+    print(f"Wrote {SNAPSHOT_PATH}, {LATEST_PATH}, and {FORECAST_LOG_PATH}.")
 
 
 if __name__ == "__main__":

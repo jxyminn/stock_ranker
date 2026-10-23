@@ -1,0 +1,43 @@
+name: Weekly Model Retrain
+
+on:
+  schedule:
+    # 03:00 UTC every Sunday -- retraining doesn't need to happen nightly
+    # (the model's learned patterns don't meaningfully shift day to day,
+    # and this takes much longer than the nightly briefing: ~5 years of
+    # history for ~230 tickers vs. one fresh row per ticker). Weekly keeps
+    # the model current without paying that cost every night.
+    - cron: "0 3 * * 0"
+  workflow_dispatch: {}  # lets us trigger a retrain manually from the Actions tab
+
+permissions:
+  contents: write  # needed to commit models/*.joblib back to the repo
+
+jobs:
+  retrain:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Retrain all horizon models
+        run: python train.py
+
+      - name: Commit and push updated models
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add models/
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Weekly retrain: $(date -u +'%Y-%m-%d')"
+            git push
+          fi

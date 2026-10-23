@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-23T04:24:48.119241+00:00",
+  "generated_at": "2026-10-23T04:37:30.735152+00:00",
   "tickers_covered": 210,
   "tickers_skipped": [],
   "models_available": true,
@@ -11,9 +11,9 @@
       "price": 131.69,
       "day_chg_pct": -8.07,
       "notes": [
-        "15d forecast moved -6.6pp overnight (now -8.2%)",
-        "50d forecast moved +5.5pp overnight (now -9.6%)",
-        "200d forecast moved +15.8pp overnight (now -31.6%)",
+        "15d forecast moved +6.6pp overnight (now -1.6%)",
+        "50d forecast moved -5.5pp overnight (now -15.1%)",
+        "200d forecast moved -15.8pp overnight (now -47.4%)",
         "earnings in 6 days"
       ]
     },
@@ -23,8 +23,8 @@
       "price": 212.51,
       "day_chg_pct": -2.164,
       "notes": [
-        "200d forecast moved +9.3pp overnight (now +7.6%)",
-        "200d chance-of-gain moved +9pp overnight (now 53%)"
+        "200d forecast moved -9.3pp overnight (now -1.6%)",
+        "200d chance-of-gain moved -9pp overnight (now 44%)"
       ]
     },
     {
@@ -124,7 +124,7 @@
       "price": 313.96,
       "day_chg_pct": -2.717,
       "notes": [
-        "200d forecast moved +5.4pp overnight (now +35.1%)"
+        "200d forecast moved -5.4pp overnight (now +29.7%)"
       ]
     },
     {
@@ -277,7 +277,7 @@
       "price": 86.62,
       "day_chg_pct": -3.444,
       "notes": [
-        "200d forecast moved +18.0pp overnight (now +49.2%)"
+        "200d forecast moved -18.0pp overnight (now +31.1%)"
       ]
     },
     {
@@ -340,7 +340,7 @@
       "price": 546.97,
       "day_chg_pct": 1.481,
       "notes": [
-        "200d forecast moved +4.0pp overnight (now +1.8%)"
+        "200d forecast moved -4.0pp overnight (now -2.2%)"
       ]
     },
     {
@@ -469,5 +469,7 @@
         "within 0.0% of its all-time high"
       ]
     }
-  ]
+  ],
+  "track_record": {},
+  "track_record_pending": 7
 }
