@@ -35,7 +35,11 @@ import numpy as np
 import pandas as pd
 
 from config import HORIZONS, LIVE_LOOKBACK_DAYS
-from data_fetcher import fetch_fundamentals, fetch_news, fetch_history, fetch_earnings, search_ticker, validate_tickers
+from data_fetcher import (
+    fetch_fundamentals, fetch_news, fetch_history, fetch_earnings,
+    fetch_insider_transactions, search_ticker, validate_tickers,
+)
+from explain import explain_prediction
 from features import FEATURE_COLUMNS
 from predict import load_models, latest_features_for_ticker
 from sentiment import summarize_articles
@@ -97,6 +101,11 @@ def build_report(ticker: str) -> dict:
             "risk_adjusted": pred_return / vol,
             "holdout_mae": models[h]["holdout_mae"],
             "holdout_auc": models[h]["holdout_auc"],
+            # Grounded in the model's own learned splits for THIS prediction
+            # -- distinct from insights.py's hand-written technical bullets,
+            # which describe the general picture rather than what this
+            # specific model weighted. See explain.py.
+            "explain": explain_prediction(reg, X),
         }
 
     return {
@@ -107,6 +116,7 @@ def build_report(ticker: str) -> dict:
         "predictions": predictions,
         "fundamentals": fetch_fundamentals(ticker),
         "news": summarize_articles(fetch_news(ticker)),
+        "insider_transactions": fetch_insider_transactions(ticker),
         "backtest": load_backtest_results(),
         "price_history": build_price_history(ticker),
         "earnings_history": fetch_earnings(ticker),
@@ -182,6 +192,16 @@ def print_report(report: dict) -> None:
     for line in format_ranking_lines(report.get("backtest")):
         print(f"  {line}")
 
+    # ---- Why the model says this (SHAP) -----------------------------------
+    print("\n--- Why the model says this (top drivers, 30d forecast) ---")
+    drivers = report["predictions"].get(30, {}).get("explain", [])
+    if not drivers:
+        print("  unavailable")
+    else:
+        for d in drivers:
+            print(f"  {d['label']} (value {d['value']:+.3f}) pushed the forecast {d['direction']} "
+                  f"by {abs(d['contribution_pp']):.2f}pp")
+
     # ---- Technical read ----------------------------------------------------
     print("\n--- Technical read ---")
     print(f"  Trend:      {_trend_read(feat)}")
@@ -255,6 +275,21 @@ def print_report(report: dict) -> None:
         print("  news, and sentiment is scored automatically -- read headlines yourself too.")
         for a in articles[:5]:
             print(f"    [{a['sentiment_label']:<8} {a['sentiment_score']:+.2f}] {a['title']} ({a['publisher']})")
+
+    # ---- Insider activity (not seen by the model) -------------------------
+    print("\n--- Insider activity (informational only -- not seen by the model) ---")
+    insiders = report.get("insider_transactions", [])
+    if not insiders:
+        print("  no recent insider filings found")
+    else:
+        sales = [t for t in insiders if t["kind"] == "Sale"]
+        buys = [t for t in insiders if t["kind"] == "Purchase"]
+        print(f"  Recent filings: {len(buys)} purchase(s), {len(sales)} sale(s), "
+              f"{len(insiders) - len(buys) - len(sales)} other (awards/exercises/etc.)")
+        for t in insiders[:5]:
+            val = f"${t['Value']:,.0f}" if pd.notna(t.get("Value")) else "n/a"
+            print(f"    {t['Start Date']}  {t['kind']:<9} {t['Insider']} ({t['Position']}) "
+                  f"-- {t['Shares']:,} shares, {val}")
 
     print(f"\n{'-' * 70}")
     print("Not financial advice. Models see technical/earnings-timing/macro data only --")

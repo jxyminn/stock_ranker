@@ -200,6 +200,26 @@ else:
     st.caption("No backtest results found yet — run `python backtest.py` to rank horizons by "
                "actual walk-forward reliability instead of the noisy single-holdout numbers above.")
 
+with st.expander("🔍 Why the model says this"):
+    st.caption("Grounded in this model's own learned splits for this specific prediction — "
+               "unlike the Technical Read below, which is a general plain-English summary, not "
+               "literally derived from what the model weighted.")
+    explain_horizon = st.selectbox(
+        "Horizon", HORIZONS, index=HORIZONS.index(30) if 30 in HORIZONS else 0,
+        format_func=lambda h: HORIZON_LABELS[h], key="explain_horizon",
+    )
+    drivers = report["predictions"][explain_horizon].get("explain", [])
+    if not drivers:
+        st.caption("Unavailable for this horizon.")
+    else:
+        for d in drivers:
+            color = "#3fb950" if d["direction"] == "up" else "#f85149"
+            st.markdown(
+                f"**{d['label']}** (value {d['value']:+.3f}) pushed the forecast "
+                f"<span style='color:{color}'>{d['direction']} {abs(d['contribution_pp']):.2f}pp</span>",
+                unsafe_allow_html=True,
+            )
+
 col1, col2 = st.columns(2)
 
 with col1:
@@ -283,6 +303,25 @@ else:
                         f"(sentiment: {a['sentiment_score']:+.2f})")
         else:
             st.markdown(f"{emoji} {a['title']} — *{a['publisher']}*  (sentiment: {a['sentiment_score']:+.2f})")
+
+st.markdown("#### Insider activity")
+st.caption("Recent SEC Form 4 filings — informational only, not seen by the model. Filing "
+           "timing is irregular and there's no clean historical archive, so unlike news this "
+           "can't even be backtested as a report-only signal; read it as context, not a rule.")
+insiders = report.get("insider_transactions", [])
+if not insiders:
+    st.markdown("_No recent insider filings found._")
+else:
+    sales = [t for t in insiders if t["kind"] == "Sale"]
+    buys = [t for t in insiders if t["kind"] == "Purchase"]
+    other = len(insiders) - len(sales) - len(buys)
+    st.markdown(f"Recent filings: **{len(buys)} purchase(s)**, **{len(sales)} sale(s)**, "
+                f"{other} other (awards/exercises/etc.)")
+    disp = pd.DataFrame(insiders[:8])[["Start Date", "Insider", "Position", "kind", "Shares", "Value"]]
+    disp.columns = pd.Index(["Date", "Insider", "Position", "Type", "Shares", "Value ($)"])
+    disp["Value ($)"] = disp["Value ($)"].map(lambda v: f"${v:,.0f}" if pd.notna(v) else "n/a")
+    disp["Shares"] = disp["Shares"].map(lambda s: f"{s:,}")
+    st.dataframe(disp, use_container_width=True, hide_index=True)
 
 st.markdown("---")
 st.caption(

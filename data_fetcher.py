@@ -221,6 +221,54 @@ def fetch_news(ticker: str, max_articles: int = 8, use_cache: bool = True) -> li
     return articles
 
 
+def fetch_insider_transactions(ticker: str, max_rows: int = 15, use_cache: bool = True) -> list[dict]:
+    """
+    Recent insider buy/sell activity (SEC Form 4 filings), via yfinance's
+    aggregated insider_transactions table. Informational only -- like
+    fundamentals and news, never seen by the trained models: filing timing
+    is irregular and there's no clean historical archive suitable for
+    leak-free backtesting.
+    """
+    cache_file = CACHE_DIR / f"{ticker.replace('/', '_')}_insiders.parquet"
+    if use_cache and cache_file.exists():
+        age_seconds = time.time() - cache_file.stat().st_mtime
+        if age_seconds < 21600:  # 6h -- filings trickle in slowly, no need to refetch every call
+            try:
+                return pd.read_parquet(cache_file).to_dict("records")
+            except Exception:
+                pass
+
+    try:
+        df = yf.Ticker(ticker).insider_transactions
+    except Exception as e:
+        print(f"[fetch_insider_transactions] '{ticker}' failed: {e}, skipping.")
+        return []
+    if df is None or df.empty:
+        return []
+
+    df = df.head(max_rows).copy()
+
+    def classify(text) -> str:
+        t = (text or "").lower()
+        if "sale" in t:
+            return "Sale"
+        if "purchase" in t or "buy" in t:
+            return "Purchase"
+        return "Other"
+
+    # yfinance's own "Transaction" column is often blank; the actual
+    # description (and thus buy/sell/other classification) lives in "Text".
+    df["kind"] = df["Text"].map(classify)
+    df["Start Date"] = df["Start Date"].astype(str)
+
+    out = df[["Start Date", "Insider", "Position", "kind", "Shares", "Value", "Text"]].to_dict("records")
+    try:
+        pd.DataFrame(out).to_parquet(cache_file)
+    except Exception:
+        pass  # caching is best-effort, not critical
+    return out
+
+
 def fetch_price_stats(ticker: str, use_cache: bool = True) -> dict:
     """
     Long-horizon price context that the 400-day live lookback can't give:

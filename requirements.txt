@@ -9,3 +9,4 @@ plotly>=5.18.0
 lxml>=5.0.0
 vaderSentiment>=3.3.2
 requests>=2.31.0
+shap>=0.44.0
