@@ -156,15 +156,16 @@ def fetch_fundamentals(ticker: str, use_cache: bool = True) -> dict:
             except Exception:
                 pass
 
-    # A couple of retries with a short backoff: yfinance occasionally returns
-    # an empty/partial payload on a transient hiccup (more common from a
-    # shared cloud IP, which gets rate-limited more aggressively than a home
-    # connection) rather than raising -- that empty dict is indistinguishable
-    # from "this ticker genuinely has no info," so worth a quick retry before
-    # giving up, especially since callers like classify_section() treat a
-    # missing quote_type as "fetch failed" and fall back to a generic bucket.
+    # Retries with growing backoff: yfinance's full .info scrape occasionally
+    # comes back empty on a hiccup (more common from a shared cloud IP, which
+    # can get rate-limited harder/longer than a home connection) rather than
+    # raising -- that empty dict is indistinguishable from "this ticker
+    # genuinely has no info." Growing the delay (not just a flat 1.5s) gives
+    # a real rate-limit window more chance to actually clear.
     info = None
-    for attempt in range(3):
+    for attempt, delay in enumerate([0, 2, 5]):
+        if delay:
+            time.sleep(delay)
         try:
             candidate = yf.Ticker(ticker).info
         except Exception as e:
@@ -173,11 +174,24 @@ def fetch_fundamentals(ticker: str, use_cache: bool = True) -> dict:
         if candidate:
             info = candidate
             break
-        if attempt < 2:
-            time.sleep(1.5)
+        print(f"[fetch_fundamentals] '{ticker}' attempt {attempt + 1} returned empty info.")
 
     if not info:
-        return {}
+        # Full .info failed every attempt -- fall back to fast_info, a
+        # separate (lighter) endpoint that still carries quoteType and
+        # marketCap. Degraded (no sector/industry/dividend_yield), but
+        # enough for classify_section() to at least get the ETF-vs-equity
+        # call right instead of falling back to "no idea" blind.
+        try:
+            fi = dict(yf.Ticker(ticker).fast_info)
+        except Exception as e:
+            print(f"[fetch_fundamentals] '{ticker}' fast_info fallback also failed: {e}")
+            return {}
+        if not fi:
+            return {}
+        print(f"[fetch_fundamentals] '{ticker}': using fast_info fallback (full info unavailable).")
+        return {"long_name": None, "quote_type": fi.get("quoteType"), "sector": None, "industry": None,
+                "market_cap": fi.get("marketCap"), "dividend_yield": None}
 
     out = {key: info.get(src_key) for key, src_key in FUNDAMENTALS_FIELDS.items()}
 
