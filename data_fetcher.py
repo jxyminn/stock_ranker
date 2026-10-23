@@ -156,11 +156,25 @@ def fetch_fundamentals(ticker: str, use_cache: bool = True) -> dict:
             except Exception:
                 pass
 
-    try:
-        info = yf.Ticker(ticker).info
-    except Exception as e:
-        print(f"[fetch_fundamentals] '{ticker}' failed: {e}, skipping.")
-        return {}
+    # A couple of retries with a short backoff: yfinance occasionally returns
+    # an empty/partial payload on a transient hiccup (more common from a
+    # shared cloud IP, which gets rate-limited more aggressively than a home
+    # connection) rather than raising -- that empty dict is indistinguishable
+    # from "this ticker genuinely has no info," so worth a quick retry before
+    # giving up, especially since callers like classify_section() treat a
+    # missing quote_type as "fetch failed" and fall back to a generic bucket.
+    info = None
+    for attempt in range(3):
+        try:
+            candidate = yf.Ticker(ticker).info
+        except Exception as e:
+            candidate = None
+            print(f"[fetch_fundamentals] '{ticker}' attempt {attempt + 1} failed: {e}")
+        if candidate:
+            info = candidate
+            break
+        if attempt < 2:
+            time.sleep(1.5)
 
     if not info:
         return {}
