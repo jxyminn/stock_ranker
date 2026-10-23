@@ -20,16 +20,13 @@ If no token is available anywhere, add_ticker() still saves locally (so it
 works immediately in a local session) but reports that it won't survive a
 redeploy until it's pushed some other way.
 """
-import base64
 import json
-import subprocess
 from pathlib import Path
-
-import requests
 
 from classification import classify_section
 from config import WATCHLIST_SECTIONS
 from data_fetcher import fetch_fundamentals, validate_tickers
+from github_sync import commit_json, get_token
 
 ADDITIONS_PATH = Path(__file__).parent / "watchlist_additions.json"
 
@@ -66,63 +63,6 @@ def ticker_exists(ticker: str) -> bool:
     return False
 
 
-def _get_token() -> str | None:
-    try:
-        import streamlit as st
-        token = st.secrets.get("GITHUB_TOKEN")
-        if token:
-            return token
-    except Exception:
-        pass
-
-    import os
-    if os.environ.get("GITHUB_TOKEN"):
-        return os.environ["GITHUB_TOKEN"]
-
-    try:
-        result = subprocess.run(["gh", "auth", "token"], capture_output=True, text=True, timeout=5)
-        if result.returncode == 0 and result.stdout.strip():
-            return result.stdout.strip()
-    except Exception:
-        pass
-
-    return None
-
-
-def _commit_to_github(content: dict, token: str, commit_message: str) -> tuple[bool, str]:
-    """Write the merged additions dict back to GitHub via the Contents API."""
-    api_url = f"https://api.github.com/repos/{GITHUB_REPO}/contents/{GITHUB_FILE_PATH}"
-    headers = {"Authorization": f"token {token}", "Accept": "application/vnd.github+json"}
-
-    sha = None
-    try:
-        resp = requests.get(api_url, headers=headers, params={"ref": GITHUB_BRANCH}, timeout=15)
-        if resp.status_code == 200:
-            sha = resp.json()["sha"]
-        elif resp.status_code != 404:
-            return False, f"GitHub API error checking existing file: {resp.status_code} {resp.text[:200]}"
-    except requests.RequestException as e:
-        return False, f"Couldn't reach GitHub API: {e}"
-
-    body_text = json.dumps(content, indent=2) + "\n"
-    payload = {
-        "message": commit_message,
-        "content": base64.b64encode(body_text.encode()).decode(),
-        "branch": GITHUB_BRANCH,
-    }
-    if sha:
-        payload["sha"] = sha
-
-    try:
-        resp = requests.put(api_url, headers=headers, json=payload, timeout=15)
-    except requests.RequestException as e:
-        return False, f"Couldn't reach GitHub API: {e}"
-
-    if resp.status_code in (200, 201):
-        return True, "committed"
-    return False, f"GitHub API error committing: {resp.status_code} {resp.text[:300]}"
-
-
 def add_ticker(query: str) -> dict:
     """
     Resolve, classify, and persist a new ticker. Returns:
@@ -154,9 +94,10 @@ def add_ticker(query: str) -> dict:
     additions[section].append(candidate)
     ADDITIONS_PATH.write_text(json.dumps(additions, indent=2) + "\n")
 
-    token = _get_token()
+    token = get_token()
     if token:
-        ok, detail = _commit_to_github(additions, token, f"Add {candidate} to watchlist (via app)")
+        ok, detail = commit_json(GITHUB_REPO, GITHUB_BRANCH, GITHUB_FILE_PATH, additions,
+                                  token, f"Add {candidate} to watchlist (via app)")
         if ok:
             return {"ok": True, "ticker": candidate, "section": section,
                      "message": f"Added {candidate} to \"{section}\" and saved permanently.",

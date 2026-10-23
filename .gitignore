@@ -12,3 +12,8 @@ cache/
 stock_images/
 
 .claude/settings.local.json
+
+# Local cache of portfolio_store.py's data -- the real copy lives in the
+# PRIVATE jxyminn/stock_ranker_portfolio repo (share counts + cost basis
+# reveal actual dollar amounts, which must never land in this public repo).
+portfolio.json
