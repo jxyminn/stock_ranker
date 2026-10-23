@@ -14,7 +14,8 @@ import streamlit as st
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from config import DEFAULT_TRAIN_UNIVERSE, HORIZONS, MODELS_DIR, WATCHLIST_SECTIONS
+from config import DEFAULT_TRAIN_UNIVERSE, HORIZONS, MODELS_DIR
+from watchlist_store import get_effective_sections
 from data_fetcher import search_ticker, validate_tickers
 from predict import latest_features_for_ticker, load_models, score_universe
 from insights import generate_why_bullets
@@ -596,15 +597,16 @@ with st.sidebar:
         st.caption(f"Analyzing {len(chosen)} large, well-known US companies.")
     elif source == "My watchlist":
         st.caption("Grouped from your saved stock images. Uncheck a section to leave it out.")
+        watchlist_sections = get_effective_sections()
         chosen = []
-        for section_name, tickers in WATCHLIST_SECTIONS.items():
+        for section_name, tickers in watchlist_sections.items():
             with st.expander(f"{section_name} ({len(tickers)})", expanded=False):
                 include = st.checkbox("Include this section", value=True, key=f"wl_{section_name}")
                 st.caption(", ".join(tickers))
             if include:
                 chosen.extend(tickers)
         chosen = list(dict.fromkeys(chosen))  # dedupe, keep order
-        st.caption(f"{len(chosen)} stock{'s' if len(chosen) != 1 else ''} selected across {sum(1 for s in WATCHLIST_SECTIONS if st.session_state.get(f'wl_{s}', True))} sections.")
+        st.caption(f"{len(chosen)} stock{'s' if len(chosen) != 1 else ''} selected across {sum(1 for s in watchlist_sections if st.session_state.get(f'wl_{s}', True))} sections.")
     else:
         st.markdown("""<div style="background:#0c2d45;border-radius:6px;padding:10px 12px;
             color:#a5c8f0;font-size:.82rem;margin-bottom:8px;line-height:1.5;">

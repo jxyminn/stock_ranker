@@ -153,6 +153,25 @@ latest available prices. The **models** themselves are static once trained —
 re-run `train.py` periodically (e.g. weekly) so they don't go stale as market
 regimes shift. You can put `train.py` on a cron job / scheduled task.
 
+## Nightly briefing
+
+`nightly_briefing.py` pulls fresh data for every ticker in
+`config.WATCHLIST_SECTIONS`, runs the already-trained models for a forecast,
+and compares the result to the previous run to flag what's actually *new*:
+a forecast or chance-of-gain swing beyond the thresholds in `config.py`, an
+earnings report due within a week, a golden/death cross that just happened,
+a new near-all-time-high, or notably one-sided news. It does **not** retrain
+the models — that's still a separate, manual, much slower step (`train.py`).
+
+In this deployment it runs automatically every night via
+`.github/workflows/nightly.yml` (a GitHub Actions scheduled job — no
+computer needs to stay on), which commits `briefing/snapshot.json` (raw data,
+for tomorrow's diff) and `briefing/latest.json` (the digest) back to the
+repo. The **Daily Briefing** Streamlit page just reads `briefing/latest.json`
+as a static file — it never calls yfinance itself, so it loads instantly.
+You can also run it manually any time with `python nightly_briefing.py`, or
+trigger the scheduled job early from the repo's Actions tab.
+
 ## Important caveats — please read
 
 - **This is not a reliable way to beat the market.** Stock prices are close
@@ -194,4 +213,8 @@ regimes shift. You can put `train.py` on a cron job / scheduled task.
 | `search.py` | CLI ticker lookup by company name |
 | `app.py` | Streamlit UI — single-stock research (main page) |
 | `pages/1_Ranker.py` | Streamlit UI — multi-stock ranking (secondary page) |
+| `pages/2_My_Watchlist.py` | Streamlit UI — per-stock info browser for `config.WATCHLIST_SECTIONS` |
+| `pages/3_Daily_Briefing.py` | Streamlit UI — reads `briefing/latest.json`, shows what changed overnight |
+| `nightly_briefing.py` | Generates the nightly watchlist digest (see "Nightly briefing" above) |
+| `.github/workflows/nightly.yml` | Scheduled GitHub Actions job that runs `nightly_briefing.py` and commits the result |
 | `tests/` | pytest suite — see "Running the tests" above |

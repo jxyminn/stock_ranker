@@ -22,12 +22,13 @@ from plotly.subplots import make_subplots
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from config import HORIZONS, MODELS_DIR, WATCHLIST_SECTIONS
+from config import HORIZONS, MODELS_DIR
 from data_fetcher import fetch_fundamentals, fetch_price_stats, fetch_earnings
 from predict import latest_features_for_ticker, load_models
 from features import FEATURE_COLUMNS
 from insights import generate_why_bullets
 from analyze import fmt_money, fmt, build_price_history
+from watchlist_store import add_ticker, get_effective_sections
 
 st.set_page_config(
     page_title="My Watchlist · Stock Research",
@@ -315,12 +316,32 @@ def render_stock_panel(info: dict, sections: list[str]) -> None:
 # ── Sidebar ───────────────────────────────────────────────────────────────────
 with st.sidebar:
     st.markdown("## Your sections")
+
+    with st.expander("➕ Add a stock", expanded=False):
+        new_query = st.text_input("Ticker or company name", key="add_ticker_input",
+                                   placeholder="e.g. AMAT or 'Applied Materials'")
+        if st.button("Add to watchlist", key="add_ticker_btn", use_container_width=True):
+            if not new_query.strip():
+                st.warning("Type a ticker or company name first.")
+            else:
+                with st.spinner(f"Looking up '{new_query}'…"):
+                    result = add_ticker(new_query)
+                if result["ok"]:
+                    st.success(result["message"])
+                    st.session_state.pop("watchlist_info", None)
+                    if result["persisted"]:
+                        st.caption("Refresh the page in a minute or two to see it everywhere "
+                                   "once Streamlit Cloud redeploys.")
+                else:
+                    st.error(result["message"])
+
     st.caption("From your saved stock images. Uncheck a section to leave it out.")
     st.markdown("---")
 
     chosen: list[str] = []
     ticker_sections: dict[str, list[str]] = {}
-    for section_name, tickers in WATCHLIST_SECTIONS.items():
+    watchlist_sections = get_effective_sections()
+    for section_name, tickers in watchlist_sections.items():
         include = st.checkbox(f"{section_name} ({len(tickers)})", value=True, key=f"mw_{section_name}")
         if include:
             chosen.extend(tickers)
@@ -347,7 +368,7 @@ st.markdown("""<div class="main-header">
 
 st.markdown("".join(
     f'<span class="section-chip"><b>{len(t)}</b> {name}</span>'
-    for name, t in WATCHLIST_SECTIONS.items()
+    for name, t in watchlist_sections.items()
 ), unsafe_allow_html=True)
 st.markdown("<br>", unsafe_allow_html=True)
 
@@ -412,7 +433,7 @@ with rcol:
 st.markdown("<br>", unsafe_allow_html=True)
 
 shown_any = False
-for section_name, tickers in WATCHLIST_SECTIONS.items():
+for section_name, tickers in watchlist_sections.items():
     if not st.session_state.get(f"mw_{section_name}", True):
         continue
     section_tickers = [t for t in tickers if t in info_map]

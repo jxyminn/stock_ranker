@@ -1,0 +1,41 @@
+name: Nightly Briefing
+
+on:
+  schedule:
+    # 02:00 UTC daily -- after US market close (9/10pm ET depending on DST),
+    # well before the next trading day opens. Runs every day including
+    # weekends; nightly_briefing.py just reflects the last available close
+    # on non-trading days, which is harmless.
+    - cron: "0 2 * * *"
+  workflow_dispatch: {}  # lets us trigger a run manually from the Actions tab
+
+permissions:
+  contents: write  # needed to commit briefing/*.json back to the repo
+
+jobs:
+  briefing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run nightly briefing
+        run: python nightly_briefing.py
+
+      - name: Commit and push updated briefing
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add briefing/
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Nightly briefing: $(date -u +'%Y-%m-%d')"
+            git push
+          fi

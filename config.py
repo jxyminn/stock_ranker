@@ -129,3 +129,18 @@ CACHE_DIR.mkdir(exist_ok=True)
 BACKTEST_RESULTS_PATH = MODELS_DIR / "backtest_results.json"
 
 RANDOM_STATE = 42
+
+# Where nightly_briefing.py writes its output. Committed to the repo (not
+# gitignored) so the deployed Streamlit app can read it as a static file --
+# there's no running server/database behind the deployed app, so "last
+# night's data" has to live in the repo itself for the app to see it.
+BRIEFING_DIR = Path(__file__).parent / "briefing"
+BRIEFING_DIR.mkdir(exist_ok=True)
+
+# Thresholds nightly_briefing.py uses to decide what counts as "notable"
+# enough to call out, vs. routine day-to-day noise.
+BRIEFING_FORECAST_MOVE_PP = 3.0     # predicted-return change vs. last run, in percentage points
+BRIEFING_PROB_UP_MOVE_PP = 8.0      # chance-of-gain change vs. last run, in percentage points
+BRIEFING_EARNINGS_WITHIN_DAYS = 7   # flag earnings reports due this soon
+BRIEFING_NEAR_ATH_PCT = 2.0         # "near its all-time high" = within this % of it
+BRIEFING_SENTIMENT_EXTREME = 0.35   # |mean headline sentiment score| above this is "notable"

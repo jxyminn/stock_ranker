@@ -1,0 +1,433 @@
+{
+  "generated_at": "2026-10-23T04:05:17.702501+00:00",
+  "tickers_covered": 210,
+  "tickers_skipped": [],
+  "models_available": true,
+  "is_first_run": true,
+  "notable": [
+    {
+      "ticker": "WM",
+      "name": "Waste Management, Inc.",
+      "price": 239.1,
+      "day_chg_pct": 4.147,
+      "notes": [
+        "earnings in 6 days",
+        "within 1.8% of its all-time high"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "name": "Apple Inc.",
+      "price": 348.22,
+      "day_chg_pct": 1.23,
+      "notes": [
+        "within 0.0% of its all-time high"
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft Corporation",
+      "price": 521.08,
+      "day_chg_pct": -2.227,
+      "notes": [
+        "earnings in 7 days"
+      ]
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet Inc.",
+      "price": 324.22,
+      "day_chg_pct": -3.149,
+      "notes": [
+        "earnings in 7 days"
+      ]
+    },
+    {
+      "ticker": "GOOG",
+      "name": "Alphabet Inc.",
+      "price": 320.76,
+      "day_chg_pct": -3.079,
+      "notes": [
+        "earnings in 7 days"
+      ]
+    },
+    {
+      "ticker": "AMKR",
+      "name": "Amkor Technology, Inc.",
+      "price": 39.05,
+      "day_chg_pct": -10.702,
+      "notes": [
+        "earnings in 5 days"
+      ]
+    },
+    {
+      "ticker": "STX",
+      "name": "Seagate Technology Holdings plc",
+      "price": 642.14,
+      "day_chg_pct": -7.856,
+      "notes": [
+        "earnings in 6 days"
+      ]
+    },
+    {
+      "ticker": "WDC",
+      "name": "Western Digital Corporation",
+      "price": 354.19,
+      "day_chg_pct": -6.425,
+      "notes": [
+        "earnings in 1 days"
+      ]
+    },
+    {
+      "ticker": "SKHY",
+      "name": "SK hynix Inc.",
+      "price": 131.69,
+      "day_chg_pct": -8.07,
+      "notes": [
+        "earnings in 6 days"
+      ]
+    },
+    {
+      "ticker": "VRT",
+      "name": "Vertiv Holdings Co",
+      "price": 195.59,
+      "day_chg_pct": -7.806,
+      "notes": [
+        "earnings in 6 days"
+      ]
+    },
+    {
+      "ticker": "NOW",
+      "name": "ServiceNow, Inc.",
+      "price": 157.0,
+      "day_chg_pct": 2.534,
+      "notes": [
+        "earnings in 7 days"
+      ]
+    },
+    {
+      "ticker": "FFIV",
+      "name": "F5, Inc.",
+      "price": 450.08,
+      "day_chg_pct": -1.856,
+      "notes": [
+        "earnings in 6 days"
+      ]
+    },
+    {
+      "ticker": "RDWR",
+      "name": "Radware Ltd.",
+      "price": 29.78,
+      "day_chg_pct": -1.651,
+      "notes": [
+        "earnings in 6 days"
+      ]
+    },
+    {
+      "ticker": "FTNT",
+      "name": "Fortinet, Inc.",
+      "price": 172.98,
+      "day_chg_pct": -0.615,
+      "notes": [
+        "earnings in 7 days"
+      ]
+    },
+    {
+      "ticker": "ADP",
+      "name": "Automatic Data Processing, Inc.",
+      "price": 307.94,
+      "day_chg_pct": 4.564,
+      "notes": [
+        "earnings in 6 days"
+      ]
+    },
+    {
+      "ticker": "LMT",
+      "name": "Lockheed Martin Corporation",
+      "price": 589.91,
+      "day_chg_pct": 6.963,
+      "notes": [
+        "earnings in 0 days"
+      ]
+    },
+    {
+      "ticker": "BE",
+      "name": "Bloom Energy Corporation",
+      "price": 217.77,
+      "day_chg_pct": -8.703,
+      "notes": [
+        "earnings in 1 days"
+      ]
+    },
+    {
+      "ticker": "GEV",
+      "name": "GE Vernova Inc.",
+      "price": 827.42,
+      "day_chg_pct": -10.638,
+      "notes": [
+        "earnings in 6 days"
+      ]
+    },
+    {
+      "ticker": "XYL",
+      "name": "Xylem Inc.",
+      "price": 109.26,
+      "day_chg_pct": 2.736,
+      "notes": [
+        "earnings in 5 days"
+      ]
+    },
+    {
+      "ticker": "ECL",
+      "name": "Ecolab Inc.",
+      "price": 292.3,
+      "day_chg_pct": 1.461,
+      "notes": [
+        "earnings in 5 days"
+      ]
+    },
+    {
+      "ticker": "AWK",
+      "name": "American Water Works Company, Inc.",
+      "price": 143.23,
+      "day_chg_pct": 6.285,
+      "notes": [
+        "earnings in 7 days"
+      ]
+    },
+    {
+      "ticker": "HON",
+      "name": "Honeywell International Inc.",
+      "price": 218.31,
+      "day_chg_pct": 1.667,
+      "notes": [
+        "earnings in 0 days"
+      ]
+    },
+    {
+      "ticker": "SOFI",
+      "name": "SoFi Technologies, Inc.",
+      "price": 14.77,
+      "day_chg_pct": -0.872,
+      "notes": [
+        "earnings in 5 days"
+      ]
+    },
+    {
+      "ticker": "HOOD",
+      "name": "Robinhood Markets, Inc.",
+      "price": 96.58,
+      "day_chg_pct": -5.249,
+      "notes": [
+        "earnings in 6 days"
+      ]
+    },
+    {
+      "ticker": "PYPL",
+      "name": "PayPal Holdings, Inc.",
+      "price": 57.535,
+      "day_chg_pct": 0.586,
+      "notes": [
+        "earnings in 5 days"
+      ]
+    },
+    {
+      "ticker": "V",
+      "name": "Visa Inc.",
+      "price": 414.34,
+      "day_chg_pct": 1.591,
+      "notes": [
+        "earnings in 6 days"
+      ]
+    },
+    {
+      "ticker": "MA",
+      "name": "Mastercard Incorporated",
+      "price": 633.21,
+      "day_chg_pct": 1.701,
+      "notes": [
+        "within 0.0% of its all-time high"
+      ]
+    },
+    {
+      "ticker": "LLY",
+      "name": "Eli Lilly and Company",
+      "price": 1306.6899,
+      "day_chg_pct": 2.828,
+      "notes": [
+        "within 0.0% of its all-time high"
+      ]
+    },
+    {
+      "ticker": "ABBV",
+      "name": "AbbVie Inc.",
+      "price": 285.19,
+      "day_chg_pct": 0.137,
+      "notes": [
+        "within 1.3% of its all-time high"
+      ]
+    },
+    {
+      "ticker": "SPGI",
+      "name": "S&P Global Inc.",
+      "price": 453.1,
+      "day_chg_pct": 2.243,
+      "notes": [
+        "earnings in 5 days"
+      ]
+    },
+    {
+      "ticker": "ABG",
+      "name": "Asbury Automotive Group, Inc.",
+      "price": 173.43,
+      "day_chg_pct": 5.718,
+      "notes": [
+        "earnings in 5 days"
+      ]
+    },
+    {
+      "ticker": "TXNM",
+      "name": "TXNM Energy, Inc.",
+      "price": 58.73,
+      "day_chg_pct": 0.41,
+      "notes": [
+        "within 0.5% of its all-time high"
+      ]
+    },
+    {
+      "ticker": "CVX",
+      "name": "Chevron Corporation",
+      "price": 226.68,
+      "day_chg_pct": -0.044,
+      "notes": [
+        "within 0.0% of its all-time high"
+      ]
+    },
+    {
+      "ticker": "OLED",
+      "name": "OLED",
+      "price": 87.45,
+      "day_chg_pct": 4.293,
+      "notes": [
+        "earnings in 7 days"
+      ]
+    },
+    {
+      "ticker": "JEPI",
+      "name": "JPMorgan Equity Premium Income ETF",
+      "price": 57.29,
+      "day_chg_pct": -0.105,
+      "notes": [
+        "within 0.3% of its all-time high"
+      ]
+    },
+    {
+      "ticker": "XYLD",
+      "name": "Global X S&P 500 Covered Call ETF",
+      "price": 41.3,
+      "day_chg_pct": -0.578,
+      "notes": [
+        "within 0.9% of its all-time high"
+      ]
+    },
+    {
+      "ticker": "SCHD",
+      "name": "Schwab U.S. Dividend Equity ETF",
+      "price": 35.4,
+      "day_chg_pct": 2.135,
+      "notes": [
+        "within 0.0% of its all-time high"
+      ]
+    },
+    {
+      "ticker": "DGRO",
+      "name": "iShares Core Dividend Growth ETF",
+      "price": 80.29,
+      "day_chg_pct": 1.159,
+      "notes": [
+        "within 0.0% of its all-time high"
+      ]
+    },
+    {
+      "ticker": "SDY",
+      "name": "State Street SPDR S&P Dividend ETF",
+      "price": 159.94,
+      "day_chg_pct": 2.532,
+      "notes": [
+        "within 0.0% of its all-time high"
+      ]
+    },
+    {
+      "ticker": "DGRW",
+      "name": "WisdomTree U.S. Quality Dividend Growth Fund",
+      "price": 99.12,
+      "day_chg_pct": -0.392,
+      "notes": [
+        "within 1.0% of its all-time high"
+      ]
+    },
+    {
+      "ticker": "SPY",
+      "name": "State Street SPDR S&P 500 ETF Trust",
+      "price": 763.96,
+      "day_chg_pct": -1.181,
+      "notes": [
+        "within 1.9% of its all-time high"
+      ]
+    },
+    {
+      "ticker": "VOO",
+      "name": "Vanguard S&P 500 ETF",
+      "price": 702.3,
+      "day_chg_pct": -1.185,
+      "notes": [
+        "within 1.9% of its all-time high"
+      ]
+    },
+    {
+      "ticker": "IVV",
+      "name": "iShares Core S&P 500 ETF",
+      "price": 767.41,
+      "day_chg_pct": -1.19,
+      "notes": [
+        "within 1.9% of its all-time high"
+      ]
+    },
+    {
+      "ticker": "SPTM",
+      "name": "State Street SPDR Portfolio S&P 1500 Composite Stock Market ETF",
+      "price": 92.36,
+      "day_chg_pct": -1.166,
+      "notes": [
+        "within 1.9% of its all-time high"
+      ]
+    },
+    {
+      "ticker": "SCHV",
+      "name": "Schwab U.S. Large-Cap Value ETF",
+      "price": 34.57,
+      "day_chg_pct": 0.494,
+      "notes": [
+        "within 1.8% of its all-time high"
+      ]
+    },
+    {
+      "ticker": "VTV",
+      "name": "Vanguard Morningstar Value ETF",
+      "price": 226.55,
+      "day_chg_pct": 0.716,
+      "notes": [
+        "within 0.0% of its all-time high"
+      ]
+    },
+    {
+      "ticker": "IVE",
+      "name": "iShares S&P 500 Value ETF",
+      "price": 239.47,
+      "day_chg_pct": 0.597,
+      "notes": [
+        "within 0.0% of its all-time high"
+      ]
+    }
+  ]
+}
