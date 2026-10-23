@@ -145,13 +145,18 @@ BRIEFING_EARNINGS_WITHIN_DAYS = 7   # flag earnings reports due this soon
 BRIEFING_NEAR_ATH_PCT = 2.0         # "near its all-time high" = within this % of it
 BRIEFING_SENTIMENT_EXTREME = 0.35   # |mean headline sentiment score| above this is "notable"
 
-# Forecast accuracy tracker (nightly_briefing.py): every time a ticker's
-# forecast move gets flagged as notable, we log that prediction and check
-# back once its horizon has elapsed to see whether it was actually right.
+# Forecast accuracy tracker (nightly_briefing.py): logs EVERY ticker's
+# prediction for every horizon (not just ones flagged as a notable overnight
+# move -- that would bias the sample toward "things already in motion"), and
+# checks back once each one's horizon has elapsed to see whether it was
+# actually right. A given (ticker, horizon) only gets re-logged once its
+# previous entry resolves, so "pending" stays naturally capped at roughly
+# one per ticker per horizon rather than growing every night.
 # Caps the resolved-history list so the committed JSON file doesn't grow
-# forever -- this is a rolling recent track record, not a permanent archive
-# (backtest.py already covers rigorous historical evaluation).
-FORECAST_LOG_MAX_RESOLVED = 1500
+# forever -- this is a rolling recent track record (sized for a few months
+# at full-coverage volume), not a permanent archive (backtest.py already
+# covers rigorous large-sample historical evaluation).
+FORECAST_LOG_MAX_RESOLVED = 10000
 # Stop waiting on a pending prediction after this many calendar days past
 # its expected resolution date (data gaps, a ticker dropping out of the
 # watchlist, etc. shouldn't let a pending entry linger forever).

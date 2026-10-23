@@ -3849,8 +3849,8 @@
   },
   "DRO.AX": {
     "name": "DroneShield Limited",
-    "price": 1.44,
-    "day_chg_pct": -4.636,
+    "price": 1.435,
+    "day_chg_pct": -4.967,
     "sma_50": 1.6827400088310243,
     "sma_200": 2.8150100082159044,
     "golden_cross": false,
@@ -3860,7 +3860,7 @@
     "predictions": {
       "5": {
         "pred_return_pct": -2.217,
-        "prob_up": 0.2471
+        "prob_up": 0.2523
       },
       "10": {
         "pred_return_pct": 0.253,
@@ -3868,19 +3868,19 @@
       },
       "15": {
         "pred_return_pct": 5.731,
-        "prob_up": 0.4498
+        "prob_up": 0.4372
       },
       "30": {
-        "pred_return_pct": 10.936,
+        "pred_return_pct": 10.892,
         "prob_up": 0.5166
       },
       "50": {
         "pred_return_pct": 12.987,
-        "prob_up": 0.5839
+        "prob_up": 0.5866
       },
       "200": {
-        "pred_return_pct": 69.661,
-        "prob_up": 0.5611
+        "pred_return_pct": 72.45,
+        "prob_up": 0.5592
       }
     }
   },

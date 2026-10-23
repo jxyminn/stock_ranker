@@ -119,15 +119,13 @@ def pct_from_ath(price: float, ath: float | None) -> float | None:
     return (1 - price / ath) * 100
 
 
-def diff_ticker(ticker: str, name: str, today: dict, yesterday: dict | None) -> tuple[dict, list[dict]]:
-    """Compare today's snapshot to yesterday's (if any). Returns the
-    notable-event flags for this ticker, plus a separate list of
-    "forecast moved" events (ticker/horizon/prediction) worth logging to
-    the accuracy tracker -- those are the only notes that are actual
-    predictions rather than facts (earnings dates, crossovers, etc. aren't
-    something to check for "accuracy")."""
+def diff_ticker(ticker: str, name: str, today: dict, yesterday: dict | None) -> dict:
+    """Compare today's snapshot to yesterday's (if any) and return the
+    notable-event flags for this ticker. (The accuracy tracker logs every
+    prediction independently of these flags -- see update_forecast_log --
+    so a stock not showing up here can still be contributing to the Track
+    Record.)"""
     notes: list[str] = []
-    forecast_events: list[dict] = []
 
     if yesterday and today.get("predictions") and yesterday.get("predictions"):
         for h in HORIZONS:
@@ -137,22 +135,12 @@ def diff_ticker(ticker: str, name: str, today: dict, yesterday: dict | None) -> 
                 continue
             d_ret = t_pred["pred_return_pct"] - y_pred["pred_return_pct"]
             d_prob = (t_pred["prob_up"] - y_pred["prob_up"]) * 100
-            flagged = False
             if abs(d_ret) >= BRIEFING_FORECAST_MOVE_PP:
                 notes.append(f"{h}d forecast moved {d_ret:+.1f}pp overnight "
                              f"(now {t_pred['pred_return_pct']:+.1f}%)")
-                flagged = True
             if abs(d_prob) >= BRIEFING_PROB_UP_MOVE_PP:
                 notes.append(f"{h}d chance-of-gain moved {d_prob:+.0f}pp overnight "
                              f"(now {t_pred['prob_up'] * 100:.0f}%)")
-                flagged = True
-            if flagged:
-                forecast_events.append({
-                    "ticker": ticker, "horizon": h,
-                    "price_at_log": today["price"],
-                    "pred_return_pct": t_pred["pred_return_pct"],
-                    "prob_up": t_pred["prob_up"],
-                })
 
     if yesterday and today.get("golden_cross") is not None and yesterday.get("golden_cross") is not None:
         if today["golden_cross"] != yesterday["golden_cross"]:
@@ -173,14 +161,24 @@ def diff_ticker(ticker: str, name: str, today: dict, yesterday: dict | None) -> 
 
     diff = {"ticker": ticker, "name": name, "price": today["price"],
             "day_chg_pct": today.get("day_chg_pct"), "notes": notes}
-    return diff, forecast_events
+    return diff
 
 
-def update_forecast_log(today_snapshot: dict[str, dict], new_events: list[dict], today: datetime) -> dict:
-    """Resolve any pending predictions whose horizon has elapsed (using
-    today's price for that ticker), log the new ones flagged tonight, and
-    return a per-horizon accuracy scorecard. Mutates nothing on disk itself
-    -- caller writes the returned log."""
+def update_forecast_log(today_snapshot: dict[str, dict], today: datetime) -> dict:
+    """
+    Resolve any pending predictions whose horizon has elapsed (using today's
+    price for that ticker), then seed a fresh entry for every (ticker,
+    horizon) that doesn't already have one pending.
+
+    Deliberately tracks EVERY prediction, not just ones flagged as a notable
+    overnight move -- only logging the "notable" subset would bias the
+    sample toward stocks that were already moving a lot, which isn't a fair
+    read of the model's actual accuracy. A given (ticker, horizon) only gets
+    a new entry once its previous one resolves, so "pending" stays capped at
+    roughly one per ticker per horizon rather than growing every night.
+
+    Mutates nothing on disk itself -- caller writes the returned log.
+    """
     log = {"pending": [], "resolved": []}
     if FORECAST_LOG_PATH.exists():
         try:
@@ -190,6 +188,7 @@ def update_forecast_log(today_snapshot: dict[str, dict], new_events: list[dict],
 
     still_pending = []
     newly_resolved = []
+    in_flight: set[tuple[str, int]] = set()
     for entry in log.get("pending", []):
         logged_at_date = datetime.fromisoformat(entry["logged_at"]).date()
         calendar_days_elapsed = (today.date() - logged_at_date).days
@@ -210,9 +209,18 @@ def update_forecast_log(today_snapshot: dict[str, dict], new_events: list[dict],
             pass  # gave up waiting (ticker likely dropped out of the watchlist) -- just drop it
         else:
             still_pending.append(entry)
+            in_flight.add((entry["ticker"], entry["horizon"]))
 
-    for event in new_events:
-        still_pending.append({**event, "logged_at": today.date().isoformat()})
+    for ticker, info in today_snapshot.items():
+        for h_str, pred in info.get("predictions", {}).items():
+            h = int(h_str)
+            if (ticker, h) in in_flight:
+                continue
+            still_pending.append({
+                "ticker": ticker, "horizon": h, "price_at_log": info["price"],
+                "pred_return_pct": pred["pred_return_pct"], "prob_up": pred["prob_up"],
+                "logged_at": today.date().isoformat(),
+            })
 
     resolved = (log.get("resolved", []) + newly_resolved)[-FORECAST_LOG_MAX_RESOLVED:]
     log = {"pending": still_pending, "resolved": resolved}
@@ -269,15 +277,13 @@ def main():
           f"({len(skipped)} skipped: {skipped[:10]}{'...' if len(skipped) > 10 else ''})")
 
     notable = []
-    all_forecast_events = []
     for t, info in today_snapshot.items():
-        diff, forecast_events = diff_ticker(t, info["name"], info, yesterday_snapshot.get(t))
+        diff = diff_ticker(t, info["name"], info, yesterday_snapshot.get(t))
         if diff["notes"]:
             notable.append(diff)
-        all_forecast_events.extend(forecast_events)
 
     now = datetime.now(timezone.utc)
-    tracker_result = update_forecast_log(today_snapshot, all_forecast_events, now)
+    tracker_result = update_forecast_log(today_snapshot, now)
 
     briefing = {
         "generated_at": now.isoformat(),

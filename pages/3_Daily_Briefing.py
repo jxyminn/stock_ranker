@@ -18,6 +18,7 @@ import streamlit as st
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from config import BRIEFING_DIR
+from reliability import load_backtest_results
 
 st.set_page_config(
     page_title="Daily Briefing · Stock Research",
@@ -183,22 +184,52 @@ else:
                 <ul class="note-list">{notes_html}</ul>
             </div>""", unsafe_allow_html=True)
 
-st.markdown('<div class="section-heading">📊 Track Record</div>', unsafe_allow_html=True)
+HORIZON_LABELS = {5: "1 week", 10: "2 weeks", 15: "3 weeks", 30: "1 month",
+                   50: "~2.5 months", 200: "~9.5 months"}
+
+st.markdown('<div class="section-heading">📚 Historical Backtest (large sample)</div>', unsafe_allow_html=True)
 st.caption(
-    "Every time a stock's forecast moved enough to get flagged above, it gets logged and "
-    "checked again once that horizon's time window has passed — this is how that's actually "
-    "turned out, not just the model's training-time stats."
+    "From walk-forward testing on years of historical data across the full training "
+    "universe — a much bigger sample than the live tracker below can build up on its own, "
+    "but it's backward-looking: how the model performed on the past, not a guarantee about "
+    "what's ahead."
+)
+backtest_results = load_backtest_results()
+if not backtest_results:
+    st.info("No backtest on record yet — run `python backtest.py`.")
+else:
+    run_at = backtest_results["run_at"][:10]
+    rows = []
+    for h_str, stats in backtest_results["horizons"].items():
+        h = int(h_str)
+        rows.append({
+            "Horizon": HORIZON_LABELS.get(h, f"{h}d"),
+            "Mean IC": f"{stats['mean_ic']:+.3f}",
+            "AUC": f"{stats['mean_auc']:.3f}",
+            "% days IC > 0": f"{stats['pct_days_positive_ic'] * 100:.0f}%",
+            "Folds": stats["n_folds"],
+        })
+    st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True)
+    st.caption(f"Run {run_at} on {backtest_results['universe_size']} tickers, "
+               f"{backtest_results['folds']} walk-forward folds. AUC 0.5 = coin flip; "
+               f"IC near 0 means the ranking has little real signal that horizon.")
+
+st.markdown('<div class="section-heading">📊 Live Track Record (small, growing sample)</div>', unsafe_allow_html=True)
+st.caption(
+    "Every prediction made for every stock gets logged and checked again once that "
+    "horizon's time window has passed — not just the ones flagged as notable above, since "
+    "only tracking the flagged ones would bias this toward stocks already in motion. This "
+    "is how the model has actually done in live use, which can drift from the backtest above "
+    "as market conditions change."
 )
 
 track_record = briefing.get("track_record", {})
 n_pending = briefing.get("track_record_pending", 0)
 
 if not track_record:
-    st.info(f"No forecast flags have had enough time to resolve yet "
+    st.info(f"No predictions have had enough time to resolve yet "
              f"({n_pending} pending). Check back as the briefing accumulates history.")
 else:
-    HORIZON_LABELS = {5: "1 week", 10: "2 weeks", 15: "3 weeks", 30: "1 month",
-                       50: "~2.5 months", 200: "~9.5 months"}
     rows = []
     for h_str, stats in track_record.items():
         h = int(h_str)
@@ -215,7 +246,7 @@ else:
     st.caption(
         f"**Direction correct**: did the stock actually move the same way (up/down) the "
         f"forecast said? **Chance-of-gain correct**: did the \"chance of a gain\" call end up "
-        f"on the right side of 50%? **{n_pending}** forecasts are still waiting for their "
+        f"on the right side of 50%? **{n_pending}** predictions are still waiting for their "
         f"horizon to pass. Small sample sizes early on (especially for 50-/200-day horizons, "
         f"which take months to resolve) will be noisy — a handful of resolved predictions "
         f"doesn't prove much either way yet."

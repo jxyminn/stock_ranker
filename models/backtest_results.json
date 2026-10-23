@@ -1,35 +1,49 @@
 {
-  "run_at": "2026-07-08T00:21:14.224749+00:00",
-  "universe_size": 50,
+  "run_at": "2026-10-23T04:53:48.502087+00:00",
+  "universe_size": 233,
   "folds": 6,
   "step_days": 40,
   "horizons": {
     "5": {
-      "mean_ic": 0.017338540174944846,
-      "pct_days_positive_ic": 0.5458333333333333,
-      "mean_top_bottom_spread_pct": 0.3390831486870127,
-      "mean_auc": 0.5184615552220325,
+      "mean_ic": 0.024179055831430516,
+      "pct_days_positive_ic": 0.5504385964912281,
+      "mean_top_bottom_spread_pct": 1.300458254952314,
+      "mean_auc": 0.4927549314903172,
       "n_folds": 6
     },
     "10": {
-      "mean_ic": 0.03379471788715486,
-      "pct_days_positive_ic": 0.5666666666666668,
-      "mean_top_bottom_spread_pct": 1.8052144618926393,
-      "mean_auc": 0.5169057499667874,
+      "mean_ic": 0.014524693086724392,
+      "pct_days_positive_ic": 0.5162280701754386,
+      "mean_top_bottom_spread_pct": 1.2346569372495793,
+      "mean_auc": 0.5062785514614726,
       "n_folds": 6
     },
     "15": {
-      "mean_ic": 0.04194797919167667,
-      "pct_days_positive_ic": 0.5750000000000001,
-      "mean_top_bottom_spread_pct": 2.5058072591871716,
-      "mean_auc": 0.523567242185667,
+      "mean_ic": 0.026816181999459048,
+      "pct_days_positive_ic": 0.5714912280701754,
+      "mean_top_bottom_spread_pct": 1.420105134655491,
+      "mean_auc": 0.5356171593569233,
       "n_folds": 6
     },
     "30": {
-      "mean_ic": 0.07285874349739897,
-      "pct_days_positive_ic": 0.6375,
-      "mean_top_bottom_spread_pct": 5.3075086717585656,
-      "mean_auc": 0.5467963775987407,
+      "mean_ic": 0.030505194611675335,
+      "pct_days_positive_ic": 0.5307017543859649,
+      "mean_top_bottom_spread_pct": 11.419393259371985,
+      "mean_auc": 0.5684602559373996,
+      "n_folds": 6
+    },
+    "50": {
+      "mean_ic": 0.029272446662277105,
+      "pct_days_positive_ic": 0.5574561403508772,
+      "mean_top_bottom_spread_pct": 14.75307452008599,
+      "mean_auc": 0.581334753995333,
+      "n_folds": 6
+    },
+    "200": {
+      "mean_ic": 0.21618119251124582,
+      "pct_days_positive_ic": 1.0,
+      "mean_top_bottom_spread_pct": 422.3214623817208,
+      "mean_auc": 0.6509376523075562,
       "n_folds": 6
     }
   }

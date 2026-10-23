@@ -35,7 +35,7 @@ import pandas as pd
 import lightgbm as lgb
 from sklearn.metrics import roc_auc_score, mean_absolute_error
 
-from config import HORIZONS, TRAINING_LOOKBACK_DAYS, DEFAULT_TRAIN_UNIVERSE, RANDOM_STATE, LGBM_PARAMS
+from config import HORIZONS, TRAINING_LOOKBACK_DAYS, TRAINING_UNIVERSE, RANDOM_STATE, LGBM_PARAMS
 from data_fetcher import fetch_history_batch, fetch_earnings
 from features import (
     build_features, add_earnings_features, add_macro_features,
@@ -150,7 +150,8 @@ def run_fold(full: pd.DataFrame, horizon: int, test_start, test_end, top_n: int,
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--universe", nargs="+", default=None,
-                         help="Tickers to backtest on. Defaults to the built-in training universe.")
+                         help="Tickers to backtest on. Defaults to config.TRAINING_UNIVERSE "
+                              "(same universe train.py uses).")
     parser.add_argument("--horizons", type=int, nargs="+", default=None,
                          help="Horizons to backtest. Defaults to config.HORIZONS.")
     parser.add_argument("--lookback-days", type=int, default=TRAINING_LOOKBACK_DAYS)
@@ -159,7 +160,7 @@ def main():
     parser.add_argument("--top-n", type=int, default=5, help="Top/bottom N stocks per day for the spread metric")
     args = parser.parse_args()
 
-    universe = args.universe or DEFAULT_TRAIN_UNIVERSE
+    universe = args.universe or TRAINING_UNIVERSE
     horizons = args.horizons or HORIZONS
 
     print(f"Fetching {len(universe)} tickers, {args.lookback_days} days of history...")
