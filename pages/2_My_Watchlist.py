@@ -3,25 +3,31 @@ My Watchlist: an information browser for the tickers pulled from the user's
 own stock screenshots/infographics (config.WATCHLIST_SECTIONS).
 
 No cross-stock ranking or comparison -- each stock gets its own self-
-contained panel: fundamentals, technical read, earnings timing, 50/200-day
-moving averages, all-time high, and this stock's own model-predicted
-forecast per horizon (5d through 200d/~9.5mo). Nothing here sorts or picks
-winners across stocks -- for that, see the Ranker page.
+contained panel: price chart, fundamentals, technical read, earnings timing,
+50/200-day moving averages, all-time high, and this stock's own model-
+predicted forecast per horizon (5d through 200d/~9.5mo). Nothing here sorts
+or picks winners across stocks -- for that, see the Ranker page.
+
+Charts are loaded on demand (a per-stock toggle) rather than all at once --
+with 200+ tickers, building and rendering every chart up front would make
+the page very slow to load.
 """
 import sys
 from pathlib import Path
 
 import pandas as pd
+import plotly.graph_objects as go
 import streamlit as st
+from plotly.subplots import make_subplots
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from config import HORIZONS, MODELS_DIR, WATCHLIST_SECTIONS
-from data_fetcher import fetch_fundamentals, fetch_price_stats
+from data_fetcher import fetch_fundamentals, fetch_price_stats, fetch_earnings
 from predict import latest_features_for_ticker, load_models
 from features import FEATURE_COLUMNS
 from insights import generate_why_bullets
-from analyze import fmt_money, fmt
+from analyze import fmt_money, fmt, build_price_history
 
 st.set_page_config(
     page_title="My Watchlist · Stock Research",
@@ -82,6 +88,85 @@ HORIZON_LABELS = {
 }
 
 
+def build_price_chart(price_df: pd.DataFrame, earnings_df: pd.DataFrame | None) -> go.Figure:
+    """Price + SMA20/50 + Bollinger Bands on top, volume below, earnings dates marked.
+    Same chart as the Stock Research page, kept here as its own copy since
+    each Streamlit page in this app is self-contained."""
+    fig = make_subplots(
+        rows=2, cols=1, shared_xaxes=True, row_heights=[0.72, 0.28], vertical_spacing=0.03,
+    )
+
+    fig.add_trace(go.Scatter(
+        x=price_df.index, y=price_df["bb_upper"], line=dict(width=0),
+        showlegend=False, hoverinfo="skip",
+    ), row=1, col=1)
+    fig.add_trace(go.Scatter(
+        x=price_df.index, y=price_df["bb_lower"], line=dict(width=0),
+        fill="tonexty", fillcolor="rgba(88,166,255,0.08)",
+        name="Bollinger Band (20d)", hoverinfo="skip",
+    ), row=1, col=1)
+
+    fig.add_trace(go.Scatter(
+        x=price_df.index, y=price_df["sma_50"], line=dict(color="#d29922", width=1, dash="dot"),
+        name="50d average",
+    ), row=1, col=1)
+    fig.add_trace(go.Scatter(
+        x=price_df.index, y=price_df["sma_20"], line=dict(color="#8b949e", width=1, dash="dot"),
+        name="20d average",
+    ), row=1, col=1)
+    fig.add_trace(go.Scatter(
+        x=price_df.index, y=price_df["close"], line=dict(color="#58a6ff", width=2),
+        name="Close price",
+        hovertemplate="%{x|%b %d, %Y}<br>$%{y:.2f}<extra></extra>",
+    ), row=1, col=1)
+
+    vol_colors = ["#3fb950" if c >= o else "#f85149"
+                  for c, o in zip(price_df["close"], price_df["open"])]
+    fig.add_trace(go.Bar(
+        x=price_df.index, y=price_df["volume"], marker_color=vol_colors,
+        name="Volume", showlegend=False,
+    ), row=2, col=1)
+
+    if earnings_df is not None and not earnings_df.empty:
+        idx = earnings_df.index.tz_localize(None) if earnings_df.index.tz is not None else earnings_df.index
+        chart_start = price_df.index.min()
+        chart_end = price_df.index.max()
+        chart_start_naive = chart_start.tz_localize(None) if chart_start.tz is not None else chart_start
+        chart_end_naive = chart_end.tz_localize(None) if chart_end.tz is not None else chart_end
+        for date, row in zip(idx, earnings_df["surprise_pct"]):
+            if date < chart_start_naive or date > chart_end_naive:
+                continue
+            color = "#3fb950" if pd.notna(row) and row > 0 else "#f85149" if pd.notna(row) and row < 0 else "#8b949e"
+            fig.add_vline(x=date, line=dict(color=color, width=1, dash="dash"),
+                          opacity=0.6, row=1, col=1)
+
+    fig.update_layout(
+        paper_bgcolor="#161b22", plot_bgcolor="#0d1117",
+        font=dict(color="#e6edf3"),
+        legend=dict(orientation="h", yanchor="bottom", y=1.12, xanchor="left", x=0),
+        margin=dict(l=0, r=0, t=70, b=0),
+        height=380,
+        hovermode="x unified",
+        xaxis=dict(
+            rangeselector=dict(
+                y=1.3,
+                buttons=[
+                    dict(count=1, label="1M", step="month", stepmode="backward"),
+                    dict(count=3, label="3M", step="month", stepmode="backward"),
+                    dict(count=6, label="6M", step="month", stepmode="backward"),
+                    dict(count=1, label="1Y", step="year", stepmode="backward"),
+                    dict(step="all", label="All"),
+                ],
+                bgcolor="#21262d", activecolor="#388bfd", font=dict(color="#e6edf3", size=11),
+            ),
+        ),
+    )
+    fig.update_xaxes(gridcolor="#21262d")
+    fig.update_yaxes(gridcolor="#21262d", title_text="Price ($)", row=1, col=1)
+    fig.update_yaxes(gridcolor="#21262d", title_text="Volume", row=2, col=1)
+    return fig
+
+
 @st.cache_resource(show_spinner=False)
 def get_models():
     missing = [h for h in HORIZONS if not (MODELS_DIR / f"horizon_{h}.joblib").exists()]
@@ -132,6 +217,21 @@ def render_stock_panel(info: dict, sections: list[str]) -> None:
     with st.expander(label):
         if len(sections) > 1:
             st.caption("In sections: " + ", ".join(sections))
+
+        if st.checkbox("📈 Show price chart", key=f"show_chart_{ticker}"):
+            cache_key = f"chart_data_{ticker}"
+            if cache_key not in st.session_state:
+                with st.spinner(f"Loading chart for {ticker}…"):
+                    st.session_state[cache_key] = (build_price_history(ticker), fetch_earnings(ticker))
+            price_df, earnings_df = st.session_state[cache_key]
+            if price_df is not None and not price_df.empty:
+                st.plotly_chart(build_price_chart(price_df, earnings_df), use_container_width=True,
+                                 theme=None, key=f"chart_{ticker}")
+                st.caption("Dashed vertical lines mark earnings reports — green if that report beat "
+                           "estimates, red if it missed.")
+            else:
+                st.caption("No price history available for a chart.")
+            st.markdown("---")
 
         col1, col2 = st.columns(2)
         with col1:
