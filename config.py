@@ -24,20 +24,26 @@ DEFAULT_TRAIN_UNIVERSE = [
 # User-curated watchlist, grouped by theme. Sourced from the user's own stock
 # screenshots/infographics (screened against yfinance so every symbol resolves
 # to real price data; a few needed the correct listing, e.g. ABB Ltd -> ABBNY,
-# DroneShield -> DRO.AX, Siemens -> SIEGY).
+# DroneShield -> DRO.AX, Siemens -> SIEGY, Aixtron -> AIXA.DE, BE Semiconductor
+# -> BESI.AS, IQE plc -> IQE.L, LPKF Laser -> LPK.DE, MKS Instruments -> MKSI,
+# Corbus Pharmaceuticals -> CRBP).
 WATCHLIST_SECTIONS = {
     "Mega-Cap Tech & Platforms": [
         "AAPL", "MSFT", "GOOGL", "GOOG", "AMZN", "META", "NVDA", "TSLA",
-        "AVGO", "ORCL", "IBM", "NFLX",
+        "AVGO", "ORCL", "IBM", "NFLX", "BABA",
     ],
     "Semiconductors & Chip Supply Chain": [
         "AMD", "INTC", "TSM", "QCOM", "MU", "ARM", "ASML", "MRVL", "ON",
         "MPWR", "NVTS", "AMKR", "STX", "WDC", "SNDK", "COHR", "LITE",
         "VIAV", "CRDO", "ALAB", "AEHR", "AAOI", "AXTI", "PENG", "SKHY",
+        "AMAT", "AMS", "ASM", "CAMT", "FN", "FORM", "GLW", "IPGP", "LASR",
+        "LPTH", "MTSI", "ONTO", "TER", "AIXA.DE", "BESI.AS", "IQE.L",
+        "MKSI", "LPK.DE",
     ],
     "AI Infrastructure & Data Centers": [
         "VRT", "NBIS", "IREN", "CRWV", "APLD", "DOCN", "CIFR", "SMCI",
         "NET", "ETN", "NVT", "EOSE", "FLNC", "STEM", "ENVX", "MOD", "AAON",
+        "DELL", "HUT", "MVST", "QS", "SLDP",
     ],
     "Cloud, SaaS & Enterprise Software": [
         "CRM", "NOW", "SNOW", "MDB", "DDOG", "TEAM", "DT", "FROG", "ESTC",
@@ -49,33 +55,45 @@ WATCHLIST_SECTIONS = {
     "Space, Robotics & Defense": [
         "RKLB", "ASTS", "LUNR", "RDW", "UMAC", "AVAV", "ONDS", "KTOS",
         "RTX", "GD", "LMT", "NOC", "BWXT", "DRO.AX", "SPCX", "JOBY", "PL",
+        "IRDM", "MNTS", "OUST", "RCAT", "SPCE",
     ],
     "Nuclear, Power & Clean Energy": [
         "CEG", "VST", "OKLO", "SMR", "NNE", "BE", "GEV", "SU", "XYL",
         "ECL", "AWK", "PWR", "ROK", "HON", "SIEGY", "NEE", "CCJ",
+        "APH", "CARR", "CAT", "CMI", "DUK", "EME", "ETR", "FIX", "FLR",
+        "GNRC", "JCI", "KBR", "MTZ",
     ],
-    "Quantum Computing": ["IONQ", "RGTI", "QUBT", "INFQ"],
+    "Quantum Computing": ["IONQ", "RGTI", "QUBT", "INFQ", "QBTS"],
     "Fintech, Payments & Consumer Platforms": [
         "SOFI", "UPST", "HOOD", "PYPL", "V", "MA", "CPNG", "UBER",
-        "XPEV", "CRCL", "OSCR",
+        "XPEV", "CRCL", "OSCR", "COIN", "MARA", "RIOT",
     ],
-    "Healthcare & Biotech": ["LLY", "ABBV", "JNJ", "NVO", "ISRG", "ADPT"],
+    "Healthcare & Biotech": [
+        "LLY", "ABBV", "JNJ", "NVO", "ISRG", "ADPT",
+        "BEAM", "CRSP", "MRNA", "RXRX", "CRBP",
+    ],
     "Industrials, Financials & Diversified": [
         "ANET", "SPGI", "WM", "MPLX", "JPM", "BAC", "MELI", "SYM",
         "ZETA", "TE", "NOK", "WTW", "LOAR", "LAD", "ABG", "CMC", "WWW",
         "TXNM", "CVX", "FTAI", "SGI", "BRK-B", "COST", "ABBNY", "UHAL-B",
+        "CLF",
     ],
     "Congressional Trade-Tracker Picks": [
         "ADPT", "TXNM", "WWW", "CMC", "OLED", "OKLO", "JOBY",
     ],
     "Dividend & Income ETFs": [
         "QQQI", "JEPI", "JEPQ", "GPIQ", "FEPI", "BTCI", "XYLD", "SCHD",
-        "DGRO", "SDY", "VYM", "DGRW",
+        "DGRO", "SDY", "VYM", "DGRW", "VYMI",
     ],
     "Broad Market & Core ETFs": [
         "QQQ", "SPY", "VOO", "IVV", "VTI", "ITOT", "SCHB", "SPTM", "VT",
         "ACWI", "SPGM", "VXUS", "IXUS", "SCHF", "SCHX", "SCHG", "SCHV",
         "VUG", "VTV", "IVW", "IVE", "SPYG", "SPYV", "BND", "AGG", "SCHZ",
+        "MGC", "MGK", "VO", "VONE", "VONG", "VOOG",
+    ],
+    "Sector & Thematic ETFs": [
+        "AIQ", "ARKX", "BLOK", "DRAM", "FBT", "IHI", "PJP", "PKB", "PPA",
+        "SOXX", "VCR", "VDE", "VGT",
     ],
 }
 
