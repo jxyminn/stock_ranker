@@ -26,6 +26,8 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from config import BRIEFING_DIR
 from reliability import load_backtest_results
+from stock_info import get_models, build_stock_info, render_stock_panel
+from watchlist_store import get_effective_sections
 
 st.set_page_config(
     page_title="Daily Briefing · Stock Research",
@@ -209,6 +211,36 @@ HORIZON_LABELS = {5: "1 week", 10: "2 weeks", 15: "3 weeks", 30: "1 month",
                    50: "~2.5 months", 200: "~9.5 months"}
 
 
+def render_ticker_detail(ticker: str) -> None:
+    """Fetches (and caches for the session) + renders the exact same info
+    panel My Watchlist uses -- fundamentals, technical read, earnings,
+    moving averages/ATH, forecast, optional chart. Shown expanded since
+    the user just clicked specifically to see this one."""
+    cache_key = f"briefing_detail_{ticker}"
+    if cache_key not in st.session_state:
+        models, _ = get_models()
+        with st.spinner(f"Loading {ticker}…"):
+            st.session_state[cache_key] = build_stock_info(ticker, models)
+    info = st.session_state[cache_key]
+    if info is None:
+        st.warning(f"Couldn't load data for {ticker}.")
+        return
+    sections = [name for name, tickers in get_effective_sections().items() if ticker in tickers]
+    render_stock_panel(info, sections, key_prefix=f"briefing_{ticker}_", expanded=True)
+
+
+def render_selectable_table(df: pd.DataFrame, key: str) -> None:
+    """A table where clicking a row shows that stock's full info panel
+    right below it -- the same one My Watchlist shows."""
+    event = st.dataframe(
+        df, use_container_width=True, hide_index=True,
+        on_select="rerun", selection_mode="single-row", key=key,
+    )
+    selected_rows = event.selection.rows if event else []
+    if selected_rows:
+        render_ticker_detail(df.iloc[selected_rows[0]]["Ticker"])
+
+
 tab_notable, tab_backtest, tab_track = st.tabs(
     [f"🔔 Notable Tonight ({len(briefing.get('notable', []))})",
      "📚 Historical Backtest", "📊 Live Track Record"]
@@ -219,13 +251,16 @@ with tab_notable:
     if not notable:
         st.info("Nothing notable overnight across your watchlist.")
     else:
+        st.caption("Click any row to see that stock's full info — fundamentals, technical read, "
+                   "forecast, and chart.")
+
         forecast_matcher = CATEGORIES[1][1]  # "Big forecast moves"
         top_moves = build_table(notable, forecast_matcher).head(15)
         if not top_moves.empty:
             st.markdown("##### 🔥 Biggest moves tonight")
             st.caption("The 15 largest forecast/chance-of-gain swings across the whole watchlist, "
                        "regardless of category — start here.")
-            st.dataframe(top_moves, use_container_width=True, hide_index=True)
+            render_selectable_table(top_moves, key="tbl_biggest_moves")
             st.markdown("---")
 
         used = set()
@@ -235,12 +270,12 @@ with tab_notable:
                 continue
             used.update(item["ticker"] for item in items)
             with st.expander(f"{heading} ({len(items)})"):
-                st.dataframe(build_table(items, matcher), use_container_width=True, hide_index=True)
+                render_selectable_table(build_table(items, matcher), key=f"tbl_{heading}")
 
         leftover = [n for n in notable if n["ticker"] not in used]
         if leftover:
             with st.expander(f"📌 Other notable changes ({len(leftover)})"):
-                st.dataframe(build_table(leftover, lambda n: True), use_container_width=True, hide_index=True)
+                render_selectable_table(build_table(leftover, lambda n: True), key="tbl_other")
 
 with tab_backtest:
     st.caption(
