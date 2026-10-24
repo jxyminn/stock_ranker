@@ -2,12 +2,13 @@ name: Weekly Model Retrain
 
 on:
   schedule:
-    # 03:00 UTC every Sunday -- retraining doesn't need to happen nightly
+    # 03:33 UTC every Sunday -- retraining doesn't need to happen nightly
     # (the model's learned patterns don't meaningfully shift day to day,
     # and this takes much longer than the nightly briefing: ~5 years of
     # history for ~230 tickers vs. one fresh row per ticker). Weekly keeps
-    # the model current without paying that cost every night.
-    - cron: "0 3 * * 0"
+    # the model current without paying that cost every night. Off the exact
+    # hour deliberately -- see nightly.yml's comment on why.
+    - cron: "33 3 * * 0"
   workflow_dispatch: {}  # lets us trigger a retrain manually from the Actions tab
 
 permissions:

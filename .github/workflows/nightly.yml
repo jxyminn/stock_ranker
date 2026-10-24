@@ -2,11 +2,15 @@ name: Nightly Briefing
 
 on:
   schedule:
-    # 02:00 UTC daily -- after US market close (9/10pm ET depending on DST),
-    # well before the next trading day opens. Runs every day including
+    # 02:17 UTC daily -- after US market close (9/10pm ET depending on DST),
+    # well before the next trading day opens. Deliberately NOT on the hour:
+    # GitHub's own docs warn that exact-top-of-hour schedules are the
+    # highest-load slot and most likely to be delayed or silently dropped
+    # (confirmed happened once already at 0 2 * * *, with zero run recorded
+    # for a window that should have fired). Runs every day including
     # weekends; nightly_briefing.py just reflects the last available close
     # on non-trading days, which is harmless.
-    - cron: "0 2 * * *"
+    - cron: "17 2 * * *"
   workflow_dispatch: {}  # lets us trigger a run manually from the Actions tab
 
 permissions:
