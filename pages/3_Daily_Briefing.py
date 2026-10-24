@@ -60,10 +60,6 @@ html, body, [class*="css"] { font-family: 'Inter', 'Segoe UI', sans-serif; }
 .metric-card .value { font-size: 1.6rem; font-weight: 700; color: #58a6ff; margin-top: 4px; }
 .metric-card .sub   { color: #8b949e; font-size: 0.8rem; margin-top: 2px; }
 
-.section-heading {
-    font-size: 1.2rem; font-weight: 700; color: #e6edf3;
-    margin: 26px 0 10px; padding-bottom: 6px; border-bottom: 1px solid #30363d;
-}
 .note-card {
     background: #161b22; border: 1px solid #30363d; border-radius: 10px;
     padding: 14px 16px; margin-bottom: 10px;
@@ -149,108 +145,111 @@ if briefing.get("is_first_run"):
         tomorrow's run will start flagging overnight changes.
     </div>""", unsafe_allow_html=True)
 
-notable = briefing.get("notable", [])
-if not notable:
-    st.info("Nothing notable overnight across your watchlist.")
-else:
-    used = set()
-    for heading, matcher in CATEGORIES:
-        items = [n for n in notable if any(matcher(note) for note in n["notes"])]
-        if not items:
-            continue
-        st.markdown(f'<div class="section-heading">{heading}</div>', unsafe_allow_html=True)
-        for item in items:
-            used.add(item["ticker"])
-            chg = item.get("day_chg_pct")
-            chg_str = f" ({chg:+.2f}% today)" if chg is not None else ""
-            matching_notes = [n for n in item["notes"] if matcher(n)]
-            notes_html = "".join(f"<li>{n}</li>" for n in matching_notes)
-            st.markdown(f"""<div class="note-card">
-                <span class="note-ticker">{item['ticker']}</span>
-                <span class="note-price">{item['name']} — ${item['price']:.2f}{chg_str}</span>
-                <ul class="note-list">{notes_html}</ul>
-            </div>""", unsafe_allow_html=True)
-
-    leftover = [n for n in notable if n["ticker"] not in used]
-    if leftover:
-        st.markdown('<div class="section-heading">📌 Other notable changes</div>', unsafe_allow_html=True)
-        for item in leftover:
-            chg = item.get("day_chg_pct")
-            chg_str = f" ({chg:+.2f}% today)" if chg is not None else ""
-            notes_html = "".join(f"<li>{n}</li>" for n in item["notes"])
-            st.markdown(f"""<div class="note-card">
-                <span class="note-ticker">{item['ticker']}</span>
-                <span class="note-price">{item['name']} — ${item['price']:.2f}{chg_str}</span>
-                <ul class="note-list">{notes_html}</ul>
-            </div>""", unsafe_allow_html=True)
-
 HORIZON_LABELS = {5: "1 week", 10: "2 weeks", 15: "3 weeks", 30: "1 month",
                    50: "~2.5 months", 200: "~9.5 months"}
 
-st.markdown('<div class="section-heading">📚 Historical Backtest (large sample)</div>', unsafe_allow_html=True)
-st.caption(
-    "From walk-forward testing on years of historical data across the full training "
-    "universe — a much bigger sample than the live tracker below can build up on its own, "
-    "but it's backward-looking: how the model performed on the past, not a guarantee about "
-    "what's ahead."
-)
-backtest_results = load_backtest_results()
-if not backtest_results:
-    st.info("No backtest on record yet — run `python backtest.py`.")
-else:
-    run_at = backtest_results["run_at"][:10]
-    rows = []
-    for h_str, stats in backtest_results["horizons"].items():
-        h = int(h_str)
-        rows.append({
-            "Horizon": HORIZON_LABELS.get(h, f"{h}d"),
-            "Mean IC": f"{stats['mean_ic']:+.3f}",
-            "AUC": f"{stats['mean_auc']:.3f}",
-            "% days IC > 0": f"{stats['pct_days_positive_ic'] * 100:.0f}%",
-            "Folds": stats["n_folds"],
-        })
-    st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True)
-    st.caption(f"Run {run_at} on {backtest_results['universe_size']} tickers, "
-               f"{backtest_results['folds']} walk-forward folds. AUC 0.5 = coin flip; "
-               f"IC near 0 means the ranking has little real signal that horizon.")
 
-st.markdown('<div class="section-heading">📊 Live Track Record (small, growing sample)</div>', unsafe_allow_html=True)
-st.caption(
-    "Every prediction made for every stock gets logged and checked again once that "
-    "horizon's time window has passed — not just the ones flagged as notable above, since "
-    "only tracking the flagged ones would bias this toward stocks already in motion. This "
-    "is how the model has actually done in live use, which can drift from the backtest above "
-    "as market conditions change."
+def render_note_card(item: dict, notes: list[str]) -> None:
+    chg = item.get("day_chg_pct")
+    chg_str = f" ({chg:+.2f}% today)" if chg is not None else ""
+    notes_html = "".join(f"<li>{n}</li>" for n in notes)
+    st.markdown(f"""<div class="note-card">
+        <span class="note-ticker">{item['ticker']}</span>
+        <span class="note-price">{item['name']} — ${item['price']:.2f}{chg_str}</span>
+        <ul class="note-list">{notes_html}</ul>
+    </div>""", unsafe_allow_html=True)
+
+
+tab_notable, tab_backtest, tab_track = st.tabs(
+    [f"🔔 Notable Tonight ({len(briefing.get('notable', []))})",
+     "📚 Historical Backtest", "📊 Live Track Record"]
 )
 
-track_record = briefing.get("track_record", {})
-n_pending = briefing.get("track_record_pending", 0)
+with tab_notable:
+    notable = briefing.get("notable", [])
+    if not notable:
+        st.info("Nothing notable overnight across your watchlist.")
+    else:
+        used = set()
+        for heading, matcher in CATEGORIES:
+            items = [n for n in notable if any(matcher(note) for note in n["notes"])]
+            if not items:
+                continue
+            with st.expander(f"{heading} ({len(items)})"):
+                for item in items:
+                    used.add(item["ticker"])
+                    matching_notes = [n for n in item["notes"] if matcher(n)]
+                    render_note_card(item, matching_notes)
 
-if not track_record:
-    st.info(f"No predictions have had enough time to resolve yet "
-             f"({n_pending} pending). Check back as the briefing accumulates history.")
-else:
-    rows = []
-    for h_str, stats in track_record.items():
-        h = int(h_str)
-        rows.append({
-            "Horizon": HORIZON_LABELS.get(h, f"{h}d"),
-            "Resolved": stats["n_resolved"],
-            "Direction correct": f"{stats['direction_accuracy'] * 100:.0f}%",
-            "Chance-of-gain correct": f"{stats['classifier_accuracy'] * 100:.0f}%",
-            "Avg error (pp)": stats["mean_abs_error_pp"],
-            "Avg predicted": f"{stats['mean_predicted_pct']:+.1f}%",
-            "Avg actual": f"{stats['mean_actual_pct']:+.1f}%",
-        })
-    st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True)
+        leftover = [n for n in notable if n["ticker"] not in used]
+        if leftover:
+            with st.expander(f"📌 Other notable changes ({len(leftover)})"):
+                for item in leftover:
+                    render_note_card(item, item["notes"])
+
+with tab_backtest:
     st.caption(
-        f"**Direction correct**: did the stock actually move the same way (up/down) the "
-        f"forecast said? **Chance-of-gain correct**: did the \"chance of a gain\" call end up "
-        f"on the right side of 50%? **{n_pending}** predictions are still waiting for their "
-        f"horizon to pass. Small sample sizes early on (especially for 50-/200-day horizons, "
-        f"which take months to resolve) will be noisy — a handful of resolved predictions "
-        f"doesn't prove much either way yet."
+        "From walk-forward testing on years of historical data across the full training "
+        "universe — a much bigger sample than the live tracker can build up on its own, "
+        "but it's backward-looking: how the model performed on the past, not a guarantee "
+        "about what's ahead."
     )
+    backtest_results = load_backtest_results()
+    if not backtest_results:
+        st.info("No backtest on record yet — run `python backtest.py`.")
+    else:
+        run_at = backtest_results["run_at"][:10]
+        rows = []
+        for h_str, stats in backtest_results["horizons"].items():
+            h = int(h_str)
+            rows.append({
+                "Horizon": HORIZON_LABELS.get(h, f"{h}d"),
+                "Mean IC": f"{stats['mean_ic']:+.3f}",
+                "AUC": f"{stats['mean_auc']:.3f}",
+                "% days IC > 0": f"{stats['pct_days_positive_ic'] * 100:.0f}%",
+                "Folds": stats["n_folds"],
+            })
+        st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True)
+        st.caption(f"Run {run_at} on {backtest_results['universe_size']} tickers, "
+                   f"{backtest_results['folds']} walk-forward folds. AUC 0.5 = coin flip; "
+                   f"IC near 0 means the ranking has little real signal that horizon.")
+
+with tab_track:
+    st.caption(
+        "Every prediction made for every stock gets logged and checked again once that "
+        "horizon's time window has passed — not just the ones flagged as notable, since "
+        "only tracking flagged ones would bias this toward stocks already in motion. This "
+        "is how the model has actually done in live use, which can drift from the backtest "
+        "as market conditions change."
+    )
+    track_record = briefing.get("track_record", {})
+    n_pending = briefing.get("track_record_pending", 0)
+
+    if not track_record:
+        st.info(f"No predictions have had enough time to resolve yet "
+                 f"({n_pending} pending). Check back as the briefing accumulates history.")
+    else:
+        rows = []
+        for h_str, stats in track_record.items():
+            h = int(h_str)
+            rows.append({
+                "Horizon": HORIZON_LABELS.get(h, f"{h}d"),
+                "Resolved": stats["n_resolved"],
+                "Direction correct": f"{stats['direction_accuracy'] * 100:.0f}%",
+                "Chance-of-gain correct": f"{stats['classifier_accuracy'] * 100:.0f}%",
+                "Avg error (pp)": stats["mean_abs_error_pp"],
+                "Avg predicted": f"{stats['mean_predicted_pct']:+.1f}%",
+                "Avg actual": f"{stats['mean_actual_pct']:+.1f}%",
+            })
+        st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True)
+        st.caption(
+            f"**Direction correct**: did the stock actually move the same way (up/down) the "
+            f"forecast said? **Chance-of-gain correct**: did the \"chance of a gain\" call end "
+            f"up on the right side of 50%? **{n_pending}** predictions are still waiting for "
+            f"their horizon to pass. Small sample sizes early on (especially for 50-/200-day "
+            f"horizons, which take months to resolve) will be noisy — a handful of resolved "
+            f"predictions doesn't prove much either way yet."
+        )
 
 st.markdown("---")
 st.caption(
