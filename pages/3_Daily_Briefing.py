@@ -6,8 +6,15 @@ calls yfinance or runs models itself, so it loads instantly.
 
 This is a summary digest of what changed overnight, not buy/sell/hold
 instructions -- see the disclaimer at the bottom.
+
+Rendered as sortable tables rather than one card of prose per ticker --
+with 280+ tickers, a stock that triggered six separate forecast-move notes
+(one per horizon) used to mean eleven lines of text to read just for that
+one ticker. A table lets you sort by magnitude and scan the whole night at
+once instead.
 """
 import json
+import re
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -59,14 +66,6 @@ html, body, [class*="css"] { font-family: 'Inter', 'Segoe UI', sans-serif; }
 .metric-card .label { color: #8b949e; font-size: 0.78rem; text-transform: uppercase; letter-spacing: .08em; }
 .metric-card .value { font-size: 1.6rem; font-weight: 700; color: #58a6ff; margin-top: 4px; }
 .metric-card .sub   { color: #8b949e; font-size: 0.8rem; margin-top: 2px; }
-
-.note-card {
-    background: #161b22; border: 1px solid #30363d; border-radius: 10px;
-    padding: 14px 16px; margin-bottom: 10px;
-}
-.note-ticker { font-weight: 700; font-size: 1.05rem; color: #e6edf3; }
-.note-price  { color: #8b949e; font-size: .85rem; margin-left: 8px; }
-.note-list   { margin: 6px 0 0; padding-left: 18px; color: #c9d1d9; font-size: .88rem; line-height: 1.6; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -77,6 +76,67 @@ CATEGORIES = [
     ("🚀 Near an all-time high", lambda n: "all-time high" in n),
     ("📰 Notably one-sided news", lambda n: "headlines" in n),
 ]
+
+# Pulls the sortable number back out of nightly_briefing.py's note strings
+# (ticker/horizon/magnitude), so the page can sort by "biggest" instead of
+# just listing notes in whatever order they happened to be generated.
+_NOTE_PATTERNS = [
+    (re.compile(r"^(\d+)d forecast moved ([+-]?[\d.]+)pp overnight \(now ([+-]?[\d.]+)%\)$"),
+     lambda m: {"Horizon": int(m.group(1)), "Signal": "Forecast return",
+                "Change": f"{float(m.group(2)):+.1f}pp", "New value": f"{float(m.group(3)):+.1f}%",
+                "_magnitude": abs(float(m.group(2)))}),
+    (re.compile(r"^(\d+)d chance-of-gain moved ([+-]?[\d.]+)pp overnight \(now (\d+)%\)$"),
+     lambda m: {"Horizon": int(m.group(1)), "Signal": "Chance of gain",
+                "Change": f"{float(m.group(2)):+.0f}pp", "New value": f"{m.group(3)}%",
+                "_magnitude": abs(float(m.group(2)))}),
+    (re.compile(r"^earnings in (\d+) days?$"),
+     lambda m: {"Days until": int(m.group(1)), "_magnitude": -int(m.group(1))}),
+    (re.compile(r"^within ([\d.]+)% of its all-time high$"),
+     lambda m: {"% from ATH": f"{float(m.group(1)):.1f}%", "_magnitude": -float(m.group(1))}),
+    (re.compile(r"^notably (positive|negative) headlines \(score ([+-][\d.]+)\)$"),
+     lambda m: {"Tone": m.group(1).capitalize(), "Score": m.group(2),
+                "_magnitude": abs(float(m.group(2)))}),
+    (re.compile(r"^(golden|death) cross \((bullish|bearish)\)$"),
+     lambda m: {"Signal": f"{m.group(1).capitalize()} cross", "Read": m.group(2).capitalize(),
+                "_magnitude": 0}),
+]
+
+
+def parse_note(note: str) -> dict:
+    """Structured fields for a note string, or just {"Detail": note} if it
+    doesn't match a known pattern (keeps the table useful even for a note
+    format this page doesn't specifically know how to break apart)."""
+    for pattern, builder in _NOTE_PATTERNS:
+        m = pattern.match(note)
+        if m:
+            return builder(m)
+    return {"Detail": note, "_magnitude": 0}
+
+
+def build_table(items: list[dict], matcher) -> pd.DataFrame:
+    """One row per matching note (so a ticker with 6 flagged horizons gets
+    6 rows, not 1 row crammed with 6 lines of text), sorted by magnitude
+    descending so the biggest moves are at the top by default -- click any
+    column header to re-sort."""
+    rows = []
+    for item in items:
+        for note in item["notes"]:
+            if not matcher(note):
+                continue
+            parsed = parse_note(note)
+            chg = item.get("day_chg_pct")
+            rows.append({
+                "Ticker": item["ticker"],
+                "Company": item["name"],
+                "Price": item["price"],
+                "Today": chg,
+                **{k: v for k, v in parsed.items() if k != "_magnitude"},
+                "_magnitude": parsed["_magnitude"],
+            })
+    df = pd.DataFrame(rows).sort_values("_magnitude", ascending=False).drop(columns="_magnitude")
+    df["Price"] = df["Price"].map(lambda v: f"${v:.2f}")
+    df["Today"] = df["Today"].map(lambda v: f"{v:+.2f}%" if pd.notna(v) else "—")
+    return df.reset_index(drop=True)
 
 
 def load_briefing() -> dict | None:
@@ -149,17 +209,6 @@ HORIZON_LABELS = {5: "1 week", 10: "2 weeks", 15: "3 weeks", 30: "1 month",
                    50: "~2.5 months", 200: "~9.5 months"}
 
 
-def render_note_card(item: dict, notes: list[str]) -> None:
-    chg = item.get("day_chg_pct")
-    chg_str = f" ({chg:+.2f}% today)" if chg is not None else ""
-    notes_html = "".join(f"<li>{n}</li>" for n in notes)
-    st.markdown(f"""<div class="note-card">
-        <span class="note-ticker">{item['ticker']}</span>
-        <span class="note-price">{item['name']} — ${item['price']:.2f}{chg_str}</span>
-        <ul class="note-list">{notes_html}</ul>
-    </div>""", unsafe_allow_html=True)
-
-
 tab_notable, tab_backtest, tab_track = st.tabs(
     [f"🔔 Notable Tonight ({len(briefing.get('notable', []))})",
      "📚 Historical Backtest", "📊 Live Track Record"]
@@ -170,22 +219,28 @@ with tab_notable:
     if not notable:
         st.info("Nothing notable overnight across your watchlist.")
     else:
+        forecast_matcher = CATEGORIES[1][1]  # "Big forecast moves"
+        top_moves = build_table(notable, forecast_matcher).head(15)
+        if not top_moves.empty:
+            st.markdown("##### 🔥 Biggest moves tonight")
+            st.caption("The 15 largest forecast/chance-of-gain swings across the whole watchlist, "
+                       "regardless of category — start here.")
+            st.dataframe(top_moves, use_container_width=True, hide_index=True)
+            st.markdown("---")
+
         used = set()
         for heading, matcher in CATEGORIES:
             items = [n for n in notable if any(matcher(note) for note in n["notes"])]
             if not items:
                 continue
+            used.update(item["ticker"] for item in items)
             with st.expander(f"{heading} ({len(items)})"):
-                for item in items:
-                    used.add(item["ticker"])
-                    matching_notes = [n for n in item["notes"] if matcher(n)]
-                    render_note_card(item, matching_notes)
+                st.dataframe(build_table(items, matcher), use_container_width=True, hide_index=True)
 
         leftover = [n for n in notable if n["ticker"] not in used]
         if leftover:
             with st.expander(f"📌 Other notable changes ({len(leftover)})"):
-                for item in leftover:
-                    render_note_card(item, item["notes"])
+                st.dataframe(build_table(leftover, lambda n: True), use_container_width=True, hide_index=True)
 
 with tab_backtest:
     st.caption(
