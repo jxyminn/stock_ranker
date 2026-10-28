@@ -38,7 +38,7 @@ from config import (
 )
 from data_fetcher import fetch_fundamentals, fetch_news, fetch_price_stats
 from features import FEATURE_COLUMNS
-from predict import latest_features_for_ticker, load_models
+from predict import composite_score, latest_features_for_ticker, load_models
 from sentiment import summarize_articles
 from watchlist_store import get_effective_sections
 
@@ -109,6 +109,7 @@ def build_ticker_snapshot(ticker: str, models: dict | None) -> dict | None:
         "all_time_high": stats.get("all_time_high"),
         "days_until_earnings": float(days_until) if pd.notna(days_until) else None,
         "news_sentiment": news.get("mean_score"),
+        "vol_20d": float(feat["vol_20d"]),  # needed to rank by risk-adjusted score, same as predict.py
         "predictions": predictions,
     }
 
@@ -245,6 +246,92 @@ def update_forecast_log(today_snapshot: dict[str, dict], today: datetime) -> dic
             "n_newly_resolved": len(newly_resolved)}
 
 
+def _ranked_by_horizon(today_snapshot: dict[str, dict]) -> dict[int, list[str]]:
+    """Per horizon, every ticker with a prediction for it, ranked best-to-
+    worst by the same composite_score formula used everywhere else in the
+    app (predict.py) -- so "recommended" means the same thing here as it
+    does on the Ranker page, just computed from data already fetched
+    tonight instead of a fresh live run."""
+    ranked = {}
+    for h in HORIZONS:
+        rows = [(t, info) for t, info in today_snapshot.items() if str(h) in info.get("predictions", {})]
+        if not rows:
+            continue
+        tickers = [t for t, _ in rows]
+        pred_return = pd.Series([info["predictions"][str(h)]["pred_return_pct"] / 100 for _, info in rows])
+        prob_up = pd.Series([info["predictions"][str(h)]["prob_up"] for _, info in rows])
+        vol = pd.Series([info["vol_20d"] for _, info in rows])
+        scores = composite_score(pred_return, prob_up, vol)
+        order = scores.sort_values(ascending=False).index
+        ranked[h] = [tickers[i] for i in order]
+    return ranked
+
+
+def compute_recommendations(today_snapshot: dict[str, dict]) -> dict:
+    """
+    Same selection philosophy as the Ranker page's "Best Picks" tab
+    (get_short_long_picks), just applied automatically to the whole
+    watchlist every night instead of requiring someone to load it live:
+      - Short-term: top 20% (min 5) for BOTH the two shortest horizons --
+        dual confirmation, not just one noisy signal.
+      - Long-term: top 50% (min 5) across EVERY horizon, ranked by average
+        rank -- consistency across the whole forecast curve, not a one-
+        horizon fluke.
+    Returns the top 5 of each with enough data for the Recommendations page
+    to render without recomputing anything.
+    """
+    ranked = _ranked_by_horizon(today_snapshot)
+    if len(ranked) < 2:
+        return {"short_term": [], "long_term": []}
+
+    horizons = sorted(ranked.keys())
+    n = len(next(iter(ranked.values())))
+    cutoff_s = max(5, n // 5)
+    cutoff_l = max(5, n // 2)
+
+    short_h = horizons[:2]
+    short_tickers = set(ranked[short_h[0]][:cutoff_s]) & set(ranked[short_h[1]][:cutoff_s])
+
+    long_tickers = set(ranked[horizons[0]][:cutoff_l])
+    for h in horizons[1:]:
+        long_tickers &= set(ranked[h][:cutoff_l])
+
+    def pct_rank(ticker: str, h: int) -> int:
+        return ranked[h].index(ticker) + 1
+
+    short_list = []
+    for t in short_tickers:
+        info = today_snapshot[t]
+        p0 = info["predictions"][str(short_h[0])]
+        p1 = info["predictions"][str(short_h[1])]
+        short_list.append({
+            "ticker": t, "name": info["name"], "price": info["price"],
+            "horizons": short_h,
+            "pred_return_pct": [p0["pred_return_pct"], p1["pred_return_pct"]],
+            "prob_up": [p0["prob_up"], p1["prob_up"]],
+            "avg_rank": (pct_rank(t, short_h[0]) + pct_rank(t, short_h[1])) / 2,
+        })
+    short_list.sort(key=lambda r: r["avg_rank"])
+
+    long_list = []
+    for t in long_tickers:
+        info = today_snapshot[t]
+        longest_h = horizons[-1]
+        pred = info["predictions"][str(longest_h)]
+        avg_rank = sum(pct_rank(t, h) for h in horizons) / len(horizons)
+        long_list.append({
+            "ticker": t, "name": info["name"], "price": info["price"],
+            "horizon": longest_h,
+            "pred_return_pct": pred["pred_return_pct"], "prob_up": pred["prob_up"],
+            "avg_rank": avg_rank,
+            "rank_by_horizon": {h: pct_rank(t, h) for h in horizons},
+        })
+    long_list.sort(key=lambda r: r["avg_rank"])
+
+    return {"short_term": short_list[:5], "long_term": long_list[:5],
+            "universe_size": n, "short_horizons": short_h, "all_horizons": horizons}
+
+
 def main():
     models, missing_horizons = (None, HORIZONS)
     if all((MODELS_DIR / f"horizon_{h}.joblib").exists() for h in HORIZONS):
@@ -284,6 +371,7 @@ def main():
 
     now = datetime.now(timezone.utc)
     tracker_result = update_forecast_log(today_snapshot, now)
+    recommendations = compute_recommendations(today_snapshot) if models is not None else {}
 
     briefing = {
         "generated_at": now.isoformat(),
@@ -294,6 +382,7 @@ def main():
         "notable": sorted(notable, key=lambda d: len(d["notes"]), reverse=True),
         "track_record": tracker_result["scorecard"],
         "track_record_pending": tracker_result["n_pending"],
+        "recommendations": recommendations,
     }
 
     BRIEFING_DIR.mkdir(exist_ok=True)
@@ -303,6 +392,8 @@ def main():
     print(f"\n{len(notable)} tickers have something notable tonight.")
     print(f"Forecast tracker: {tracker_result['n_newly_resolved']} newly resolved, "
           f"{tracker_result['n_pending']} still pending.")
+    print(f"Recommendations: {len(recommendations.get('short_term', []))} short-term, "
+          f"{len(recommendations.get('long_term', []))} long-term.")
     print(f"Wrote {SNAPSHOT_PATH}, {LATEST_PATH}, and {FORECAST_LOG_PATH}.")
 
 
