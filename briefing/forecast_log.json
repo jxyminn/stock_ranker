@@ -13583,6 +13583,198 @@
       "pred_return_pct": 11.827,
       "prob_up": 0.7316,
       "logged_at": "2026-10-24"
+    },
+    {
+      "ticker": "AIXA.DE",
+      "horizon": 5,
+      "price_at_log": 28.45,
+      "pred_return_pct": 0.399,
+      "prob_up": 0.4247,
+      "logged_at": "2026-10-25"
+    },
+    {
+      "ticker": "AIXA.DE",
+      "horizon": 10,
+      "price_at_log": 28.45,
+      "pred_return_pct": 1.969,
+      "prob_up": 0.4306,
+      "logged_at": "2026-10-25"
+    },
+    {
+      "ticker": "AIXA.DE",
+      "horizon": 15,
+      "price_at_log": 28.45,
+      "pred_return_pct": 3.674,
+      "prob_up": 0.6264,
+      "logged_at": "2026-10-25"
+    },
+    {
+      "ticker": "AIXA.DE",
+      "horizon": 30,
+      "price_at_log": 28.45,
+      "pred_return_pct": 8.67,
+      "prob_up": 0.5136,
+      "logged_at": "2026-10-25"
+    },
+    {
+      "ticker": "AIXA.DE",
+      "horizon": 50,
+      "price_at_log": 28.45,
+      "pred_return_pct": 7.386,
+      "prob_up": 0.5036,
+      "logged_at": "2026-10-25"
+    },
+    {
+      "ticker": "AIXA.DE",
+      "horizon": 200,
+      "price_at_log": 28.45,
+      "pred_return_pct": 14.199,
+      "prob_up": 0.3771,
+      "logged_at": "2026-10-25"
+    },
+    {
+      "ticker": "BESI.AS",
+      "horizon": 5,
+      "price_at_log": 145.1,
+      "pred_return_pct": 0.217,
+      "prob_up": 0.4561,
+      "logged_at": "2026-10-25"
+    },
+    {
+      "ticker": "BESI.AS",
+      "horizon": 10,
+      "price_at_log": 145.1,
+      "pred_return_pct": -0.649,
+      "prob_up": 0.3792,
+      "logged_at": "2026-10-25"
+    },
+    {
+      "ticker": "BESI.AS",
+      "horizon": 15,
+      "price_at_log": 145.1,
+      "pred_return_pct": 0.669,
+      "prob_up": 0.4944,
+      "logged_at": "2026-10-25"
+    },
+    {
+      "ticker": "BESI.AS",
+      "horizon": 30,
+      "price_at_log": 145.1,
+      "pred_return_pct": -0.952,
+      "prob_up": 0.4809,
+      "logged_at": "2026-10-25"
+    },
+    {
+      "ticker": "BESI.AS",
+      "horizon": 50,
+      "price_at_log": 145.1,
+      "pred_return_pct": -1.065,
+      "prob_up": 0.4369,
+      "logged_at": "2026-10-25"
+    },
+    {
+      "ticker": "BESI.AS",
+      "horizon": 200,
+      "price_at_log": 145.1,
+      "pred_return_pct": -18.926,
+      "prob_up": 0.3175,
+      "logged_at": "2026-10-25"
+    },
+    {
+      "ticker": "IQE.L",
+      "horizon": 5,
+      "price_at_log": 35.35,
+      "pred_return_pct": -1.012,
+      "prob_up": 0.3747,
+      "logged_at": "2026-10-25"
+    },
+    {
+      "ticker": "IQE.L",
+      "horizon": 10,
+      "price_at_log": 35.35,
+      "pred_return_pct": 0.488,
+      "prob_up": 0.3724,
+      "logged_at": "2026-10-25"
+    },
+    {
+      "ticker": "IQE.L",
+      "horizon": 15,
+      "price_at_log": 35.35,
+      "pred_return_pct": 3.504,
+      "prob_up": 0.4618,
+      "logged_at": "2026-10-25"
+    },
+    {
+      "ticker": "IQE.L",
+      "horizon": 30,
+      "price_at_log": 35.35,
+      "pred_return_pct": -3.36,
+      "prob_up": 0.4118,
+      "logged_at": "2026-10-25"
+    },
+    {
+      "ticker": "IQE.L",
+      "horizon": 50,
+      "price_at_log": 35.35,
+      "pred_return_pct": -7.38,
+      "prob_up": 0.4026,
+      "logged_at": "2026-10-25"
+    },
+    {
+      "ticker": "IQE.L",
+      "horizon": 200,
+      "price_at_log": 35.35,
+      "pred_return_pct": -41.283,
+      "prob_up": 0.3246,
+      "logged_at": "2026-10-25"
+    },
+    {
+      "ticker": "LPK.DE",
+      "horizon": 5,
+      "price_at_log": 10.6,
+      "pred_return_pct": 0.537,
+      "prob_up": 0.3947,
+      "logged_at": "2026-10-25"
+    },
+    {
+      "ticker": "LPK.DE",
+      "horizon": 10,
+      "price_at_log": 10.6,
+      "pred_return_pct": -1.883,
+      "prob_up": 0.4159,
+      "logged_at": "2026-10-25"
+    },
+    {
+      "ticker": "LPK.DE",
+      "horizon": 15,
+      "price_at_log": 10.6,
+      "pred_return_pct": 5.347,
+      "prob_up": 0.691,
+      "logged_at": "2026-10-25"
+    },
+    {
+      "ticker": "LPK.DE",
+      "horizon": 30,
+      "price_at_log": 10.6,
+      "pred_return_pct": 9.695,
+      "prob_up": 0.4758,
+      "logged_at": "2026-10-25"
+    },
+    {
+      "ticker": "LPK.DE",
+      "horizon": 50,
+      "price_at_log": 10.6,
+      "pred_return_pct": 10.886,
+      "prob_up": 0.4259,
+      "logged_at": "2026-10-25"
+    },
+    {
+      "ticker": "LPK.DE",
+      "horizon": 200,
+      "price_at_log": 10.6,
+      "pred_return_pct": 39.943,
+      "prob_up": 0.2862,
+      "logged_at": "2026-10-25"
     }
   ],
   "resolved": []
