@@ -1,31 +1,158 @@
 {
-  "generated_at": "2026-11-07T08:49:24.509556+00:00",
-  "tickers_covered": 286,
-  "tickers_skipped": [
-    "IQE.L"
-  ],
+  "generated_at": "2026-11-08T09:03:48.800575+00:00",
+  "tickers_covered": 287,
+  "tickers_skipped": [],
   "models_available": true,
   "is_first_run": false,
   "notable": [
     {
-      "ticker": "RGTI",
-      "name": "Rigetti Computing, Inc.",
-      "price": 11.75,
-      "day_chg_pct": 19.289,
+      "ticker": "LPTH",
+      "name": "LightPath Technologies, Inc.",
+      "price": 7.06,
+      "day_chg_pct": 14.797,
       "notes": [
-        "5d forecast moved -4.9pp overnight (now -3.1%)",
-        "5d chance-of-gain moved -9pp overnight (now 34%)",
-        "10d forecast moved -3.3pp overnight (now +0.0%)",
-        "10d chance-of-gain moved -13pp overnight (now 41%)",
-        "15d forecast moved -6.2pp overnight (now -1.8%)",
-        "15d chance-of-gain moved -15pp overnight (now 50%)",
-        "30d chance-of-gain moved -8pp overnight (now 53%)",
-        "50d forecast moved -18.6pp overnight (now -1.4%)",
-        "50d chance-of-gain moved -15pp overnight (now 39%)",
-        "200d forecast moved -8.9pp overnight (now +17.6%)",
-        "200d chance-of-gain moved -14pp overnight (now 33%)",
         "earnings in 5 days",
-        "notably positive headlines (score +0.43)"
+        "notably positive headlines (score +0.36)"
+      ]
+    },
+    {
+      "ticker": "LUNR",
+      "name": "Intuitive Machines, Inc.",
+      "price": 10.47,
+      "day_chg_pct": 21.462,
+      "notes": [
+        "earnings in 6 days",
+        "notably positive headlines (score +0.38)"
+      ]
+    },
+    {
+      "ticker": "ONDS",
+      "name": "Ondas Inc.",
+      "price": 5.335,
+      "day_chg_pct": 18.031,
+      "notes": [
+        "earnings in 6 days",
+        "notably positive headlines (score +0.41)"
+      ]
+    },
+    {
+      "ticker": "FLR",
+      "name": "Fluor Corporation",
+      "price": 46.48,
+      "day_chg_pct": 3.335,
+      "notes": [
+        "earnings in 0 days",
+        "notably positive headlines (score +0.36)"
+      ]
+    },
+    {
+      "ticker": "QBTS",
+      "name": "D-Wave Quantum Inc.",
+      "price": 10.68,
+      "day_chg_pct": 18.011,
+      "notes": [
+        "earnings in 4 days",
+        "notably positive headlines (score +0.39)"
+      ]
+    },
+    {
+      "ticker": "BRK-B",
+      "name": "Berkshire Hathaway Inc.",
+      "price": 570.89,
+      "day_chg_pct": -0.252,
+      "notes": [
+        "earnings in 1 days",
+        "within 1.4% of its all-time high"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "name": "Apple Inc.",
+      "price": 342.37,
+      "day_chg_pct": -0.523,
+      "notes": [
+        "notably positive headlines (score +0.35)"
+      ]
+    },
+    {
+      "ticker": "BABA",
+      "name": "Alibaba Group Holding Limited",
+      "price": 109.45,
+      "day_chg_pct": 1.277,
+      "notes": [
+        "notably positive headlines (score +0.37)"
+      ]
+    },
+    {
+      "ticker": "AEHR",
+      "name": "Aehr Test Systems, Inc.",
+      "price": 53.57,
+      "day_chg_pct": 8.971,
+      "notes": [
+        "notably positive headlines (score +0.47)"
+      ]
+    },
+    {
+      "ticker": "AXTI",
+      "name": "AXT, Inc.",
+      "price": 38.88,
+      "day_chg_pct": 5.882,
+      "notes": [
+        "notably positive headlines (score +0.37)"
+      ]
+    },
+    {
+      "ticker": "AMAT",
+      "name": "Applied Materials, Inc.",
+      "price": 332.72,
+      "day_chg_pct": 4.219,
+      "notes": [
+        "earnings in 7 days"
+      ]
+    },
+    {
+      "ticker": "AMS",
+      "name": "American Shared Hospital Services",
+      "price": 1.16,
+      "day_chg_pct": -0.855,
+      "notes": [
+        "earnings in 6 days"
+      ]
+    },
+    {
+      "ticker": "ASM",
+      "name": "Avino Silver & Gold Mines Ltd.",
+      "price": 4.65,
+      "day_chg_pct": 1.528,
+      "notes": [
+        "notably positive headlines (score +0.37)"
+      ]
+    },
+    {
+      "ticker": "CAMT",
+      "name": "Camtek Ltd.",
+      "price": 97.05,
+      "day_chg_pct": 5.581,
+      "notes": [
+        "notably positive headlines (score +0.39)"
+      ]
+    },
+    {
+      "ticker": "FORM",
+      "name": "FormFactor, Inc.",
+      "price": 81.12,
+      "day_chg_pct": 13.043,
+      "notes": [
+        "notably positive headlines (score +0.46)"
+      ]
+    },
+    {
+      "ticker": "MTSI",
+      "name": "MACOM Technology Solutions Holdings, Inc.",
+      "price": 210.98,
+      "day_chg_pct": 10.838,
+      "notes": [
+        "notably positive headlines (score +0.39)"
       ]
     },
     {
@@ -34,17 +161,6 @@
       "price": 173.28,
       "day_chg_pct": 11.084,
       "notes": [
-        "5d forecast moved -3.6pp overnight (now -0.4%)",
-        "5d chance-of-gain moved -19pp overnight (now 40%)",
-        "10d forecast moved -5.5pp overnight (now +5.6%)",
-        "10d chance-of-gain moved -16pp overnight (now 51%)",
-        "15d forecast moved -7.6pp overnight (now -0.4%)",
-        "15d chance-of-gain moved -13pp overnight (now 55%)",
-        "30d forecast moved -5.2pp overnight (now +1.9%)",
-        "30d chance-of-gain moved -13pp overnight (now 46%)",
-        "50d forecast moved -16.9pp overnight (now +4.4%)",
-        "50d chance-of-gain moved -9pp overnight (now 48%)",
-        "200d forecast moved -12.6pp overnight (now -14.9%)",
         "earnings in 4 days"
       ]
     },
@@ -54,17 +170,6 @@
       "price": 129.49,
       "day_chg_pct": 7.577,
       "notes": [
-        "5d forecast moved -5.6pp overnight (now -0.3%)",
-        "5d chance-of-gain moved -17pp overnight (now 47%)",
-        "10d forecast moved -5.7pp overnight (now +4.9%)",
-        "10d chance-of-gain moved -11pp overnight (now 58%)",
-        "15d forecast moved -5.5pp overnight (now +1.9%)",
-        "15d chance-of-gain moved -11pp overnight (now 61%)",
-        "30d forecast moved -8.2pp overnight (now +1.3%)",
-        "30d chance-of-gain moved -15pp overnight (now 47%)",
-        "50d forecast moved -19.7pp overnight (now +5.8%)",
-        "200d forecast moved -5.6pp overnight (now +10.3%)",
-        "200d chance-of-gain moved -13pp overnight (now 33%)",
         "earnings in 6 days"
       ]
     },
@@ -74,212 +179,15 @@
       "price": 46.4,
       "day_chg_pct": 6.276,
       "notes": [
-        "5d forecast moved -4.9pp overnight (now -1.8%)",
-        "5d chance-of-gain moved -15pp overnight (now 38%)",
-        "10d forecast moved -4.8pp overnight (now +1.3%)",
-        "10d chance-of-gain moved -14pp overnight (now 49%)",
-        "15d forecast moved -5.5pp overnight (now +0.1%)",
-        "15d chance-of-gain moved -14pp overnight (now 50%)",
-        "30d forecast moved -4.6pp overnight (now +3.2%)",
-        "30d chance-of-gain moved -9pp overnight (now 50%)",
-        "50d forecast moved -15.1pp overnight (now +1.9%)",
-        "200d forecast moved -13.0pp overnight (now -9.9%)",
-        "200d chance-of-gain moved -16pp overnight (now 29%)",
         "earnings in 5 days"
       ]
     },
     {
-      "ticker": "EOSE",
-      "name": "Eos Energy Enterprises, Inc.",
-      "price": 1.74,
-      "day_chg_pct": -7.447,
+      "ticker": "SMCI",
+      "name": "Super Micro Computer, Inc.",
+      "price": 28.76,
+      "day_chg_pct": 6.204,
       "notes": [
-        "5d forecast moved -4.6pp overnight (now -3.0%)",
-        "5d chance-of-gain moved -21pp overnight (now 23%)",
-        "10d forecast moved -3.3pp overnight (now +0.3%)",
-        "10d chance-of-gain moved -15pp overnight (now 37%)",
-        "15d forecast moved -12.0pp overnight (now -0.1%)",
-        "15d chance-of-gain moved -18pp overnight (now 37%)",
-        "30d forecast moved -4.3pp overnight (now +17.6%)",
-        "30d chance-of-gain moved -9pp overnight (now 55%)",
-        "50d forecast moved -33.4pp overnight (now +7.9%)",
-        "50d chance-of-gain moved -14pp overnight (now 49%)",
-        "200d forecast moved -50.0pp overnight (now +39.5%)",
-        "200d chance-of-gain moved -32pp overnight (now 59%)"
-      ]
-    },
-    {
-      "ticker": "LUNR",
-      "name": "Intuitive Machines, Inc.",
-      "price": 10.47,
-      "day_chg_pct": 21.462,
-      "notes": [
-        "5d forecast moved -3.5pp overnight (now -1.0%)",
-        "5d chance-of-gain moved -11pp overnight (now 33%)",
-        "10d forecast moved -4.8pp overnight (now +2.4%)",
-        "10d chance-of-gain moved -17pp overnight (now 41%)",
-        "15d forecast moved -10.4pp overnight (now -1.8%)",
-        "15d chance-of-gain moved -11pp overnight (now 52%)",
-        "30d forecast moved -3.7pp overnight (now +9.8%)",
-        "50d forecast moved -25.2pp overnight (now +4.3%)",
-        "200d forecast moved +4.9pp overnight (now +22.3%)",
-        "200d chance-of-gain moved -18pp overnight (now 35%)",
-        "earnings in 6 days",
-        "notably positive headlines (score +0.40)"
-      ]
-    },
-    {
-      "ticker": "RCAT",
-      "name": "Red Cat Holdings, Inc.",
-      "price": 4.04,
-      "day_chg_pct": 18.649,
-      "notes": [
-        "5d forecast moved -3.3pp overnight (now -2.5%)",
-        "5d chance-of-gain moved -13pp overnight (now 31%)",
-        "10d forecast moved -6.2pp overnight (now -0.3%)",
-        "10d chance-of-gain moved -15pp overnight (now 40%)",
-        "15d forecast moved -5.8pp overnight (now -1.9%)",
-        "15d chance-of-gain moved -20pp overnight (now 44%)",
-        "30d forecast moved -4.9pp overnight (now +2.6%)",
-        "30d chance-of-gain moved -12pp overnight (now 46%)",
-        "50d forecast moved -22.3pp overnight (now -1.5%)",
-        "50d chance-of-gain moved -11pp overnight (now 46%)",
-        "200d forecast moved -16.9pp overnight (now +4.6%)",
-        "200d chance-of-gain moved -16pp overnight (now 34%)"
-      ]
-    },
-    {
-      "ticker": "QBTS",
-      "name": "D-Wave Quantum Inc.",
-      "price": 10.68,
-      "day_chg_pct": 18.011,
-      "notes": [
-        "5d forecast moved -3.3pp overnight (now -1.1%)",
-        "5d chance-of-gain moved -13pp overnight (now 39%)",
-        "10d forecast moved -4.4pp overnight (now +1.7%)",
-        "10d chance-of-gain moved -13pp overnight (now 44%)",
-        "15d forecast moved -10.2pp overnight (now -2.6%)",
-        "15d chance-of-gain moved -15pp overnight (now 50%)",
-        "30d chance-of-gain moved -9pp overnight (now 60%)",
-        "50d forecast moved -22.1pp overnight (now -4.5%)",
-        "50d chance-of-gain moved -11pp overnight (now 44%)",
-        "200d forecast moved -17.7pp overnight (now -0.9%)",
-        "earnings in 4 days",
-        "notably positive headlines (score +0.39)"
-      ]
-    },
-    {
-      "ticker": "MARA",
-      "name": "MARA Holdings, Inc.",
-      "price": 6.35,
-      "day_chg_pct": 7.993,
-      "notes": [
-        "5d forecast moved -4.0pp overnight (now -2.1%)",
-        "5d chance-of-gain moved -14pp overnight (now 38%)",
-        "10d forecast moved -6.2pp overnight (now +2.0%)",
-        "10d chance-of-gain moved -15pp overnight (now 47%)",
-        "15d forecast moved -8.1pp overnight (now -1.0%)",
-        "15d chance-of-gain moved -19pp overnight (now 46%)",
-        "30d forecast moved -3.9pp overnight (now +5.8%)",
-        "30d chance-of-gain moved -17pp overnight (now 49%)",
-        "50d forecast moved -18.6pp overnight (now -0.4%)",
-        "200d forecast moved -20.2pp overnight (now +1.5%)",
-        "200d chance-of-gain moved -14pp overnight (now 31%)",
-        "earnings in 4 days"
-      ]
-    },
-    {
-      "ticker": "COHR",
-      "name": "Coherent Corp.",
-      "price": 192.81,
-      "day_chg_pct": 13.578,
-      "notes": [
-        "5d forecast moved -3.5pp overnight (now -1.7%)",
-        "5d chance-of-gain moved -20pp overnight (now 43%)",
-        "10d forecast moved -7.1pp overnight (now +1.0%)",
-        "10d chance-of-gain moved -18pp overnight (now 53%)",
-        "15d forecast moved -9.5pp overnight (now -1.9%)",
-        "15d chance-of-gain moved -18pp overnight (now 50%)",
-        "30d forecast moved -6.6pp overnight (now -3.0%)",
-        "30d chance-of-gain moved -9pp overnight (now 46%)",
-        "50d forecast moved -20.7pp overnight (now -4.5%)",
-        "50d chance-of-gain moved -9pp overnight (now 45%)",
-        "notably positive headlines (score +0.40)"
-      ]
-    },
-    {
-      "ticker": "AEHR",
-      "name": "Aehr Test Systems, Inc.",
-      "price": 53.57,
-      "day_chg_pct": 8.971,
-      "notes": [
-        "5d forecast moved -6.1pp overnight (now -0.2%)",
-        "5d chance-of-gain moved -17pp overnight (now 42%)",
-        "10d forecast moved -6.2pp overnight (now +8.5%)",
-        "10d chance-of-gain moved -19pp overnight (now 54%)",
-        "15d forecast moved -11.2pp overnight (now +3.2%)",
-        "15d chance-of-gain moved -24pp overnight (now 47%)",
-        "30d forecast moved -6.3pp overnight (now +10.9%)",
-        "50d forecast moved -19.5pp overnight (now +25.1%)",
-        "200d forecast moved -14.2pp overnight (now +30.1%)",
-        "200d chance-of-gain moved -8pp overnight (now 18%)",
-        "notably positive headlines (score +0.47)"
-      ]
-    },
-    {
-      "ticker": "FORM",
-      "name": "FormFactor, Inc.",
-      "price": 81.12,
-      "day_chg_pct": 13.043,
-      "notes": [
-        "5d forecast moved -6.3pp overnight (now -1.7%)",
-        "5d chance-of-gain moved -17pp overnight (now 43%)",
-        "10d forecast moved -8.5pp overnight (now +2.5%)",
-        "10d chance-of-gain moved -17pp overnight (now 56%)",
-        "15d forecast moved -6.3pp overnight (now -1.2%)",
-        "15d chance-of-gain moved -20pp overnight (now 47%)",
-        "30d forecast moved -4.6pp overnight (now -0.5%)",
-        "50d forecast moved -14.5pp overnight (now +5.8%)",
-        "200d forecast moved +9.1pp overnight (now +2.2%)",
-        "death cross (bearish)",
-        "notably positive headlines (score +0.45)"
-      ]
-    },
-    {
-      "ticker": "LPTH",
-      "name": "LightPath Technologies, Inc.",
-      "price": 7.06,
-      "day_chg_pct": 14.797,
-      "notes": [
-        "5d forecast moved -4.7pp overnight (now -2.0%)",
-        "5d chance-of-gain moved -12pp overnight (now 36%)",
-        "10d forecast moved -5.5pp overnight (now +1.7%)",
-        "10d chance-of-gain moved -12pp overnight (now 44%)",
-        "15d forecast moved -6.0pp overnight (now +2.8%)",
-        "15d chance-of-gain moved -18pp overnight (now 51%)",
-        "50d forecast moved -14.4pp overnight (now +17.7%)",
-        "50d chance-of-gain moved -8pp overnight (now 52%)",
-        "200d chance-of-gain moved -13pp overnight (now 29%)",
-        "earnings in 5 days",
-        "notably positive headlines (score +0.36)"
-      ]
-    },
-    {
-      "ticker": "MTSI",
-      "name": "MACOM Technology Solutions Holdings, Inc.",
-      "price": 210.98,
-      "day_chg_pct": 10.838,
-      "notes": [
-        "5d forecast moved -5.1pp overnight (now -1.7%)",
-        "5d chance-of-gain moved -16pp overnight (now 44%)",
-        "10d forecast moved -10.7pp overnight (now -0.2%)",
-        "10d chance-of-gain moved -19pp overnight (now 49%)",
-        "15d forecast moved -7.8pp overnight (now -3.0%)",
-        "15d chance-of-gain moved -21pp overnight (now 48%)",
-        "30d forecast moved -5.8pp overnight (now -3.9%)",
-        "30d chance-of-gain moved -9pp overnight (now 46%)",
-        "50d forecast moved -25.9pp overnight (now -6.0%)",
-        "200d forecast moved -3.4pp overnight (now -10.3%)",
         "notably positive headlines (score +0.39)"
       ]
     },
@@ -289,17 +197,7 @@
       "price": 5.27,
       "day_chg_pct": 3.435,
       "notes": [
-        "5d chance-of-gain moved -13pp overnight (now 30%)",
-        "10d forecast moved -5.3pp overnight (now +3.1%)",
-        "10d chance-of-gain moved -14pp overnight (now 42%)",
-        "15d forecast moved -6.4pp overnight (now +2.4%)",
-        "15d chance-of-gain moved -13pp overnight (now 46%)",
-        "30d forecast moved +4.7pp overnight (now +22.1%)",
-        "30d chance-of-gain moved -12pp overnight (now 51%)",
-        "50d forecast moved -25.0pp overnight (now +12.6%)",
-        "200d forecast moved -4.1pp overnight (now +118.5%)",
-        "200d chance-of-gain moved -12pp overnight (now 72%)",
-        "notably positive headlines (score +0.51)"
+        "notably positive headlines (score +0.40)"
       ]
     },
     {
@@ -308,293 +206,7 @@
       "price": 2.76,
       "day_chg_pct": 15.0,
       "notes": [
-        "5d forecast moved -4.4pp overnight (now -3.3%)",
-        "5d chance-of-gain moved -10pp overnight (now 31%)",
-        "10d forecast moved -4.7pp overnight (now +0.2%)",
-        "15d forecast moved -9.6pp overnight (now -1.7%)",
-        "15d chance-of-gain moved -11pp overnight (now 47%)",
-        "30d forecast moved +5.7pp overnight (now +2.4%)",
-        "30d chance-of-gain moved -8pp overnight (now 50%)",
-        "50d forecast moved -25.2pp overnight (now +3.4%)",
-        "200d forecast moved -23.6pp overnight (now +6.2%)",
-        "200d chance-of-gain moved -21pp overnight (now 30%)",
         "earnings in 6 days"
-      ]
-    },
-    {
-      "ticker": "FROG",
-      "name": "JFrog Ltd.",
-      "price": 100.98,
-      "day_chg_pct": 35.326,
-      "notes": [
-        "5d forecast moved -4.9pp overnight (now -0.7%)",
-        "5d chance-of-gain moved -10pp overnight (now 50%)",
-        "10d forecast moved -4.6pp overnight (now +6.7%)",
-        "10d chance-of-gain moved -11pp overnight (now 57%)",
-        "15d forecast moved -3.3pp overnight (now +5.2%)",
-        "15d chance-of-gain moved -21pp overnight (now 58%)",
-        "30d forecast moved +6.7pp overnight (now +11.2%)",
-        "50d forecast moved -12.8pp overnight (now +20.1%)",
-        "200d forecast moved +21.1pp overnight (now +85.6%)",
-        "200d chance-of-gain moved +11pp overnight (now 59%)",
-        "notably positive headlines (score +0.43)"
-      ]
-    },
-    {
-      "ticker": "ONDS",
-      "name": "Ondas Inc.",
-      "price": 5.335,
-      "day_chg_pct": 18.031,
-      "notes": [
-        "5d forecast moved -3.2pp overnight (now -1.5%)",
-        "5d chance-of-gain moved -8pp overnight (now 38%)",
-        "10d forecast moved -5.6pp overnight (now +1.5%)",
-        "10d chance-of-gain moved -12pp overnight (now 42%)",
-        "15d forecast moved -4.0pp overnight (now +1.7%)",
-        "15d chance-of-gain moved -17pp overnight (now 52%)",
-        "50d forecast moved -17.9pp overnight (now +11.3%)",
-        "200d forecast moved -7.9pp overnight (now +44.8%)",
-        "200d chance-of-gain moved -15pp overnight (now 52%)",
-        "earnings in 6 days",
-        "notably positive headlines (score +0.41)"
-      ]
-    },
-    {
-      "ticker": "VST",
-      "name": "Vistra Corp.",
-      "price": 124.8,
-      "day_chg_pct": 10.55,
-      "notes": [
-        "5d forecast moved -5.2pp overnight (now -2.6%)",
-        "5d chance-of-gain moved -24pp overnight (now 31%)",
-        "10d forecast moved -5.0pp overnight (now -0.2%)",
-        "10d chance-of-gain moved -17pp overnight (now 42%)",
-        "15d forecast moved -6.4pp overnight (now -0.5%)",
-        "15d chance-of-gain moved -21pp overnight (now 41%)",
-        "30d forecast moved -4.4pp overnight (now -1.6%)",
-        "50d forecast moved -18.9pp overnight (now +6.0%)",
-        "50d chance-of-gain moved -10pp overnight (now 58%)",
-        "200d forecast moved -18.1pp overnight (now +10.5%)",
-        "200d chance-of-gain moved -17pp overnight (now 42%)"
-      ]
-    },
-    {
-      "ticker": "SMR",
-      "name": "NuScale Power Corporation",
-      "price": 5.08,
-      "day_chg_pct": 16.247,
-      "notes": [
-        "5d forecast moved -3.8pp overnight (now -3.6%)",
-        "5d chance-of-gain moved -13pp overnight (now 29%)",
-        "10d forecast moved -4.8pp overnight (now -1.1%)",
-        "10d chance-of-gain moved -17pp overnight (now 35%)",
-        "15d forecast moved -6.8pp overnight (now -4.0%)",
-        "15d chance-of-gain moved -19pp overnight (now 41%)",
-        "30d forecast moved -14.7pp overnight (now -3.0%)",
-        "50d forecast moved -24.7pp overnight (now -7.7%)",
-        "50d chance-of-gain moved -23pp overnight (now 34%)",
-        "200d forecast moved +5.4pp overnight (now +8.9%)",
-        "200d chance-of-gain moved -28pp overnight (now 28%)"
-      ]
-    },
-    {
-      "ticker": "BE",
-      "name": "Bloom Energy Corporation",
-      "price": 173.24,
-      "day_chg_pct": 3.415,
-      "notes": [
-        "5d forecast moved -5.6pp overnight (now +0.1%)",
-        "5d chance-of-gain moved -19pp overnight (now 43%)",
-        "10d forecast moved -7.6pp overnight (now +6.6%)",
-        "10d chance-of-gain moved -14pp overnight (now 59%)",
-        "15d forecast moved -6.3pp overnight (now +2.3%)",
-        "15d chance-of-gain moved -12pp overnight (now 60%)",
-        "30d forecast moved -4.5pp overnight (now -2.6%)",
-        "50d forecast moved -18.8pp overnight (now +10.4%)",
-        "50d chance-of-gain moved -8pp overnight (now 58%)",
-        "200d forecast moved -11.5pp overnight (now -1.0%)",
-        "200d chance-of-gain moved -10pp overnight (now 13%)"
-      ]
-    },
-    {
-      "ticker": "TE",
-      "name": "T1 Energy Inc.",
-      "price": 2.36,
-      "day_chg_pct": 3.509,
-      "notes": [
-        "5d forecast moved -4.4pp overnight (now -2.6%)",
-        "5d chance-of-gain moved -13pp overnight (now 29%)",
-        "10d forecast moved -5.7pp overnight (now -0.3%)",
-        "10d chance-of-gain moved -15pp overnight (now 35%)",
-        "15d forecast moved -5.1pp overnight (now -0.5%)",
-        "15d chance-of-gain moved -14pp overnight (now 45%)",
-        "30d forecast moved +3.1pp overnight (now +3.7%)",
-        "50d forecast moved -14.7pp overnight (now +9.5%)",
-        "200d forecast moved +5.7pp overnight (now +21.9%)",
-        "200d chance-of-gain moved -11pp overnight (now 37%)",
-        "earnings in 6 days"
-      ]
-    },
-    {
-      "ticker": "MU",
-      "name": "Micron Technology, Inc.",
-      "price": 690.0,
-      "day_chg_pct": 5.12,
-      "notes": [
-        "5d forecast moved -6.3pp overnight (now -0.8%)",
-        "5d chance-of-gain moved -18pp overnight (now 43%)",
-        "10d forecast moved -4.5pp overnight (now +6.6%)",
-        "10d chance-of-gain moved -10pp overnight (now 66%)",
-        "15d forecast moved -4.7pp overnight (now +3.4%)",
-        "15d chance-of-gain moved -9pp overnight (now 62%)",
-        "30d forecast moved -5.3pp overnight (now -3.7%)",
-        "50d forecast moved -17.4pp overnight (now +27.9%)",
-        "200d forecast moved -14.1pp overnight (now -22.1%)",
-        "200d chance-of-gain moved -12pp overnight (now 16%)"
-      ]
-    },
-    {
-      "ticker": "LITE",
-      "name": "Lumentum Holdings Inc.",
-      "price": 538.59,
-      "day_chg_pct": 5.668,
-      "notes": [
-        "5d forecast moved -6.0pp overnight (now +1.0%)",
-        "5d chance-of-gain moved -18pp overnight (now 45%)",
-        "10d forecast moved -7.1pp overnight (now +9.4%)",
-        "10d chance-of-gain moved -10pp overnight (now 65%)",
-        "15d forecast moved -5.1pp overnight (now +4.6%)",
-        "15d chance-of-gain moved -12pp overnight (now 61%)",
-        "50d forecast moved -15.6pp overnight (now +16.4%)",
-        "50d chance-of-gain moved -9pp overnight (now 65%)",
-        "200d forecast moved -11.3pp overnight (now -23.1%)",
-        "200d chance-of-gain moved -9pp overnight (now 20%)"
-      ]
-    },
-    {
-      "ticker": "CRDO",
-      "name": "Credo Technology Group Holding Ltd",
-      "price": 120.51,
-      "day_chg_pct": 7.282,
-      "notes": [
-        "5d forecast moved -5.0pp overnight (now -1.9%)",
-        "5d chance-of-gain moved -15pp overnight (now 36%)",
-        "10d forecast moved -3.8pp overnight (now +2.1%)",
-        "10d chance-of-gain moved -13pp overnight (now 54%)",
-        "15d forecast moved -6.6pp overnight (now +0.8%)",
-        "30d forecast moved -5.6pp overnight (now +3.3%)",
-        "30d chance-of-gain moved -9pp overnight (now 49%)",
-        "50d forecast moved -19.6pp overnight (now +3.8%)",
-        "200d chance-of-gain moved -13pp overnight (now 15%)",
-        "death cross (bearish)"
-      ]
-    },
-    {
-      "ticker": "AAOI",
-      "name": "Applied Optoelectronics, Inc.",
-      "price": 50.13,
-      "day_chg_pct": 6.91,
-      "notes": [
-        "5d chance-of-gain moved -14pp overnight (now 38%)",
-        "10d chance-of-gain moved -13pp overnight (now 58%)",
-        "15d chance-of-gain moved -12pp overnight (now 52%)",
-        "30d forecast moved +4.6pp overnight (now +8.3%)",
-        "30d chance-of-gain moved -12pp overnight (now 54%)",
-        "50d forecast moved -5.8pp overnight (now +21.7%)",
-        "50d chance-of-gain moved +12pp overnight (now 60%)",
-        "200d forecast moved +46.2pp overnight (now +80.0%)",
-        "200d chance-of-gain moved +12pp overnight (now 56%)",
-        "notably positive headlines (score +0.57)"
-      ]
-    },
-    {
-      "ticker": "PENG",
-      "name": "Penguin Solutions, Inc.",
-      "price": 41.83,
-      "day_chg_pct": 12.386,
-      "notes": [
-        "5d forecast moved -6.6pp overnight (now -0.2%)",
-        "5d chance-of-gain moved -18pp overnight (now 40%)",
-        "10d forecast moved -8.5pp overnight (now +5.0%)",
-        "10d chance-of-gain moved -11pp overnight (now 62%)",
-        "15d forecast moved -3.6pp overnight (now +4.2%)",
-        "15d chance-of-gain moved -20pp overnight (now 51%)",
-        "30d chance-of-gain moved -10pp overnight (now 53%)",
-        "50d forecast moved -15.4pp overnight (now +29.1%)",
-        "200d forecast moved -22.8pp overnight (now +29.3%)",
-        "200d chance-of-gain moved -10pp overnight (now 34%)"
-      ]
-    },
-    {
-      "ticker": "AMAT",
-      "name": "Applied Materials, Inc.",
-      "price": 332.72,
-      "day_chg_pct": 4.219,
-      "notes": [
-        "5d chance-of-gain moved -16pp overnight (now 45%)",
-        "10d forecast moved -5.7pp overnight (now +3.1%)",
-        "10d chance-of-gain moved -16pp overnight (now 55%)",
-        "15d forecast moved -6.6pp overnight (now +2.1%)",
-        "15d chance-of-gain moved -15pp overnight (now 60%)",
-        "50d forecast moved -17.9pp overnight (now +5.5%)",
-        "50d chance-of-gain moved -8pp overnight (now 49%)",
-        "200d forecast moved -7.9pp overnight (now -23.8%)",
-        "200d chance-of-gain moved -8pp overnight (now 16%)",
-        "earnings in 7 days"
-      ]
-    },
-    {
-      "ticker": "FN",
-      "name": "Fabrinet",
-      "price": 327.13,
-      "day_chg_pct": 11.66,
-      "notes": [
-        "5d forecast moved -3.9pp overnight (now -3.0%)",
-        "5d chance-of-gain moved -22pp overnight (now 30%)",
-        "10d forecast moved -5.9pp overnight (now -0.2%)",
-        "10d chance-of-gain moved -20pp overnight (now 42%)",
-        "15d forecast moved -6.1pp overnight (now -3.7%)",
-        "15d chance-of-gain moved -15pp overnight (now 46%)",
-        "30d forecast moved -3.2pp overnight (now -1.7%)",
-        "50d forecast moved -19.1pp overnight (now -7.2%)",
-        "50d chance-of-gain moved -11pp overnight (now 42%)",
-        "200d chance-of-gain moved -12pp overnight (now 26%)"
-      ]
-    },
-    {
-      "ticker": "LASR",
-      "name": "nLIGHT, Inc.",
-      "price": 38.02,
-      "day_chg_pct": 29.584,
-      "notes": [
-        "5d forecast moved -5.8pp overnight (now -3.1%)",
-        "5d chance-of-gain moved -11pp overnight (now 36%)",
-        "10d forecast moved -4.2pp overnight (now -1.0%)",
-        "10d chance-of-gain moved -17pp overnight (now 40%)",
-        "15d forecast moved -7.7pp overnight (now -3.7%)",
-        "15d chance-of-gain moved -26pp overnight (now 43%)",
-        "30d forecast moved +3.1pp overnight (now +4.9%)",
-        "50d forecast moved -14.5pp overnight (now -0.1%)",
-        "200d forecast moved -8.7pp overnight (now +2.7%)",
-        "200d chance-of-gain moved -9pp overnight (now 31%)"
-      ]
-    },
-    {
-      "ticker": "MKSI",
-      "name": "MKS Inc.",
-      "price": 192.27,
-      "day_chg_pct": 8.738,
-      "notes": [
-        "5d forecast moved -3.3pp overnight (now -2.6%)",
-        "5d chance-of-gain moved -14pp overnight (now 44%)",
-        "10d forecast moved -3.4pp overnight (now +0.9%)",
-        "10d chance-of-gain moved -16pp overnight (now 54%)",
-        "15d forecast moved -8.0pp overnight (now -3.6%)",
-        "15d chance-of-gain moved -20pp overnight (now 47%)",
-        "50d forecast moved -16.6pp overnight (now -4.4%)",
-        "200d forecast moved -11.2pp overnight (now -13.9%)",
-        "200d chance-of-gain moved -12pp overnight (now 19%)",
-        "notably positive headlines (score +0.37)"
       ]
     },
     {
@@ -603,34 +215,7 @@
       "price": 57.19,
       "day_chg_pct": 5.09,
       "notes": [
-        "5d forecast moved -4.1pp overnight (now -1.6%)",
-        "5d chance-of-gain moved -13pp overnight (now 38%)",
-        "10d chance-of-gain moved -13pp overnight (now 47%)",
-        "15d forecast moved -4.2pp overnight (now -1.4%)",
-        "15d chance-of-gain moved -12pp overnight (now 55%)",
-        "30d forecast moved -4.2pp overnight (now -2.4%)",
-        "50d forecast moved -18.8pp overnight (now -1.8%)",
-        "200d forecast moved -7.2pp overnight (now -17.2%)",
-        "200d chance-of-gain moved -21pp overnight (now 23%)",
         "earnings in 4 days"
-      ]
-    },
-    {
-      "ticker": "DELL",
-      "name": "Dell Technologies Inc.",
-      "price": 328.53,
-      "day_chg_pct": 3.667,
-      "notes": [
-        "5d forecast moved -5.0pp overnight (now -0.5%)",
-        "5d chance-of-gain moved -15pp overnight (now 44%)",
-        "10d forecast moved -4.3pp overnight (now +6.8%)",
-        "10d chance-of-gain moved -11pp overnight (now 63%)",
-        "15d forecast moved -4.0pp overnight (now +5.7%)",
-        "15d chance-of-gain moved -9pp overnight (now 63%)",
-        "30d forecast moved -8.6pp overnight (now +3.5%)",
-        "50d forecast moved -17.5pp overnight (now +29.1%)",
-        "200d forecast moved -11.4pp overnight (now +14.7%)",
-        "200d chance-of-gain moved -14pp overnight (now 14%)"
       ]
     },
     {
@@ -639,16 +224,25 @@
       "price": 0.629,
       "day_chg_pct": 9.582,
       "notes": [
-        "5d chance-of-gain moved -14pp overnight (now 32%)",
-        "10d forecast moved -4.1pp overnight (now +0.6%)",
-        "15d forecast moved -4.6pp overnight (now -3.3%)",
-        "15d chance-of-gain moved -15pp overnight (now 44%)",
-        "30d chance-of-gain moved -12pp overnight (now 47%)",
-        "50d forecast moved -21.1pp overnight (now -16.7%)",
-        "50d chance-of-gain moved -8pp overnight (now 36%)",
-        "200d forecast moved -34.1pp overnight (now +119.3%)",
-        "200d chance-of-gain moved -13pp overnight (now 71%)",
         "earnings in 4 days"
+      ]
+    },
+    {
+      "ticker": "MDB",
+      "name": "MongoDB, Inc.",
+      "price": 312.83,
+      "day_chg_pct": 2.705,
+      "notes": [
+        "notably positive headlines (score +0.39)"
+      ]
+    },
+    {
+      "ticker": "CHKP",
+      "name": "Check Point Software Technologies Ltd.",
+      "price": 144.17,
+      "day_chg_pct": -2.706,
+      "notes": [
+        "notably positive headlines (score +0.35)"
       ]
     },
     {
@@ -657,326 +251,16 @@
       "price": 391.22,
       "day_chg_pct": 9.862,
       "notes": [
-        "5d forecast moved -3.2pp overnight (now -6.7%)",
-        "5d chance-of-gain moved -18pp overnight (now 38%)",
-        "10d forecast moved -6.0pp overnight (now -3.1%)",
-        "15d forecast moved -9.1pp overnight (now -6.8%)",
-        "15d chance-of-gain moved -14pp overnight (now 41%)",
-        "30d forecast moved -11.6pp overnight (now -6.6%)",
-        "30d chance-of-gain moved -8pp overnight (now 46%)",
-        "50d forecast moved -27.3pp overnight (now -16.5%)",
-        "200d forecast moved -30.2pp overnight (now -42.5%)",
-        "notably positive headlines (score +0.40)"
+        "notably positive headlines (score +0.54)"
       ]
     },
     {
-      "ticker": "MNTS",
-      "name": "Momentus Inc.",
-      "price": 2.05,
-      "day_chg_pct": 20.588,
+      "ticker": "U",
+      "name": "Unity Software Inc.",
+      "price": 51.49,
+      "day_chg_pct": 5.512,
       "notes": [
-        "5d chance-of-gain moved -11pp overnight (now 30%)",
-        "10d chance-of-gain moved -16pp overnight (now 43%)",
-        "15d forecast moved -4.3pp overnight (now +6.5%)",
-        "15d chance-of-gain moved -23pp overnight (now 43%)",
-        "30d forecast moved -5.7pp overnight (now +9.5%)",
-        "30d chance-of-gain moved -8pp overnight (now 50%)",
-        "50d forecast moved -23.6pp overnight (now -6.6%)",
-        "200d forecast moved -7.4pp overnight (now +18.5%)",
-        "200d chance-of-gain moved -16pp overnight (now 31%)",
-        "notably positive headlines (score +0.45)"
-      ]
-    },
-    {
-      "ticker": "FLR",
-      "name": "Fluor Corporation",
-      "price": 46.48,
-      "day_chg_pct": 3.335,
-      "notes": [
-        "5d chance-of-gain moved -12pp overnight (now 39%)",
-        "10d chance-of-gain moved -12pp overnight (now 45%)",
-        "15d forecast moved -4.9pp overnight (now -0.4%)",
-        "15d chance-of-gain moved -14pp overnight (now 51%)",
-        "30d forecast moved -3.1pp overnight (now +2.3%)",
-        "30d chance-of-gain moved -12pp overnight (now 55%)",
-        "50d forecast moved -9.7pp overnight (now -1.5%)",
-        "200d forecast moved -6.2pp overnight (now -1.5%)",
-        "200d chance-of-gain moved -15pp overnight (now 43%)",
-        "earnings in 0 days"
-      ]
-    },
-    {
-      "ticker": "QUBT",
-      "name": "Quantum Computing Inc.",
-      "price": 6.33,
-      "day_chg_pct": 12.433,
-      "notes": [
-        "5d forecast moved -3.9pp overnight (now -3.2%)",
-        "5d chance-of-gain moved -14pp overnight (now 33%)",
-        "10d chance-of-gain moved -17pp overnight (now 42%)",
-        "15d forecast moved -7.1pp overnight (now -1.5%)",
-        "15d chance-of-gain moved -24pp overnight (now 47%)",
-        "50d forecast moved -19.1pp overnight (now +3.8%)",
-        "50d chance-of-gain moved -9pp overnight (now 44%)",
-        "200d forecast moved -20.5pp overnight (now +17.5%)",
-        "200d chance-of-gain moved -13pp overnight (now 36%)",
-        "earnings in 4 days"
-      ]
-    },
-    {
-      "ticker": "ZETA",
-      "name": "Zeta Global Holdings Corp.",
-      "price": 31.03,
-      "day_chg_pct": 5.294,
-      "notes": [
-        "5d chance-of-gain moved -10pp overnight (now 47%)",
-        "10d chance-of-gain moved -11pp overnight (now 52%)",
-        "15d forecast moved -6.3pp overnight (now +0.2%)",
-        "15d chance-of-gain moved -19pp overnight (now 58%)",
-        "30d forecast moved -3.7pp overnight (now +2.3%)",
-        "30d chance-of-gain moved -14pp overnight (now 49%)",
-        "50d forecast moved -13.4pp overnight (now +5.2%)",
-        "200d forecast moved -3.3pp overnight (now +32.8%)",
-        "200d chance-of-gain moved -20pp overnight (now 54%)",
-        "earnings in 4 days"
-      ]
-    },
-    {
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices, Inc.",
-      "price": 449.04,
-      "day_chg_pct": 11.039,
-      "notes": [
-        "5d forecast moved -6.9pp overnight (now -0.5%)",
-        "5d chance-of-gain moved -15pp overnight (now 51%)",
-        "10d forecast moved -5.7pp overnight (now +4.7%)",
-        "10d chance-of-gain moved -13pp overnight (now 62%)",
-        "15d forecast moved -5.7pp overnight (now +1.3%)",
-        "15d chance-of-gain moved -17pp overnight (now 59%)",
-        "50d forecast moved -21.5pp overnight (now +6.6%)",
-        "50d chance-of-gain moved -11pp overnight (now 53%)",
-        "200d forecast moved -10.5pp overnight (now -14.5%)"
-      ]
-    },
-    {
-      "ticker": "STX",
-      "name": "Seagate Technology Holdings plc",
-      "price": 460.99,
-      "day_chg_pct": -1.187,
-      "notes": [
-        "5d forecast moved -3.8pp overnight (now +0.3%)",
-        "5d chance-of-gain moved -18pp overnight (now 44%)",
-        "10d forecast moved -6.1pp overnight (now +4.9%)",
-        "10d chance-of-gain moved -8pp overnight (now 65%)",
-        "15d forecast moved -4.1pp overnight (now +6.4%)",
-        "15d chance-of-gain moved -9pp overnight (now 65%)",
-        "50d forecast moved -19.6pp overnight (now +7.3%)",
-        "200d forecast moved -17.1pp overnight (now -10.9%)",
-        "200d chance-of-gain moved -8pp overnight (now 21%)"
-      ]
-    },
-    {
-      "ticker": "WDC",
-      "name": "Western Digital Corporation",
-      "price": 263.78,
-      "day_chg_pct": -1.439,
-      "notes": [
-        "5d forecast moved -4.2pp overnight (now -0.5%)",
-        "5d chance-of-gain moved -23pp overnight (now 41%)",
-        "10d forecast moved -6.6pp overnight (now +2.5%)",
-        "10d chance-of-gain moved -10pp overnight (now 61%)",
-        "15d forecast moved -5.2pp overnight (now +4.3%)",
-        "15d chance-of-gain moved -12pp overnight (now 58%)",
-        "50d forecast moved -19.0pp overnight (now +6.0%)",
-        "200d forecast moved -25.7pp overnight (now +2.8%)",
-        "200d chance-of-gain moved -9pp overnight (now 16%)"
-      ]
-    },
-    {
-      "ticker": "AXTI",
-      "name": "AXT, Inc.",
-      "price": 38.88,
-      "day_chg_pct": 5.882,
-      "notes": [
-        "5d forecast moved -5.3pp overnight (now +2.1%)",
-        "5d chance-of-gain moved -14pp overnight (now 41%)",
-        "10d forecast moved -4.6pp overnight (now +12.9%)",
-        "10d chance-of-gain moved -10pp overnight (now 64%)",
-        "15d chance-of-gain moved -12pp overnight (now 62%)",
-        "50d forecast moved -19.7pp overnight (now +26.2%)",
-        "200d forecast moved -15.0pp overnight (now +54.4%)",
-        "200d chance-of-gain moved -15pp overnight (now 35%)",
-        "notably positive headlines (score +0.37)"
-      ]
-    },
-    {
-      "ticker": "DOCN",
-      "name": "DigitalOcean Holdings, Inc.",
-      "price": 72.48,
-      "day_chg_pct": 2.518,
-      "notes": [
-        "5d forecast moved -4.8pp overnight (now -0.3%)",
-        "5d chance-of-gain moved -12pp overnight (now 44%)",
-        "10d forecast moved -8.4pp overnight (now +4.0%)",
-        "10d chance-of-gain moved -11pp overnight (now 62%)",
-        "15d forecast moved -5.1pp overnight (now -0.3%)",
-        "15d chance-of-gain moved -13pp overnight (now 54%)",
-        "50d forecast moved -21.5pp overnight (now -0.9%)",
-        "200d forecast moved -3.4pp overnight (now -6.3%)",
-        "200d chance-of-gain moved -9pp overnight (now 13%)"
-      ]
-    },
-    {
-      "ticker": "CIFR",
-      "name": "Cipher Digital Inc.",
-      "price": 6.545,
-      "day_chg_pct": 17.928,
-      "notes": [
-        "5d forecast moved -4.5pp overnight (now -3.2%)",
-        "5d chance-of-gain moved -10pp overnight (now 30%)",
-        "10d chance-of-gain moved -13pp overnight (now 42%)",
-        "15d forecast moved -4.4pp overnight (now -2.2%)",
-        "15d chance-of-gain moved -17pp overnight (now 43%)",
-        "50d forecast moved -21.8pp overnight (now +1.4%)",
-        "50d chance-of-gain moved -8pp overnight (now 53%)",
-        "200d forecast moved +7.9pp overnight (now +6.3%)",
-        "200d chance-of-gain moved -16pp overnight (now 29%)"
-      ]
-    },
-    {
-      "ticker": "SMCI",
-      "name": "Super Micro Computer, Inc.",
-      "price": 28.76,
-      "day_chg_pct": 6.204,
-      "notes": [
-        "5d forecast moved -3.1pp overnight (now -2.0%)",
-        "5d chance-of-gain moved -15pp overnight (now 44%)",
-        "10d forecast moved -3.6pp overnight (now +1.5%)",
-        "10d chance-of-gain moved -18pp overnight (now 50%)",
-        "15d forecast moved -5.2pp overnight (now +0.0%)",
-        "15d chance-of-gain moved -22pp overnight (now 49%)",
-        "50d forecast moved -15.1pp overnight (now -1.4%)",
-        "200d chance-of-gain moved -14pp overnight (now 28%)",
-        "notably positive headlines (score +0.36)"
-      ]
-    },
-    {
-      "ticker": "STEM",
-      "name": "Stem, Inc.",
-      "price": 2.52,
-      "day_chg_pct": 15.596,
-      "notes": [
-        "5d forecast moved -4.0pp overnight (now -4.4%)",
-        "5d chance-of-gain moved -21pp overnight (now 25%)",
-        "10d forecast moved -5.0pp overnight (now -0.5%)",
-        "10d chance-of-gain moved -14pp overnight (now 37%)",
-        "15d chance-of-gain moved -16pp overnight (now 45%)",
-        "30d forecast moved +3.5pp overnight (now +12.5%)",
-        "50d forecast moved -25.5pp overnight (now +2.0%)",
-        "200d forecast moved +3.7pp overnight (now +7.0%)",
-        "200d chance-of-gain moved -16pp overnight (now 41%)"
-      ]
-    },
-    {
-      "ticker": "HUT",
-      "name": "Hut 8 Corp.",
-      "price": 52.65,
-      "day_chg_pct": 14.581,
-      "notes": [
-        "5d forecast moved -5.6pp overnight (now -2.0%)",
-        "5d chance-of-gain moved -12pp overnight (now 43%)",
-        "10d forecast moved -3.6pp overnight (now +5.8%)",
-        "10d chance-of-gain moved -12pp overnight (now 60%)",
-        "15d forecast moved -6.1pp overnight (now -0.1%)",
-        "15d chance-of-gain moved -18pp overnight (now 51%)",
-        "50d forecast moved -16.8pp overnight (now +0.6%)",
-        "200d forecast moved +5.6pp overnight (now +1.7%)",
-        "200d chance-of-gain moved -9pp overnight (now 16%)"
-      ]
-    },
-    {
-      "ticker": "TEAM",
-      "name": "Atlassian Corporation",
-      "price": 153.68,
-      "day_chg_pct": -16.155,
-      "notes": [
-        "5d chance-of-gain moved -20pp overnight (now 41%)",
-        "10d chance-of-gain moved +11pp overnight (now 67%)",
-        "15d forecast moved -4.6pp overnight (now +2.2%)",
-        "15d chance-of-gain moved -9pp overnight (now 62%)",
-        "30d forecast moved -3.8pp overnight (now +4.5%)",
-        "30d chance-of-gain moved -15pp overnight (now 49%)",
-        "50d forecast moved -17.3pp overnight (now +5.6%)",
-        "200d forecast moved +4.1pp overnight (now +32.6%)",
-        "200d chance-of-gain moved -28pp overnight (now 44%)"
-      ]
-    },
-    {
-      "ticker": "AKAM",
-      "name": "Akamai Technologies, Inc.",
-      "price": 83.09,
-      "day_chg_pct": 6.745,
-      "notes": [
-        "5d forecast moved -4.5pp overnight (now -2.1%)",
-        "5d chance-of-gain moved -14pp overnight (now 33%)",
-        "10d forecast moved -5.0pp overnight (now -0.1%)",
-        "10d chance-of-gain moved -19pp overnight (now 44%)",
-        "15d forecast moved -6.4pp overnight (now -1.4%)",
-        "15d chance-of-gain moved -21pp overnight (now 43%)",
-        "50d forecast moved -20.2pp overnight (now -4.7%)",
-        "200d forecast moved -10.5pp overnight (now -2.0%)",
-        "notably positive headlines (score +0.52)"
-      ]
-    },
-    {
-      "ticker": "PANW",
-      "name": "Palo Alto Networks, Inc.",
-      "price": 313.84,
-      "day_chg_pct": -0.264,
-      "notes": [
-        "5d forecast moved -4.0pp overnight (now -0.2%)",
-        "5d chance-of-gain moved -17pp overnight (now 47%)",
-        "10d chance-of-gain moved -11pp overnight (now 58%)",
-        "15d forecast moved -5.3pp overnight (now +4.8%)",
-        "15d chance-of-gain moved -9pp overnight (now 70%)",
-        "50d forecast moved -16.6pp overnight (now +9.9%)",
-        "200d forecast moved -15.4pp overnight (now +8.7%)",
-        "200d chance-of-gain moved -15pp overnight (now 44%)",
-        "notably positive headlines (score +0.44)"
-      ]
-    },
-    {
-      "ticker": "FTNT",
-      "name": "Fortinet, Inc.",
-      "price": 118.84,
-      "day_chg_pct": -2.996,
-      "notes": [
-        "5d forecast moved -6.1pp overnight (now -1.7%)",
-        "5d chance-of-gain moved -18pp overnight (now 47%)",
-        "10d forecast moved -5.2pp overnight (now +2.9%)",
-        "10d chance-of-gain moved -11pp overnight (now 63%)",
-        "15d forecast moved -5.9pp overnight (now +0.5%)",
-        "15d chance-of-gain moved -15pp overnight (now 59%)",
-        "50d forecast moved -15.1pp overnight (now +2.5%)",
-        "200d forecast moved -9.4pp overnight (now -20.0%)",
-        "200d chance-of-gain moved -22pp overnight (now 20%)"
-      ]
-    },
-    {
-      "ticker": "NTAP",
-      "name": "NetApp, Inc.",
-      "price": 169.19,
-      "day_chg_pct": -0.112,
-      "notes": [
-        "5d forecast moved -3.3pp overnight (now -1.0%)",
-        "5d chance-of-gain moved -18pp overnight (now 45%)",
-        "10d forecast moved -4.0pp overnight (now +3.2%)",
-        "10d chance-of-gain moved -15pp overnight (now 55%)",
-        "15d forecast moved -4.2pp overnight (now +4.7%)",
-        "15d chance-of-gain moved -14pp overnight (now 66%)",
-        "30d forecast moved +3.9pp overnight (now +12.5%)",
-        "50d forecast moved -16.6pp overnight (now +10.3%)",
-        "200d chance-of-gain moved -28pp overnight (now 28%)"
+        "notably positive headlines (score +0.61)"
       ]
     },
     {
@@ -985,14 +269,6 @@
       "price": 53.07,
       "day_chg_pct": 15.395,
       "notes": [
-        "5d forecast moved -5.3pp overnight (now -3.3%)",
-        "5d chance-of-gain moved -11pp overnight (now 39%)",
-        "10d chance-of-gain moved -14pp overnight (now 46%)",
-        "15d forecast moved -5.9pp overnight (now -1.2%)",
-        "15d chance-of-gain moved -14pp overnight (now 50%)",
-        "50d forecast moved -13.8pp overnight (now +1.3%)",
-        "200d forecast moved +3.5pp overnight (now +1.1%)",
-        "200d chance-of-gain moved -11pp overnight (now 24%)",
         "earnings in 4 days"
       ]
     },
@@ -1002,585 +278,16 @@
       "price": 32.33,
       "day_chg_pct": 7.053,
       "notes": [
-        "5d chance-of-gain moved -14pp overnight (now 37%)",
-        "10d forecast moved -3.3pp overnight (now +2.7%)",
-        "10d chance-of-gain moved -11pp overnight (now 42%)",
-        "15d forecast moved -4.1pp overnight (now +5.3%)",
-        "50d forecast moved -20.7pp overnight (now +1.3%)",
-        "50d chance-of-gain moved -10pp overnight (now 40%)",
-        "200d forecast moved -19.7pp overnight (now -3.3%)",
-        "200d chance-of-gain moved -17pp overnight (now 30%)",
         "earnings in 4 days"
       ]
     },
     {
-      "ticker": "RDW",
-      "name": "Redwire Corporation",
-      "price": 7.21,
-      "day_chg_pct": 16.478,
+      "ticker": "MNTS",
+      "name": "Momentus Inc.",
+      "price": 2.05,
+      "day_chg_pct": 20.588,
       "notes": [
-        "5d forecast moved -3.8pp overnight (now -2.5%)",
-        "5d chance-of-gain moved -10pp overnight (now 37%)",
-        "10d forecast moved -4.7pp overnight (now +1.6%)",
-        "10d chance-of-gain moved -17pp overnight (now 46%)",
-        "15d forecast moved -6.6pp overnight (now -2.5%)",
-        "15d chance-of-gain moved -18pp overnight (now 47%)",
-        "50d forecast moved -19.7pp overnight (now +0.6%)",
-        "200d forecast moved +12.2pp overnight (now +4.1%)",
-        "200d chance-of-gain moved -15pp overnight (now 30%)"
-      ]
-    },
-    {
-      "ticker": "PL",
-      "name": "Planet Labs PBC",
-      "price": 12.55,
-      "day_chg_pct": 10.378,
-      "notes": [
-        "5d forecast moved -3.2pp overnight (now -2.8%)",
-        "5d chance-of-gain moved -15pp overnight (now 29%)",
-        "10d forecast moved -3.4pp overnight (now -0.5%)",
-        "10d chance-of-gain moved -17pp overnight (now 38%)",
-        "15d forecast moved -4.9pp overnight (now +1.0%)",
-        "15d chance-of-gain moved -17pp overnight (now 48%)",
-        "50d forecast moved -18.5pp overnight (now +1.7%)",
-        "200d forecast moved +3.9pp overnight (now -7.6%)",
-        "200d chance-of-gain moved -18pp overnight (now 27%)"
-      ]
-    },
-    {
-      "ticker": "NNE",
-      "name": "NANO Nuclear Energy Inc.",
-      "price": 11.11,
-      "day_chg_pct": 15.309,
-      "notes": [
-        "5d forecast moved -3.7pp overnight (now -3.3%)",
-        "5d chance-of-gain moved -13pp overnight (now 32%)",
-        "10d chance-of-gain moved -10pp overnight (now 40%)",
-        "15d forecast moved -6.2pp overnight (now -0.6%)",
-        "15d chance-of-gain moved -16pp overnight (now 46%)",
-        "30d forecast moved +4.4pp overnight (now +7.8%)",
-        "50d forecast moved -14.5pp overnight (now -0.7%)",
-        "200d forecast moved +8.1pp overnight (now -7.7%)",
-        "200d chance-of-gain moved -16pp overnight (now 27%)"
-      ]
-    },
-    {
-      "ticker": "PWR",
-      "name": "Quanta Services, Inc.",
-      "price": 540.9,
-      "day_chg_pct": 6.255,
-      "notes": [
-        "5d chance-of-gain moved -13pp overnight (now 41%)",
-        "10d forecast moved -3.9pp overnight (now -0.3%)",
-        "10d chance-of-gain moved -16pp overnight (now 54%)",
-        "15d forecast moved -6.4pp overnight (now -2.9%)",
-        "15d chance-of-gain moved -21pp overnight (now 49%)",
-        "50d forecast moved -13.7pp overnight (now +1.2%)",
-        "200d forecast moved +13.0pp overnight (now -12.4%)",
-        "200d chance-of-gain moved -16pp overnight (now 31%)",
-        "death cross (bearish)"
-      ]
-    },
-    {
-      "ticker": "SALQF",
-      "name": "Atlas Salt Inc.",
-      "price": 0.9798,
-      "day_chg_pct": 3.142,
-      "notes": [
-        "5d chance-of-gain moved -18pp overnight (now 40%)",
-        "10d chance-of-gain moved -15pp overnight (now 49%)",
-        "15d forecast moved -3.1pp overnight (now +3.6%)",
-        "15d chance-of-gain moved -18pp overnight (now 55%)",
-        "30d chance-of-gain moved -10pp overnight (now 55%)",
-        "50d forecast moved -7.7pp overnight (now +23.0%)",
-        "200d forecast moved -18.8pp overnight (now +51.5%)",
-        "200d chance-of-gain moved -21pp overnight (now 50%)",
-        "notably positive headlines (score +0.44)"
-      ]
-    },
-    {
-      "ticker": "IONQ",
-      "name": "IonQ, Inc.",
-      "price": 32.62,
-      "day_chg_pct": 23.42,
-      "notes": [
-        "5d forecast moved -4.3pp overnight (now -3.1%)",
-        "5d chance-of-gain moved -12pp overnight (now 35%)",
-        "10d forecast moved -7.1pp overnight (now -0.8%)",
-        "10d chance-of-gain moved -19pp overnight (now 41%)",
-        "15d forecast moved -13.1pp overnight (now -4.6%)",
-        "15d chance-of-gain moved -23pp overnight (now 40%)",
-        "50d forecast moved -10.3pp overnight (now +4.9%)",
-        "200d forecast moved +16.8pp overnight (now -6.7%)",
-        "notably positive headlines (score +0.44)"
-      ]
-    },
-    {
-      "ticker": "INFQ",
-      "name": "Infleqtion, Inc.",
-      "price": 8.89,
-      "day_chg_pct": 19.489,
-      "notes": [
-        "5d forecast moved -3.4pp overnight (now -2.4%)",
-        "5d chance-of-gain moved -16pp overnight (now 32%)",
-        "10d forecast moved -6.3pp overnight (now +0.6%)",
-        "10d chance-of-gain moved -17pp overnight (now 43%)",
-        "15d forecast moved -7.8pp overnight (now -1.9%)",
-        "15d chance-of-gain moved -16pp overnight (now 52%)",
-        "50d forecast moved -22.5pp overnight (now +2.5%)",
-        "200d forecast moved -21.5pp overnight (now +9.8%)",
-        "200d chance-of-gain moved -14pp overnight (now 32%)"
-      ]
-    },
-    {
-      "ticker": "COIN",
-      "name": "Coinbase Global, Inc.",
-      "price": 134.76,
-      "day_chg_pct": -1.506,
-      "notes": [
-        "5d chance-of-gain moved -16pp overnight (now 31%)",
-        "10d chance-of-gain moved -14pp overnight (now 50%)",
-        "15d forecast moved -5.1pp overnight (now -1.5%)",
-        "15d chance-of-gain moved -17pp overnight (now 43%)",
-        "50d forecast moved -18.7pp overnight (now -8.1%)",
-        "50d chance-of-gain moved -11pp overnight (now 45%)",
-        "200d forecast moved +9.4pp overnight (now +4.2%)",
-        "200d chance-of-gain moved -12pp overnight (now 55%)",
-        "death cross (bearish)"
-      ]
-    },
-    {
-      "ticker": "SYM",
-      "name": "Symbotic Inc.",
-      "price": 36.82,
-      "day_chg_pct": 5.08,
-      "notes": [
-        "5d chance-of-gain moved -13pp overnight (now 32%)",
-        "10d chance-of-gain moved -13pp overnight (now 39%)",
-        "15d forecast moved -8.5pp overnight (now -4.1%)",
-        "15d chance-of-gain moved -27pp overnight (now 44%)",
-        "30d forecast moved -3.5pp overnight (now -1.2%)",
-        "30d chance-of-gain moved -9pp overnight (now 47%)",
-        "50d forecast moved -20.4pp overnight (now -11.7%)",
-        "50d chance-of-gain moved -9pp overnight (now 42%)",
-        "200d chance-of-gain moved -17pp overnight (now 36%)"
-      ]
-    },
-    {
-      "ticker": "VONG",
-      "name": "Vanguard Russell 1000 Growth Index Fund ETF Shares",
-      "price": 115.03,
-      "day_chg_pct": 1.268,
-      "notes": [
-        "10d chance-of-gain moved -9pp overnight (now 50%)",
-        "15d forecast moved -3.9pp overnight (now -0.9%)",
-        "15d chance-of-gain moved -9pp overnight (now 57%)",
-        "30d chance-of-gain moved +9pp overnight (now 59%)",
-        "50d forecast moved -7.1pp overnight (now -0.7%)",
-        "50d chance-of-gain moved +10pp overnight (now 67%)",
-        "200d forecast moved +7.8pp overnight (now +4.1%)",
-        "200d chance-of-gain moved -9pp overnight (now 53%)",
-        "notably positive headlines (score +0.50)"
-      ]
-    },
-    {
-      "ticker": "AMZN",
-      "name": "Amazon.com, Inc.",
-      "price": 259.3,
-      "day_chg_pct": -0.35,
-      "notes": [
-        "5d chance-of-gain moved -9pp overnight (now 47%)",
-        "10d chance-of-gain moved -14pp overnight (now 52%)",
-        "15d forecast moved -4.6pp overnight (now -0.7%)",
-        "15d chance-of-gain moved -14pp overnight (now 54%)",
-        "50d forecast moved -7.8pp overnight (now +0.7%)",
-        "200d forecast moved +6.7pp overnight (now +8.1%)",
-        "200d chance-of-gain moved -11pp overnight (now 47%)",
-        "notably positive headlines (score +0.37)"
-      ]
-    },
-    {
-      "ticker": "ARM",
-      "name": "Arm Holdings plc",
-      "price": 174.62,
-      "day_chg_pct": 4.738,
-      "notes": [
-        "5d forecast moved -4.9pp overnight (now -1.3%)",
-        "5d chance-of-gain moved -16pp overnight (now 44%)",
-        "10d forecast moved -4.4pp overnight (now +4.4%)",
-        "10d chance-of-gain moved -13pp overnight (now 61%)",
-        "15d forecast moved -6.1pp overnight (now +1.5%)",
-        "15d chance-of-gain moved -12pp overnight (now 60%)",
-        "50d forecast moved -19.1pp overnight (now +5.1%)",
-        "200d forecast moved +6.4pp overnight (now +16.1%)"
-      ]
-    },
-    {
-      "ticker": "SNDK",
-      "name": "Sandisk Corporation",
-      "price": 835.06,
-      "day_chg_pct": 3.55,
-      "notes": [
-        "5d forecast moved -5.1pp overnight (now +0.9%)",
-        "5d chance-of-gain moved -16pp overnight (now 49%)",
-        "10d forecast moved -4.6pp overnight (now +11.2%)",
-        "10d chance-of-gain moved -8pp overnight (now 65%)",
-        "15d forecast moved -3.7pp overnight (now +5.5%)",
-        "50d forecast moved -17.7pp overnight (now +19.4%)",
-        "200d forecast moved -27.5pp overnight (now -2.7%)",
-        "200d chance-of-gain moved -11pp overnight (now 21%)"
-      ]
-    },
-    {
-      "ticker": "VIAV",
-      "name": "Viavi Solutions Inc.",
-      "price": 28.47,
-      "day_chg_pct": 8.251,
-      "notes": [
-        "5d forecast moved -4.1pp overnight (now -1.3%)",
-        "5d chance-of-gain moved -13pp overnight (now 47%)",
-        "10d forecast moved -6.3pp overnight (now +1.8%)",
-        "10d chance-of-gain moved -16pp overnight (now 56%)",
-        "15d forecast moved -8.7pp overnight (now -1.3%)",
-        "15d chance-of-gain moved -18pp overnight (now 52%)",
-        "50d forecast moved -19.2pp overnight (now -4.8%)",
-        "200d chance-of-gain moved -10pp overnight (now 29%)"
-      ]
-    },
-    {
-      "ticker": "ALAB",
-      "name": "Astera Labs, Inc.",
-      "price": 190.71,
-      "day_chg_pct": 6.263,
-      "notes": [
-        "5d forecast moved -3.6pp overnight (now +0.0%)",
-        "5d chance-of-gain moved -21pp overnight (now 43%)",
-        "10d forecast moved -4.2pp overnight (now +8.3%)",
-        "10d chance-of-gain moved -11pp overnight (now 65%)",
-        "15d forecast moved -6.5pp overnight (now +2.7%)",
-        "15d chance-of-gain moved -13pp overnight (now 60%)",
-        "50d forecast moved -15.0pp overnight (now +5.5%)",
-        "200d forecast moved +3.4pp overnight (now +4.6%)"
-      ]
-    },
-    {
-      "ticker": "ASM",
-      "name": "Avino Silver & Gold Mines Ltd.",
-      "price": 4.65,
-      "day_chg_pct": 1.528,
-      "notes": [
-        "10d forecast moved -3.4pp overnight (now -1.8%)",
-        "10d chance-of-gain moved -10pp overnight (now 37%)",
-        "15d forecast moved -8.4pp overnight (now -3.9%)",
-        "15d chance-of-gain moved -17pp overnight (now 34%)",
-        "50d forecast moved -12.5pp overnight (now -0.3%)",
-        "50d chance-of-gain moved +20pp overnight (now 56%)",
-        "200d forecast moved +3.7pp overnight (now +9.5%)",
-        "notably positive headlines (score +0.49)"
-      ]
-    },
-    {
-      "ticker": "CAMT",
-      "name": "Camtek Ltd.",
-      "price": 97.05,
-      "day_chg_pct": 5.581,
-      "notes": [
-        "5d forecast moved -3.2pp overnight (now -2.2%)",
-        "5d chance-of-gain moved -13pp overnight (now 37%)",
-        "10d chance-of-gain moved -15pp overnight (now 50%)",
-        "15d forecast moved -5.4pp overnight (now -1.5%)",
-        "15d chance-of-gain moved -13pp overnight (now 48%)",
-        "50d forecast moved -19.1pp overnight (now -5.6%)",
-        "200d forecast moved +3.6pp overnight (now -11.4%)",
-        "notably positive headlines (score +0.39)"
-      ]
-    },
-    {
-      "ticker": "TER",
-      "name": "Teradyne, Inc.",
-      "price": 218.22,
-      "day_chg_pct": 2.576,
-      "notes": [
-        "5d chance-of-gain moved -18pp overnight (now 44%)",
-        "10d forecast moved -4.1pp overnight (now +4.5%)",
-        "10d chance-of-gain moved -13pp overnight (now 62%)",
-        "15d forecast moved -4.4pp overnight (now +0.6%)",
-        "15d chance-of-gain moved -11pp overnight (now 61%)",
-        "30d forecast moved -3.9pp overnight (now -1.8%)",
-        "50d forecast moved -20.5pp overnight (now -2.3%)",
-        "200d forecast moved +7.3pp overnight (now -20.7%)"
-      ]
-    },
-    {
-      "ticker": "LPK.DE",
-      "name": "LPKF Laser & Electronics SE",
-      "price": 8.82,
-      "day_chg_pct": -2.434,
-      "notes": [
-        "5d forecast moved -3.9pp overnight (now -2.2%)",
-        "5d chance-of-gain moved -18pp overnight (now 34%)",
-        "15d chance-of-gain moved -12pp overnight (now 50%)",
-        "30d chance-of-gain moved -14pp overnight (now 42%)",
-        "50d forecast moved -14.3pp overnight (now +5.4%)",
-        "50d chance-of-gain moved -8pp overnight (now 41%)",
-        "200d forecast moved -29.6pp overnight (now +0.7%)",
-        "200d chance-of-gain moved -24pp overnight (now 21%)"
-      ]
-    },
-    {
-      "ticker": "VRT",
-      "name": "Vertiv Holdings Co",
-      "price": 182.86,
-      "day_chg_pct": 3.469,
-      "notes": [
-        "5d chance-of-gain moved -18pp overnight (now 35%)",
-        "10d forecast moved -5.3pp overnight (now +0.4%)",
-        "10d chance-of-gain moved -21pp overnight (now 46%)",
-        "15d forecast moved -4.6pp overnight (now +0.1%)",
-        "15d chance-of-gain moved -23pp overnight (now 41%)",
-        "30d forecast moved -3.6pp overnight (now -0.9%)",
-        "50d forecast moved -20.5pp overnight (now -1.1%)",
-        "200d chance-of-gain moved -14pp overnight (now 38%)"
-      ]
-    },
-    {
-      "ticker": "APLD",
-      "name": "Applied Digital Corporation",
-      "price": 15.55,
-      "day_chg_pct": 9.739,
-      "notes": [
-        "5d forecast moved -3.6pp overnight (now -3.0%)",
-        "5d chance-of-gain moved -13pp overnight (now 33%)",
-        "10d forecast moved -5.3pp overnight (now -2.6%)",
-        "10d chance-of-gain moved -19pp overnight (now 43%)",
-        "15d forecast moved -3.3pp overnight (now -2.9%)",
-        "15d chance-of-gain moved -20pp overnight (now 41%)",
-        "50d forecast moved -14.8pp overnight (now -2.0%)",
-        "200d chance-of-gain moved -11pp overnight (now 24%)"
-      ]
-    },
-    {
-      "ticker": "NET",
-      "name": "Cloudflare, Inc.",
-      "price": 268.75,
-      "day_chg_pct": 9.914,
-      "notes": [
-        "5d forecast moved -5.8pp overnight (now -1.9%)",
-        "5d chance-of-gain moved -8pp overnight (now 51%)",
-        "10d forecast moved -6.5pp overnight (now +1.6%)",
-        "10d chance-of-gain moved -10pp overnight (now 60%)",
-        "15d forecast moved -9.4pp overnight (now -2.3%)",
-        "15d chance-of-gain moved -20pp overnight (now 53%)",
-        "50d forecast moved -17.3pp overnight (now +0.0%)",
-        "200d forecast moved -5.0pp overnight (now -15.9%)"
-      ]
-    },
-    {
-      "ticker": "NVT",
-      "name": "nVent Electric plc",
-      "price": 106.22,
-      "day_chg_pct": 7.969,
-      "notes": [
-        "5d forecast moved -3.4pp overnight (now -1.6%)",
-        "5d chance-of-gain moved -19pp overnight (now 34%)",
-        "10d forecast moved -5.2pp overnight (now +1.8%)",
-        "10d chance-of-gain moved -18pp overnight (now 47%)",
-        "15d forecast moved -4.8pp overnight (now -0.2%)",
-        "15d chance-of-gain moved -16pp overnight (now 50%)",
-        "50d forecast moved -17.1pp overnight (now +1.1%)",
-        "200d forecast moved +13.1pp overnight (now +5.2%)"
-      ]
-    },
-    {
-      "ticker": "SLDP",
-      "name": "Solid Power, Inc.",
-      "price": 1.985,
-      "day_chg_pct": -2.696,
-      "notes": [
-        "5d chance-of-gain moved -13pp overnight (now 23%)",
-        "10d chance-of-gain moved -15pp overnight (now 40%)",
-        "15d forecast moved -5.6pp overnight (now -2.7%)",
-        "15d chance-of-gain moved -13pp overnight (now 43%)",
-        "30d forecast moved +4.0pp overnight (now +3.8%)",
-        "50d forecast moved -15.0pp overnight (now +1.7%)",
-        "200d forecast moved +9.9pp overnight (now +59.7%)",
-        "200d chance-of-gain moved -8pp overnight (now 58%)"
-      ]
-    },
-    {
-      "ticker": "SNOW",
-      "name": "Snowflake Inc.",
-      "price": 275.88,
-      "day_chg_pct": 2.352,
-      "notes": [
-        "5d forecast moved -4.4pp overnight (now -0.5%)",
-        "5d chance-of-gain moved -19pp overnight (now 48%)",
-        "10d chance-of-gain moved -18pp overnight (now 54%)",
-        "15d forecast moved -4.0pp overnight (now +5.4%)",
-        "15d chance-of-gain moved -16pp overnight (now 66%)",
-        "50d forecast moved -14.4pp overnight (now +15.0%)",
-        "200d forecast moved -24.3pp overnight (now -1.1%)",
-        "200d chance-of-gain moved -29pp overnight (now 16%)"
-      ]
-    },
-    {
-      "ticker": "MDB",
-      "name": "MongoDB, Inc.",
-      "price": 312.83,
-      "day_chg_pct": 2.705,
-      "notes": [
-        "5d chance-of-gain moved -16pp overnight (now 39%)",
-        "10d forecast moved -3.8pp overnight (now -0.1%)",
-        "10d chance-of-gain moved -14pp overnight (now 51%)",
-        "15d forecast moved -5.7pp overnight (now +0.4%)",
-        "15d chance-of-gain moved -16pp overnight (now 57%)",
-        "50d forecast moved -16.2pp overnight (now +3.9%)",
-        "200d chance-of-gain moved -8pp overnight (now 32%)",
-        "notably positive headlines (score +0.39)"
-      ]
-    },
-    {
-      "ticker": "FSLY",
-      "name": "Fastly, Inc.",
-      "price": 15.85,
-      "day_chg_pct": 3.056,
-      "notes": [
-        "5d chance-of-gain moved -18pp overnight (now 39%)",
-        "10d forecast moved -3.9pp overnight (now +6.1%)",
-        "10d chance-of-gain moved -9pp overnight (now 63%)",
-        "15d forecast moved -7.1pp overnight (now +4.7%)",
-        "15d chance-of-gain moved -14pp overnight (now 56%)",
-        "50d forecast moved -20.6pp overnight (now +9.7%)",
-        "200d forecast moved -24.5pp overnight (now +19.7%)",
-        "200d chance-of-gain moved -19pp overnight (now 33%)"
-      ]
-    },
-    {
-      "ticker": "NTCT",
-      "name": "NetScout Systems, Inc.",
-      "price": 31.51,
-      "day_chg_pct": -1.005,
-      "notes": [
-        "5d chance-of-gain moved -15pp overnight (now 43%)",
-        "10d forecast moved -4.1pp overnight (now +0.7%)",
-        "10d chance-of-gain moved -11pp overnight (now 52%)",
-        "15d forecast moved -5.3pp overnight (now -1.0%)",
-        "15d chance-of-gain moved -18pp overnight (now 57%)",
-        "50d forecast moved -23.3pp overnight (now -1.9%)",
-        "200d forecast moved -19.0pp overnight (now +4.0%)",
-        "200d chance-of-gain moved -20pp overnight (now 40%)"
-      ]
-    },
-    {
-      "ticker": "OKTA",
-      "name": "Okta, Inc.",
-      "price": 168.69,
-      "day_chg_pct": -1.443,
-      "notes": [
-        "5d forecast moved -3.0pp overnight (now -0.3%)",
-        "5d chance-of-gain moved -18pp overnight (now 40%)",
-        "10d forecast moved -3.6pp overnight (now +2.0%)",
-        "10d chance-of-gain moved -8pp overnight (now 53%)",
-        "15d chance-of-gain moved -10pp overnight (now 68%)",
-        "50d forecast moved -11.4pp overnight (now +10.8%)",
-        "200d forecast moved -8.2pp overnight (now +22.2%)",
-        "200d chance-of-gain moved -17pp overnight (now 37%)"
-      ]
-    },
-    {
-      "ticker": "RBRK",
-      "name": "RBRK",
-      "price": 105.75,
-      "day_chg_pct": 0.009,
-      "notes": [
-        "5d chance-of-gain moved -17pp overnight (now 41%)",
-        "10d chance-of-gain moved -10pp overnight (now 50%)",
-        "15d forecast moved -3.7pp overnight (now +1.9%)",
-        "15d chance-of-gain moved -15pp overnight (now 62%)",
-        "30d forecast moved +5.3pp overnight (now +14.3%)",
-        "50d forecast moved -14.1pp overnight (now +4.5%)",
-        "200d forecast moved -12.1pp overnight (now +24.2%)",
-        "200d chance-of-gain moved -17pp overnight (now 67%)"
-      ]
-    },
-    {
-      "ticker": "UMAC",
-      "name": "Unusual Machines, Inc.",
-      "price": 11.9,
-      "day_chg_pct": 10.801,
-      "notes": [
-        "5d chance-of-gain moved -9pp overnight (now 44%)",
-        "10d forecast moved -4.3pp overnight (now +5.1%)",
-        "15d forecast moved -3.2pp overnight (now +5.1%)",
-        "15d chance-of-gain moved -16pp overnight (now 50%)",
-        "30d forecast moved -8.6pp overnight (now -1.5%)",
-        "50d forecast moved -15.6pp overnight (now +1.4%)",
-        "200d forecast moved +17.2pp overnight (now +16.4%)",
-        "200d chance-of-gain moved -18pp overnight (now 31%)"
-      ]
-    },
-    {
-      "ticker": "AVAV",
-      "name": "AeroVironment, Inc.",
-      "price": 112.76,
-      "day_chg_pct": 10.462,
-      "notes": [
-        "5d forecast moved -3.0pp overnight (now -2.9%)",
-        "5d chance-of-gain moved -15pp overnight (now 28%)",
-        "10d chance-of-gain moved -10pp overnight (now 39%)",
-        "15d forecast moved -5.2pp overnight (now +0.6%)",
-        "15d chance-of-gain moved -20pp overnight (now 44%)",
-        "50d forecast moved -21.6pp overnight (now -4.0%)",
-        "50d chance-of-gain moved -14pp overnight (now 39%)",
-        "200d chance-of-gain moved -14pp overnight (now 13%)"
-      ]
-    },
-    {
-      "ticker": "KTOS",
-      "name": "Kratos Defense & Security Solutions, Inc.",
-      "price": 35.1,
-      "day_chg_pct": 5.121,
-      "notes": [
-        "5d forecast moved -5.5pp overnight (now -2.6%)",
-        "5d chance-of-gain moved -12pp overnight (now 30%)",
-        "10d forecast moved -3.1pp overnight (now -0.8%)",
-        "15d forecast moved -4.7pp overnight (now -2.2%)",
-        "15d chance-of-gain moved -15pp overnight (now 46%)",
-        "50d forecast moved -18.9pp overnight (now -6.6%)",
-        "200d forecast moved -9.8pp overnight (now -10.6%)",
-        "200d chance-of-gain moved -15pp overnight (now 31%)"
-      ]
-    },
-    {
-      "ticker": "BWXT",
-      "name": "BWX Technologies, Inc.",
-      "price": 119.52,
-      "day_chg_pct": 3.967,
-      "notes": [
-        "5d chance-of-gain moved -8pp overnight (now 33%)",
-        "10d chance-of-gain moved -18pp overnight (now 44%)",
-        "15d forecast moved -4.3pp overnight (now -1.1%)",
-        "15d chance-of-gain moved -16pp overnight (now 49%)",
-        "50d forecast moved -11.5pp overnight (now -4.7%)",
-        "200d forecast moved +3.4pp overnight (now -3.7%)",
-        "200d chance-of-gain moved -16pp overnight (now 35%)",
-        "notably positive headlines (score +0.36)"
-      ]
-    },
-    {
-      "ticker": "SPCX",
-      "name": "Space Exploration Technologies Corp.",
-      "price": 134.27,
-      "day_chg_pct": 8.615,
-      "notes": [
-        "5d chance-of-gain moved -14pp overnight (now 35%)",
-        "10d chance-of-gain moved -19pp overnight (now 39%)",
-        "15d forecast moved -5.5pp overnight (now -2.4%)",
-        "15d chance-of-gain moved -24pp overnight (now 39%)",
-        "30d chance-of-gain moved +15pp overnight (now 54%)",
-        "50d forecast moved -16.5pp overnight (now -6.3%)",
-        "200d forecast moved +5.3pp overnight (now -11.0%)",
-        "200d chance-of-gain moved -11pp overnight (now 28%)"
+        "notably positive headlines (score +0.45)"
       ]
     },
     {
@@ -1589,14 +296,25 @@
       "price": 2.77,
       "day_chg_pct": 16.387,
       "notes": [
-        "5d chance-of-gain moved -8pp overnight (now 32%)",
-        "10d chance-of-gain moved -10pp overnight (now 40%)",
-        "15d forecast moved -6.7pp overnight (now -0.7%)",
-        "15d chance-of-gain moved -17pp overnight (now 47%)",
-        "50d forecast moved -21.7pp overnight (now -4.6%)",
-        "200d forecast moved -6.1pp overnight (now +44.9%)",
-        "200d chance-of-gain moved -21pp overnight (now 37%)",
         "earnings in 7 days"
+      ]
+    },
+    {
+      "ticker": "CEG",
+      "name": "Constellation Energy Corporation",
+      "price": 249.95,
+      "day_chg_pct": 4.298,
+      "notes": [
+        "earnings in 3 days"
+      ]
+    },
+    {
+      "ticker": "VST",
+      "name": "Vistra Corp.",
+      "price": 124.8,
+      "day_chg_pct": 10.55,
+      "notes": [
+        "200d forecast moved -4.5pp overnight (now +6.0%)"
       ]
     },
     {
@@ -1605,549 +323,16 @@
       "price": 23.55,
       "day_chg_pct": 22.656,
       "notes": [
-        "5d forecast moved -6.6pp overnight (now -2.9%)",
-        "5d chance-of-gain moved -12pp overnight (now 38%)",
-        "15d forecast moved -6.1pp overnight (now -3.5%)",
-        "50d forecast moved -13.6pp overnight (now +1.8%)",
-        "50d chance-of-gain moved -21pp overnight (now 46%)",
-        "200d forecast moved -27.9pp overnight (now -0.1%)",
-        "200d chance-of-gain moved -12pp overnight (now 32%)",
         "earnings in 0 days"
       ]
     },
     {
-      "ticker": "GEV",
-      "name": "GE Vernova Inc.",
-      "price": 774.11,
-      "day_chg_pct": 0.467,
+      "ticker": "BE",
+      "name": "Bloom Energy Corporation",
+      "price": 173.24,
+      "day_chg_pct": 3.415,
       "notes": [
-        "5d chance-of-gain moved -17pp overnight (now 40%)",
-        "10d forecast moved -4.4pp overnight (now -0.3%)",
-        "10d chance-of-gain moved -13pp overnight (now 54%)",
-        "15d forecast moved -5.1pp overnight (now -0.8%)",
-        "15d chance-of-gain moved -17pp overnight (now 56%)",
-        "50d forecast moved -15.8pp overnight (now +0.0%)",
-        "200d forecast moved +4.5pp overnight (now -26.4%)",
-        "200d chance-of-gain moved -14pp overnight (now 23%)"
-      ]
-    },
-    {
-      "ticker": "CCJ",
-      "name": "Cameco Corporation",
-      "price": 71.3,
-      "day_chg_pct": 4.347,
-      "notes": [
-        "5d chance-of-gain moved -15pp overnight (now 34%)",
-        "10d chance-of-gain moved -15pp overnight (now 45%)",
-        "15d forecast moved -5.6pp overnight (now -0.8%)",
-        "15d chance-of-gain moved -18pp overnight (now 44%)",
-        "50d forecast moved -12.5pp overnight (now -4.0%)",
-        "200d forecast moved +5.3pp overnight (now -6.4%)",
-        "200d chance-of-gain moved -13pp overnight (now 39%)",
-        "notably positive headlines (score +0.38)"
-      ]
-    },
-    {
-      "ticker": "MTZ",
-      "name": "MasTec, Inc.",
-      "price": 174.1,
-      "day_chg_pct": 9.538,
-      "notes": [
-        "5d chance-of-gain moved -10pp overnight (now 33%)",
-        "10d chance-of-gain moved -19pp overnight (now 45%)",
-        "15d forecast moved -5.6pp overnight (now -1.9%)",
-        "15d chance-of-gain moved -14pp overnight (now 45%)",
-        "50d forecast moved -15.4pp overnight (now -3.3%)",
-        "50d chance-of-gain moved -8pp overnight (now 46%)",
-        "200d forecast moved -3.1pp overnight (now -14.8%)",
-        "200d chance-of-gain moved -10pp overnight (now 27%)"
-      ]
-    },
-    {
-      "ticker": "BEAM",
-      "name": "Beam Therapeutics Inc.",
-      "price": 26.41,
-      "day_chg_pct": 2.087,
-      "notes": [
-        "5d chance-of-gain moved -11pp overnight (now 38%)",
-        "10d chance-of-gain moved -13pp overnight (now 47%)",
-        "15d forecast moved -4.0pp overnight (now -2.0%)",
-        "15d chance-of-gain moved -11pp overnight (now 48%)",
-        "30d forecast moved +3.7pp overnight (now +0.4%)",
-        "50d forecast moved -8.1pp overnight (now -6.7%)",
-        "200d forecast moved +9.9pp overnight (now +0.3%)",
-        "200d chance-of-gain moved -10pp overnight (now 42%)"
-      ]
-    },
-    {
-      "ticker": "MRNA",
-      "name": "Moderna, Inc.",
-      "price": 254.19,
-      "day_chg_pct": 5.272,
-      "notes": [
-        "5d forecast moved -5.2pp overnight (now -7.1%)",
-        "10d forecast moved -5.1pp overnight (now -7.8%)",
-        "15d forecast moved -6.3pp overnight (now -11.9%)",
-        "30d forecast moved -12.0pp overnight (now -22.6%)",
-        "30d chance-of-gain moved -15pp overnight (now 26%)",
-        "50d forecast moved -14.1pp overnight (now -16.2%)",
-        "200d forecast moved -24.6pp overnight (now -26.8%)",
-        "earnings in 0 days"
-      ]
-    },
-    {
-      "ticker": "WWW",
-      "name": "Wolverine World Wide, Inc.",
-      "price": 21.33,
-      "day_chg_pct": -1.66,
-      "notes": [
-        "5d chance-of-gain moved -11pp overnight (now 46%)",
-        "10d chance-of-gain moved -14pp overnight (now 47%)",
-        "15d forecast moved -5.3pp overnight (now -0.3%)",
-        "15d chance-of-gain moved -14pp overnight (now 56%)",
-        "30d chance-of-gain moved -11pp overnight (now 53%)",
-        "50d forecast moved -9.1pp overnight (now +0.7%)",
-        "200d forecast moved +3.6pp overnight (now +16.1%)",
-        "earnings in 6 days"
-      ]
-    },
-    {
-      "ticker": "CLF",
-      "name": "Cleveland-Cliffs Inc.",
-      "price": 11.46,
-      "day_chg_pct": 1.686,
-      "notes": [
-        "5d chance-of-gain moved -13pp overnight (now 43%)",
-        "10d forecast moved -3.4pp overnight (now -1.0%)",
-        "10d chance-of-gain moved -14pp overnight (now 50%)",
-        "15d forecast moved -3.8pp overnight (now -1.1%)",
-        "15d chance-of-gain moved -18pp overnight (now 52%)",
-        "50d forecast moved -12.4pp overnight (now -4.2%)",
-        "200d forecast moved +3.4pp overnight (now +15.3%)",
-        "200d chance-of-gain moved -12pp overnight (now 37%)"
-      ]
-    },
-    {
-      "ticker": "SCHZ",
-      "name": "Schwab U.S. Aggregate Bond ETF",
-      "price": 22.55,
-      "day_chg_pct": -0.089,
-      "notes": [
-        "5d chance-of-gain moved -10pp overnight (now 36%)",
-        "10d chance-of-gain moved -11pp overnight (now 44%)",
-        "15d forecast moved -3.7pp overnight (now -0.7%)",
-        "15d chance-of-gain moved -11pp overnight (now 42%)",
-        "30d chance-of-gain moved +18pp overnight (now 62%)",
-        "50d forecast moved -6.0pp overnight (now -2.1%)",
-        "50d chance-of-gain moved -10pp overnight (now 53%)",
-        "200d chance-of-gain moved -16pp overnight (now 29%)"
-      ]
-    },
-    {
-      "ticker": "FBT",
-      "name": "First Trust NYSE Arca Biotechnology Index Fund",
-      "price": 266.18,
-      "day_chg_pct": 0.29,
-      "notes": [
-        "10d chance-of-gain moved -9pp overnight (now 67%)",
-        "15d forecast moved -3.5pp overnight (now +0.4%)",
-        "15d chance-of-gain moved -11pp overnight (now 71%)",
-        "30d chance-of-gain moved +14pp overnight (now 82%)",
-        "50d forecast moved -5.3pp overnight (now +1.7%)",
-        "50d chance-of-gain moved +20pp overnight (now 78%)",
-        "200d chance-of-gain moved -12pp overnight (now 63%)",
-        "notably positive headlines (score +0.47)"
-      ]
-    },
-    {
-      "ticker": "VCR",
-      "name": "Vanguard Consumer Discretionary Index Fund ETF Shares",
-      "price": 391.31,
-      "day_chg_pct": -0.13,
-      "notes": [
-        "10d chance-of-gain moved -12pp overnight (now 45%)",
-        "15d forecast moved -3.9pp overnight (now -1.3%)",
-        "15d chance-of-gain moved -11pp overnight (now 48%)",
-        "50d forecast moved -5.4pp overnight (now -4.5%)",
-        "50d chance-of-gain moved +9pp overnight (now 45%)",
-        "200d forecast moved +5.8pp overnight (now +1.5%)",
-        "200d chance-of-gain moved -9pp overnight (now 49%)",
-        "notably positive headlines (score +0.37)"
-      ]
-    },
-    {
-      "ticker": "TSLA",
-      "name": "Tesla, Inc.",
-      "price": 358.22,
-      "day_chg_pct": 4.228,
-      "notes": [
-        "5d chance-of-gain moved -14pp overnight (now 34%)",
-        "15d forecast moved -3.4pp overnight (now -3.8%)",
-        "15d chance-of-gain moved -20pp overnight (now 34%)",
-        "30d forecast moved +3.3pp overnight (now -2.5%)",
-        "50d forecast moved -12.3pp overnight (now -6.2%)",
-        "200d forecast moved +8.0pp overnight (now -0.7%)",
-        "200d chance-of-gain moved -18pp overnight (now 43%)"
-      ]
-    },
-    {
-      "ticker": "DIS",
-      "name": "The Walt Disney Company",
-      "price": 116.75,
-      "day_chg_pct": -0.401,
-      "notes": [
-        "5d chance-of-gain moved -11pp overnight (now 50%)",
-        "10d chance-of-gain moved -19pp overnight (now 48%)",
-        "15d forecast moved -4.9pp overnight (now -0.7%)",
-        "15d chance-of-gain moved -14pp overnight (now 54%)",
-        "30d chance-of-gain moved -13pp overnight (now 47%)",
-        "50d forecast moved -6.8pp overnight (now -4.3%)",
-        "200d chance-of-gain moved -12pp overnight (now 49%)"
-      ]
-    },
-    {
-      "ticker": "INTC",
-      "name": "Intel Corporation",
-      "price": 56.28,
-      "day_chg_pct": 7.713,
-      "notes": [
-        "5d forecast moved -5.4pp overnight (now -1.3%)",
-        "5d chance-of-gain moved -13pp overnight (now 45%)",
-        "10d chance-of-gain moved -16pp overnight (now 61%)",
-        "15d forecast moved -6.2pp overnight (now +0.2%)",
-        "15d chance-of-gain moved -16pp overnight (now 54%)",
-        "50d forecast moved -12.3pp overnight (now +5.8%)",
-        "200d forecast moved +22.3pp overnight (now -1.8%)"
-      ]
-    },
-    {
-      "ticker": "QCOM",
-      "name": "QUALCOMM Incorporated",
-      "price": 165.41,
-      "day_chg_pct": 5.525,
-      "notes": [
-        "5d chance-of-gain moved -14pp overnight (now 40%)",
-        "10d chance-of-gain moved -13pp overnight (now 50%)",
-        "15d forecast moved -4.2pp overnight (now -1.5%)",
-        "15d chance-of-gain moved -18pp overnight (now 49%)",
-        "50d forecast moved -15.5pp overnight (now -1.4%)",
-        "200d forecast moved +5.9pp overnight (now +5.3%)",
-        "200d chance-of-gain moved -10pp overnight (now 41%)"
-      ]
-    },
-    {
-      "ticker": "MRVL",
-      "name": "Marvell Technology, Inc.",
-      "price": 141.2,
-      "day_chg_pct": 5.728,
-      "notes": [
-        "5d forecast moved -4.5pp overnight (now -1.4%)",
-        "5d chance-of-gain moved -15pp overnight (now 41%)",
-        "10d forecast moved -3.9pp overnight (now +6.4%)",
-        "10d chance-of-gain moved -10pp overnight (now 61%)",
-        "15d forecast moved -3.7pp overnight (now +6.0%)",
-        "50d forecast moved -20.6pp overnight (now +11.8%)",
-        "200d forecast moved -8.6pp overnight (now -17.2%)"
-      ]
-    },
-    {
-      "ticker": "MPWR",
-      "name": "Monolithic Power Systems, Inc.",
-      "price": 1190.4399,
-      "day_chg_pct": 5.216,
-      "notes": [
-        "5d chance-of-gain moved -14pp overnight (now 44%)",
-        "10d chance-of-gain moved -16pp overnight (now 55%)",
-        "15d forecast moved -5.2pp overnight (now -1.7%)",
-        "15d chance-of-gain moved -17pp overnight (now 54%)",
-        "50d forecast moved -15.7pp overnight (now -1.6%)",
-        "200d forecast moved +4.7pp overnight (now -8.9%)",
-        "200d chance-of-gain moved -12pp overnight (now 19%)"
-      ]
-    },
-    {
-      "ticker": "NVTS",
-      "name": "Navitas Semiconductor Corporation",
-      "price": 8.61,
-      "day_chg_pct": 9.542,
-      "notes": [
-        "10d forecast moved -5.3pp overnight (now +0.7%)",
-        "10d chance-of-gain moved -16pp overnight (now 41%)",
-        "15d forecast moved -8.8pp overnight (now -4.0%)",
-        "15d chance-of-gain moved -17pp overnight (now 41%)",
-        "50d forecast moved -22.5pp overnight (now -7.4%)",
-        "50d chance-of-gain moved -9pp overnight (now 42%)",
-        "200d chance-of-gain moved -10pp overnight (now 28%)"
-      ]
-    },
-    {
-      "ticker": "AMKR",
-      "name": "Amkor Technology, Inc.",
-      "price": 32.82,
-      "day_chg_pct": 7.642,
-      "notes": [
-        "5d chance-of-gain moved -15pp overnight (now 35%)",
-        "10d forecast moved -5.1pp overnight (now +0.5%)",
-        "10d chance-of-gain moved -15pp overnight (now 44%)",
-        "15d forecast moved -4.3pp overnight (now -0.7%)",
-        "15d chance-of-gain moved -15pp overnight (now 45%)",
-        "50d forecast moved -16.8pp overnight (now -5.2%)",
-        "200d forecast moved +9.8pp overnight (now +10.3%)"
-      ]
-    },
-    {
-      "ticker": "SKHY",
-      "name": "SK hynix Inc.",
-      "price": 127.34,
-      "day_chg_pct": 2.776,
-      "notes": [
-        "5d chance-of-gain moved -14pp overnight (now 37%)",
-        "10d forecast moved -5.9pp overnight (now -0.7%)",
-        "10d chance-of-gain moved -14pp overnight (now 50%)",
-        "15d forecast moved -5.0pp overnight (now -1.0%)",
-        "15d chance-of-gain moved -15pp overnight (now 50%)",
-        "50d forecast moved -19.0pp overnight (now -3.8%)",
-        "200d chance-of-gain moved -9pp overnight (now 22%)"
-      ]
-    },
-    {
-      "ticker": "GLW",
-      "name": "Corning Incorporated",
-      "price": 106.13,
-      "day_chg_pct": 2.61,
-      "notes": [
-        "5d chance-of-gain moved -18pp overnight (now 41%)",
-        "10d forecast moved -4.9pp overnight (now +1.1%)",
-        "10d chance-of-gain moved -16pp overnight (now 55%)",
-        "15d forecast moved -5.4pp overnight (now -0.0%)",
-        "15d chance-of-gain moved -15pp overnight (now 56%)",
-        "50d forecast moved -18.9pp overnight (now -4.8%)",
         "notably positive headlines (score +0.43)"
-      ]
-    },
-    {
-      "ticker": "BESI.AS",
-      "name": "BE Semiconductor Industries N.V.",
-      "price": 143.4,
-      "day_chg_pct": 1.774,
-      "notes": [
-        "5d chance-of-gain moved -21pp overnight (now 30%)",
-        "10d chance-of-gain moved -16pp overnight (now 44%)",
-        "15d forecast moved -3.4pp overnight (now -2.3%)",
-        "15d chance-of-gain moved -9pp overnight (now 40%)",
-        "50d forecast moved -14.7pp overnight (now -4.7%)",
-        "200d forecast moved -5.2pp overnight (now -3.7%)",
-        "200d chance-of-gain moved -24pp overnight (now 32%)"
-      ]
-    },
-    {
-      "ticker": "ETN",
-      "name": "Eaton Corporation plc",
-      "price": 341.72,
-      "day_chg_pct": 4.495,
-      "notes": [
-        "5d chance-of-gain moved -17pp overnight (now 37%)",
-        "10d chance-of-gain moved -20pp overnight (now 42%)",
-        "15d forecast moved -5.1pp overnight (now -2.1%)",
-        "15d chance-of-gain moved -18pp overnight (now 50%)",
-        "50d forecast moved -16.5pp overnight (now -3.0%)",
-        "200d forecast moved +12.7pp overnight (now +1.9%)",
-        "200d chance-of-gain moved -10pp overnight (now 41%)"
-      ]
-    },
-    {
-      "ticker": "MOD",
-      "name": "Modine Manufacturing Company",
-      "price": 96.61,
-      "day_chg_pct": 5.712,
-      "notes": [
-        "5d forecast moved -3.9pp overnight (now -1.1%)",
-        "5d chance-of-gain moved -12pp overnight (now 37%)",
-        "10d chance-of-gain moved -13pp overnight (now 48%)",
-        "50d forecast moved -13.5pp overnight (now -4.3%)",
-        "50d chance-of-gain moved -10pp overnight (now 51%)",
-        "200d forecast moved +5.8pp overnight (now +0.8%)",
-        "200d chance-of-gain moved -10pp overnight (now 27%)"
-      ]
-    },
-    {
-      "ticker": "NOW",
-      "name": "ServiceNow, Inc.",
-      "price": 101.97,
-      "day_chg_pct": -0.381,
-      "notes": [
-        "5d chance-of-gain moved -16pp overnight (now 40%)",
-        "10d forecast moved -3.1pp overnight (now +1.8%)",
-        "10d chance-of-gain moved -13pp overnight (now 56%)",
-        "15d forecast moved -5.7pp overnight (now -2.7%)",
-        "15d chance-of-gain moved -15pp overnight (now 47%)",
-        "50d forecast moved -15.7pp overnight (now -0.2%)",
-        "200d forecast moved +15.0pp overnight (now -5.9%)"
-      ]
-    },
-    {
-      "ticker": "DDOG",
-      "name": "Datadog, Inc.",
-      "price": 179.04,
-      "day_chg_pct": 2.543,
-      "notes": [
-        "5d chance-of-gain moved -12pp overnight (now 50%)",
-        "10d chance-of-gain moved -10pp overnight (now 64%)",
-        "15d forecast moved -4.5pp overnight (now +3.7%)",
-        "15d chance-of-gain moved -12pp overnight (now 59%)",
-        "50d forecast moved -17.3pp overnight (now +5.5%)",
-        "200d forecast moved -4.9pp overnight (now -11.2%)",
-        "200d chance-of-gain moved -15pp overnight (now 25%)"
-      ]
-    },
-    {
-      "ticker": "ESTC",
-      "name": "Elastic N.V.",
-      "price": 86.08,
-      "day_chg_pct": 2.233,
-      "notes": [
-        "5d chance-of-gain moved -16pp overnight (now 42%)",
-        "10d chance-of-gain moved -11pp overnight (now 47%)",
-        "15d forecast moved -4.3pp overnight (now +1.6%)",
-        "15d chance-of-gain moved -14pp overnight (now 63%)",
-        "50d forecast moved -15.3pp overnight (now +1.8%)",
-        "200d forecast moved -5.6pp overnight (now +2.7%)",
-        "200d chance-of-gain moved -17pp overnight (now 43%)"
-      ]
-    },
-    {
-      "ticker": "PD",
-      "name": "PagerDuty, Inc.",
-      "price": 15.68,
-      "day_chg_pct": -3.389,
-      "notes": [
-        "5d chance-of-gain moved -13pp overnight (now 48%)",
-        "10d chance-of-gain moved -14pp overnight (now 54%)",
-        "15d chance-of-gain moved -11pp overnight (now 68%)",
-        "30d forecast moved +3.4pp overnight (now +12.9%)",
-        "50d forecast moved -6.3pp overnight (now +14.7%)",
-        "200d forecast moved +7.9pp overnight (now +62.2%)",
-        "200d chance-of-gain moved -12pp overnight (now 69%)"
-      ]
-    },
-    {
-      "ticker": "FFIV",
-      "name": "F5, Inc.",
-      "price": 310.84,
-      "day_chg_pct": -0.289,
-      "notes": [
-        "5d chance-of-gain moved -20pp overnight (now 40%)",
-        "10d chance-of-gain moved -12pp overnight (now 61%)",
-        "15d forecast moved -4.8pp overnight (now -0.6%)",
-        "15d chance-of-gain moved -18pp overnight (now 53%)",
-        "50d forecast moved -14.5pp overnight (now +0.8%)",
-        "200d forecast moved +7.2pp overnight (now -4.0%)",
-        "200d chance-of-gain moved -12pp overnight (now 30%)"
-      ]
-    },
-    {
-      "ticker": "ZS",
-      "name": "Zscaler, Inc.",
-      "price": 197.66,
-      "day_chg_pct": -3.051,
-      "notes": [
-        "5d chance-of-gain moved -20pp overnight (now 34%)",
-        "10d chance-of-gain moved -13pp overnight (now 40%)",
-        "15d forecast moved -4.0pp overnight (now -2.2%)",
-        "15d chance-of-gain moved -8pp overnight (now 50%)",
-        "50d forecast moved -13.5pp overnight (now -6.9%)",
-        "200d forecast moved +4.3pp overnight (now -3.9%)",
-        "200d chance-of-gain moved -13pp overnight (now 27%)"
-      ]
-    },
-    {
-      "ticker": "SOUN",
-      "name": "SoundHound AI, Inc.",
-      "price": 4.11,
-      "day_chg_pct": -3.521,
-      "notes": [
-        "5d chance-of-gain moved -17pp overnight (now 28%)",
-        "15d forecast moved -8.9pp overnight (now -2.0%)",
-        "15d chance-of-gain moved -21pp overnight (now 43%)",
-        "50d forecast moved -11.3pp overnight (now +2.0%)",
-        "50d chance-of-gain moved +9pp overnight (now 55%)",
-        "200d forecast moved +5.7pp overnight (now +24.4%)",
-        "200d chance-of-gain moved -9pp overnight (now 49%)"
-      ]
-    },
-    {
-      "ticker": "LMT",
-      "name": "Lockheed Martin Corporation",
-      "price": 567.08,
-      "day_chg_pct": -1.576,
-      "notes": [
-        "5d chance-of-gain moved -21pp overnight (now 37%)",
-        "10d chance-of-gain moved -10pp overnight (now 50%)",
-        "15d forecast moved -4.0pp overnight (now -2.6%)",
-        "15d chance-of-gain moved -15pp overnight (now 43%)",
-        "50d forecast moved -9.7pp overnight (now -3.2%)",
-        "200d forecast moved -7.1pp overnight (now -1.9%)",
-        "200d chance-of-gain moved -15pp overnight (now 39%)"
-      ]
-    },
-    {
-      "ticker": "NOC",
-      "name": "Northrop Grumman Corporation",
-      "price": 525.01,
-      "day_chg_pct": -0.046,
-      "notes": [
-        "5d chance-of-gain moved -14pp overnight (now 41%)",
-        "10d chance-of-gain moved -12pp overnight (now 44%)",
-        "15d forecast moved -4.1pp overnight (now -1.7%)",
-        "15d chance-of-gain moved -10pp overnight (now 43%)",
-        "50d forecast moved -7.8pp overnight (now -6.2%)",
-        "200d forecast moved -3.2pp overnight (now -2.1%)",
-        "200d chance-of-gain moved -20pp overnight (now 40%)"
-      ]
-    },
-    {
-      "ticker": "IRDM",
-      "name": "Iridium Communications Inc.",
-      "price": 44.04,
-      "day_chg_pct": 4.807,
-      "notes": [
-        "5d chance-of-gain moved -18pp overnight (now 49%)",
-        "10d chance-of-gain moved -19pp overnight (now 60%)",
-        "15d forecast moved -3.4pp overnight (now +4.5%)",
-        "15d chance-of-gain moved -17pp overnight (now 64%)",
-        "50d forecast moved -11.6pp overnight (now +26.1%)",
-        "200d forecast moved -23.7pp overnight (now +57.6%)",
-        "200d chance-of-gain moved -13pp overnight (now 62%)"
-      ]
-    },
-    {
-      "ticker": "OUST",
-      "name": "Ouster, Inc.",
-      "price": 34.795,
-      "day_chg_pct": 14.007,
-      "notes": [
-        "10d forecast moved -3.2pp overnight (now -0.2%)",
-        "10d chance-of-gain moved -10pp overnight (now 48%)",
-        "15d forecast moved -8.8pp overnight (now -4.3%)",
-        "15d chance-of-gain moved -9pp overnight (now 47%)",
-        "50d forecast moved -15.2pp overnight (now +5.9%)",
-        "50d chance-of-gain moved -8pp overnight (now 49%)",
-        "200d chance-of-gain moved -16pp overnight (now 34%)"
-      ]
-    },
-    {
-      "ticker": "HON",
-      "name": "Honeywell International Inc.",
-      "price": 220.05,
-      "day_chg_pct": 1.979,
-      "notes": [
-        "5d chance-of-gain moved -10pp overnight (now 38%)",
-        "10d chance-of-gain moved -22pp overnight (now 42%)",
-        "15d forecast moved -4.9pp overnight (now -1.8%)",
-        "15d chance-of-gain moved -12pp overnight (now 48%)",
-        "50d forecast moved -7.6pp overnight (now -4.3%)",
-        "200d forecast moved +4.1pp overnight (now +1.6%)",
-        "200d chance-of-gain moved -11pp overnight (now 48%)"
       ]
     },
     {
@@ -2156,73 +341,61 @@
       "price": 146.04,
       "day_chg_pct": -3.317,
       "notes": [
-        "5d chance-of-gain moved -12pp overnight (now 47%)",
-        "10d chance-of-gain moved -17pp overnight (now 49%)",
-        "15d forecast moved -4.8pp overnight (now -0.5%)",
-        "15d chance-of-gain moved -21pp overnight (now 49%)",
-        "30d forecast moved -3.5pp overnight (now +3.7%)",
-        "50d forecast moved -5.5pp overnight (now +4.8%)",
         "earnings in 7 days"
       ]
     },
     {
-      "ticker": "JCI",
-      "name": "Johnson Controls International plc",
-      "price": 135.03,
-      "day_chg_pct": 2.716,
+      "ticker": "DUK",
+      "name": "Duke Energy Corporation",
+      "price": 127.78,
+      "day_chg_pct": -1.768,
       "notes": [
-        "5d chance-of-gain moved -9pp overnight (now 46%)",
-        "15d forecast moved -3.3pp overnight (now -0.5%)",
-        "15d chance-of-gain moved -15pp overnight (now 56%)",
-        "30d chance-of-gain moved +9pp overnight (now 60%)",
-        "50d forecast moved -9.9pp overnight (now -0.4%)",
-        "50d chance-of-gain moved +9pp overnight (now 60%)",
-        "200d chance-of-gain moved -11pp overnight (now 50%)"
+        "notably positive headlines (score +0.35)"
       ]
     },
     {
-      "ticker": "UPST",
-      "name": "Upstart Holdings, Inc.",
-      "price": 21.89,
-      "day_chg_pct": -1.129,
+      "ticker": "SALQF",
+      "name": "Atlas Salt Inc.",
+      "price": 0.9798,
+      "day_chg_pct": 3.142,
       "notes": [
-        "5d chance-of-gain moved -14pp overnight (now 29%)",
-        "10d chance-of-gain moved -12pp overnight (now 42%)",
-        "15d forecast moved -4.5pp overnight (now -2.4%)",
-        "15d chance-of-gain moved -14pp overnight (now 44%)",
-        "50d forecast moved -15.6pp overnight (now -4.6%)",
-        "200d forecast moved +6.4pp overnight (now +7.4%)",
-        "200d chance-of-gain moved -14pp overnight (now 37%)"
+        "notably positive headlines (score +0.44)"
       ]
     },
     {
-      "ticker": "PYPL",
-      "name": "PayPal Holdings, Inc.",
-      "price": 59.24,
-      "day_chg_pct": 0.475,
+      "ticker": "RGTI",
+      "name": "Rigetti Computing, Inc.",
+      "price": 11.75,
+      "day_chg_pct": 19.289,
       "notes": [
-        "5d chance-of-gain moved -8pp overnight (now 57%)",
-        "10d chance-of-gain moved -14pp overnight (now 57%)",
-        "15d forecast moved -4.4pp overnight (now +0.3%)",
-        "15d chance-of-gain moved -17pp overnight (now 59%)",
-        "50d forecast moved -7.2pp overnight (now +1.7%)",
-        "200d forecast moved -3.3pp overnight (now +12.7%)",
-        "200d chance-of-gain moved -13pp overnight (now 60%)"
+        "earnings in 5 days"
       ]
     },
     {
-      "ticker": "CRCL",
-      "name": "Circle Internet Group",
-      "price": 67.88,
-      "day_chg_pct": -2.303,
+      "ticker": "QUBT",
+      "name": "Quantum Computing Inc.",
+      "price": 6.33,
+      "day_chg_pct": 12.433,
       "notes": [
-        "5d chance-of-gain moved -10pp overnight (now 38%)",
-        "10d chance-of-gain moved -10pp overnight (now 52%)",
-        "15d forecast moved -4.5pp overnight (now -3.6%)",
-        "15d chance-of-gain moved -14pp overnight (now 48%)",
-        "50d forecast moved -15.8pp overnight (now -4.0%)",
-        "200d forecast moved +3.2pp overnight (now -17.3%)",
-        "200d chance-of-gain moved -12pp overnight (now 26%)"
+        "earnings in 4 days"
+      ]
+    },
+    {
+      "ticker": "V",
+      "name": "Visa Inc.",
+      "price": 422.65,
+      "day_chg_pct": 0.014,
+      "notes": [
+        "notably positive headlines (score +0.46)"
+      ]
+    },
+    {
+      "ticker": "MARA",
+      "name": "MARA Holdings, Inc.",
+      "price": 6.35,
+      "day_chg_pct": 7.993,
+      "notes": [
+        "earnings in 4 days"
       ]
     },
     {
@@ -2231,12 +404,6 @@
       "price": 12.03,
       "day_chg_pct": 2.47,
       "notes": [
-        "5d chance-of-gain moved -13pp overnight (now 37%)",
-        "10d chance-of-gain moved -10pp overnight (now 44%)",
-        "15d forecast moved -6.2pp overnight (now -1.0%)",
-        "15d chance-of-gain moved -18pp overnight (now 47%)",
-        "50d forecast moved -16.1pp overnight (now +1.7%)",
-        "200d forecast moved -3.9pp overnight (now +9.9%)",
         "earnings in 7 days"
       ]
     },
@@ -2246,1153 +413,7 @@
       "price": 291.31,
       "day_chg_pct": 1.065,
       "notes": [
-        "10d chance-of-gain moved -15pp overnight (now 56%)",
-        "15d forecast moved -4.1pp overnight (now -0.8%)",
-        "15d chance-of-gain moved -9pp overnight (now 55%)",
-        "50d forecast moved -5.4pp overnight (now -0.4%)",
-        "200d forecast moved -3.7pp overnight (now +4.4%)",
-        "200d chance-of-gain moved -8pp overnight (now 63%)",
         "within 1.2% of its all-time high"
-      ]
-    },
-    {
-      "ticker": "ADPT",
-      "name": "Adaptive Biotechnologies Corporation",
-      "price": 27.98,
-      "day_chg_pct": 4.286,
-      "notes": [
-        "5d chance-of-gain moved -13pp overnight (now 49%)",
-        "10d chance-of-gain moved -14pp overnight (now 53%)",
-        "15d forecast moved -4.7pp overnight (now +2.1%)",
-        "15d chance-of-gain moved -19pp overnight (now 60%)",
-        "50d forecast moved -11.2pp overnight (now +8.5%)",
-        "200d forecast moved -6.4pp overnight (now +35.4%)",
-        "200d chance-of-gain moved -15pp overnight (now 58%)"
-      ]
-    },
-    {
-      "ticker": "CRSP",
-      "name": "CRISPR Therapeutics AG",
-      "price": 50.07,
-      "day_chg_pct": 3.11,
-      "notes": [
-        "5d chance-of-gain moved -13pp overnight (now 36%)",
-        "10d chance-of-gain moved -16pp overnight (now 44%)",
-        "15d forecast moved -4.1pp overnight (now -1.3%)",
-        "15d chance-of-gain moved -10pp overnight (now 51%)",
-        "50d forecast moved -10.7pp overnight (now -0.4%)",
-        "200d forecast moved +8.0pp overnight (now +11.4%)",
-        "200d chance-of-gain moved -9pp overnight (now 52%)"
-      ]
-    },
-    {
-      "ticker": "CRBP",
-      "name": "Corbus Pharmaceuticals Holdings, Inc.",
-      "price": 3.07,
-      "day_chg_pct": 7.343,
-      "notes": [
-        "10d forecast moved -3.8pp overnight (now +2.4%)",
-        "10d chance-of-gain moved -14pp overnight (now 40%)",
-        "15d forecast moved -4.2pp overnight (now +3.4%)",
-        "30d chance-of-gain moved -12pp overnight (now 56%)",
-        "50d forecast moved -13.0pp overnight (now +15.6%)",
-        "50d chance-of-gain moved -9pp overnight (now 61%)",
-        "200d chance-of-gain moved -13pp overnight (now 46%)"
-      ]
-    },
-    {
-      "ticker": "MPLX",
-      "name": "MPLX LP",
-      "price": 55.91,
-      "day_chg_pct": 1.032,
-      "notes": [
-        "5d chance-of-gain moved -13pp overnight (now 50%)",
-        "10d chance-of-gain moved -22pp overnight (now 44%)",
-        "15d forecast moved -3.8pp overnight (now -0.8%)",
-        "15d chance-of-gain moved -10pp overnight (now 50%)",
-        "50d forecast moved -6.9pp overnight (now -1.9%)",
-        "200d chance-of-gain moved -16pp overnight (now 51%)",
-        "notably positive headlines (score +0.37)"
-      ]
-    },
-    {
-      "ticker": "NOK",
-      "name": "Nokia Oyj",
-      "price": 7.66,
-      "day_chg_pct": 2.681,
-      "notes": [
-        "5d chance-of-gain moved -16pp overnight (now 37%)",
-        "10d forecast moved -3.6pp overnight (now -0.0%)",
-        "10d chance-of-gain moved -16pp overnight (now 50%)",
-        "15d forecast moved -6.8pp overnight (now -0.8%)",
-        "15d chance-of-gain moved -19pp overnight (now 49%)",
-        "50d forecast moved -19.6pp overnight (now +0.8%)",
-        "200d chance-of-gain moved -11pp overnight (now 41%)"
-      ]
-    },
-    {
-      "ticker": "LAD",
-      "name": "Lithia Motors, Inc.",
-      "price": 308.77,
-      "day_chg_pct": -2.217,
-      "notes": [
-        "5d chance-of-gain moved -23pp overnight (now 39%)",
-        "10d chance-of-gain moved -18pp overnight (now 51%)",
-        "15d forecast moved -5.9pp overnight (now -2.3%)",
-        "15d chance-of-gain moved -18pp overnight (now 46%)",
-        "50d forecast moved -10.8pp overnight (now -3.8%)",
-        "200d forecast moved +3.4pp overnight (now +3.2%)",
-        "200d chance-of-gain moved -8pp overnight (now 42%)"
-      ]
-    },
-    {
-      "ticker": "CVX",
-      "name": "Chevron Corporation",
-      "price": 212.61,
-      "day_chg_pct": -0.15,
-      "notes": [
-        "5d chance-of-gain moved -8pp overnight (now 58%)",
-        "10d chance-of-gain moved -13pp overnight (now 58%)",
-        "15d forecast moved -3.4pp overnight (now +0.0%)",
-        "15d chance-of-gain moved -17pp overnight (now 59%)",
-        "30d chance-of-gain moved +12pp overnight (now 68%)",
-        "50d forecast moved -5.7pp overnight (now +1.2%)",
-        "200d chance-of-gain moved -11pp overnight (now 61%)"
-      ]
-    },
-    {
-      "ticker": "SGI",
-      "name": "Somnigroup International Inc.",
-      "price": 64.17,
-      "day_chg_pct": -5.452,
-      "notes": [
-        "5d chance-of-gain moved -19pp overnight (now 31%)",
-        "15d forecast moved -5.9pp overnight (now -2.5%)",
-        "30d forecast moved -3.4pp overnight (now +0.7%)",
-        "30d chance-of-gain moved -13pp overnight (now 45%)",
-        "50d forecast moved -8.5pp overnight (now -5.7%)",
-        "200d chance-of-gain moved -20pp overnight (now 45%)",
-        "earnings in 3 days"
-      ]
-    },
-    {
-      "ticker": "UHAL-B",
-      "name": "U-Haul Holding Company",
-      "price": 50.08,
-      "day_chg_pct": -3.655,
-      "notes": [
-        "5d chance-of-gain moved -16pp overnight (now 43%)",
-        "10d chance-of-gain moved -19pp overnight (now 51%)",
-        "15d forecast moved -4.4pp overnight (now -0.8%)",
-        "15d chance-of-gain moved -11pp overnight (now 54%)",
-        "50d forecast moved -9.8pp overnight (now -1.9%)",
-        "200d forecast moved +4.4pp overnight (now +4.5%)",
-        "200d chance-of-gain moved -14pp overnight (now 48%)"
-      ]
-    },
-    {
-      "ticker": "SBUX",
-      "name": "Starbucks Corporation",
-      "price": 105.41,
-      "day_chg_pct": -0.706,
-      "notes": [
-        "5d chance-of-gain moved -11pp overnight (now 51%)",
-        "10d chance-of-gain moved -16pp overnight (now 52%)",
-        "15d forecast moved -4.9pp overnight (now -0.6%)",
-        "15d chance-of-gain moved -19pp overnight (now 56%)",
-        "50d forecast moved -9.2pp overnight (now -2.0%)",
-        "200d forecast moved -5.7pp overnight (now +6.6%)",
-        "200d chance-of-gain moved -15pp overnight (now 48%)"
-      ]
-    },
-    {
-      "ticker": "QQQI",
-      "name": "NEOS NASDAQ-100(R) High Income ETF",
-      "price": 49.48,
-      "day_chg_pct": 1.227,
-      "notes": [
-        "10d chance-of-gain moved -12pp overnight (now 51%)",
-        "15d forecast moved -4.0pp overnight (now -1.0%)",
-        "15d chance-of-gain moved -10pp overnight (now 57%)",
-        "30d chance-of-gain moved +9pp overnight (now 61%)",
-        "50d forecast moved -8.2pp overnight (now -0.9%)",
-        "50d chance-of-gain moved +10pp overnight (now 66%)",
-        "200d forecast moved +4.0pp overnight (now +3.7%)"
-      ]
-    },
-    {
-      "ticker": "JEPQ",
-      "name": "JPMorgan Nasdaq Equity Premium Income ETF",
-      "price": 54.34,
-      "day_chg_pct": 1.173,
-      "notes": [
-        "10d chance-of-gain moved -14pp overnight (now 48%)",
-        "15d forecast moved -3.5pp overnight (now -0.6%)",
-        "30d chance-of-gain moved +11pp overnight (now 63%)",
-        "50d forecast moved -8.1pp overnight (now -1.0%)",
-        "50d chance-of-gain moved +12pp overnight (now 64%)",
-        "200d forecast moved +7.7pp overnight (now +3.5%)",
-        "200d chance-of-gain moved -13pp overnight (now 53%)"
-      ]
-    },
-    {
-      "ticker": "FEPI",
-      "name": "REX FANG & Innovation Equity Premium Income ETF",
-      "price": 35.92,
-      "day_chg_pct": 1.785,
-      "notes": [
-        "5d chance-of-gain moved -10pp overnight (now 41%)",
-        "10d chance-of-gain moved -10pp overnight (now 49%)",
-        "15d forecast moved -3.8pp overnight (now -0.8%)",
-        "15d chance-of-gain moved -12pp overnight (now 52%)",
-        "50d forecast moved -8.2pp overnight (now +0.3%)",
-        "200d forecast moved +11.9pp overnight (now +4.7%)",
-        "200d chance-of-gain moved -12pp overnight (now 42%)"
-      ]
-    },
-    {
-      "ticker": "QQQ",
-      "name": "Invesco QQQ Trust",
-      "price": 656.1,
-      "day_chg_pct": 1.399,
-      "notes": [
-        "5d chance-of-gain moved -9pp overnight (now 42%)",
-        "10d chance-of-gain moved -12pp overnight (now 48%)",
-        "15d forecast moved -4.0pp overnight (now -0.9%)",
-        "15d chance-of-gain moved -10pp overnight (now 54%)",
-        "50d forecast moved -6.7pp overnight (now -0.1%)",
-        "50d chance-of-gain moved +8pp overnight (now 69%)",
-        "200d forecast moved +25.4pp overnight (now -4.3%)"
-      ]
-    },
-    {
-      "ticker": "SPY",
-      "name": "State Street SPDR S&P 500 ETF Trust",
-      "price": 735.29,
-      "day_chg_pct": 0.312,
-      "notes": [
-        "10d chance-of-gain moved -17pp overnight (now 46%)",
-        "15d forecast moved -4.1pp overnight (now -0.9%)",
-        "15d chance-of-gain moved -11pp overnight (now 60%)",
-        "30d chance-of-gain moved +12pp overnight (now 67%)",
-        "50d forecast moved -5.1pp overnight (now +0.1%)",
-        "50d chance-of-gain moved +9pp overnight (now 69%)",
-        "200d chance-of-gain moved -9pp overnight (now 50%)"
-      ]
-    },
-    {
-      "ticker": "VTI",
-      "name": "Vanguard Morningstar Total Stock Market ETF",
-      "price": 361.93,
-      "day_chg_pct": 0.391,
-      "notes": [
-        "10d chance-of-gain moved -15pp overnight (now 50%)",
-        "15d forecast moved -4.2pp overnight (now -0.9%)",
-        "15d chance-of-gain moved -10pp overnight (now 60%)",
-        "30d chance-of-gain moved +14pp overnight (now 71%)",
-        "50d forecast moved -5.2pp overnight (now -0.1%)",
-        "50d chance-of-gain moved +9pp overnight (now 65%)",
-        "200d chance-of-gain moved -13pp overnight (now 52%)"
-      ]
-    },
-    {
-      "ticker": "ITOT",
-      "name": "iShares Core S&P Total U.S. Stock Market ETF",
-      "price": 160.54,
-      "day_chg_pct": 0.388,
-      "notes": [
-        "10d chance-of-gain moved -14pp overnight (now 51%)",
-        "15d forecast moved -4.2pp overnight (now -0.9%)",
-        "15d chance-of-gain moved -12pp overnight (now 59%)",
-        "30d chance-of-gain moved +15pp overnight (now 71%)",
-        "50d forecast moved -5.5pp overnight (now -0.4%)",
-        "50d chance-of-gain moved +11pp overnight (now 66%)",
-        "200d chance-of-gain moved -12pp overnight (now 55%)"
-      ]
-    },
-    {
-      "ticker": "SCHB",
-      "name": "Schwab U.S. Broad Market ETF",
-      "price": 28.3,
-      "day_chg_pct": 0.355,
-      "notes": [
-        "10d chance-of-gain moved -14pp overnight (now 50%)",
-        "15d forecast moved -4.3pp overnight (now -0.9%)",
-        "15d chance-of-gain moved -11pp overnight (now 60%)",
-        "30d chance-of-gain moved +11pp overnight (now 65%)",
-        "50d forecast moved -5.8pp overnight (now -0.2%)",
-        "50d chance-of-gain moved +10pp overnight (now 61%)",
-        "200d chance-of-gain moved -12pp overnight (now 56%)"
-      ]
-    },
-    {
-      "ticker": "SPTM",
-      "name": "State Street SPDR Portfolio S&P 1500 Composite Stock Market ETF",
-      "price": 89.16,
-      "day_chg_pct": 0.315,
-      "notes": [
-        "10d chance-of-gain moved -16pp overnight (now 49%)",
-        "15d forecast moved -4.1pp overnight (now -0.9%)",
-        "15d chance-of-gain moved -10pp overnight (now 60%)",
-        "30d chance-of-gain moved +16pp overnight (now 69%)",
-        "50d forecast moved -5.3pp overnight (now -0.2%)",
-        "50d chance-of-gain moved +9pp overnight (now 60%)",
-        "200d chance-of-gain moved -17pp overnight (now 52%)"
-      ]
-    },
-    {
-      "ticker": "VT",
-      "name": "Vanguard Total World Stock Index Fund ETF Shares",
-      "price": 151.73,
-      "day_chg_pct": 0.231,
-      "notes": [
-        "10d chance-of-gain moved -15pp overnight (now 51%)",
-        "15d forecast moved -4.5pp overnight (now -1.0%)",
-        "15d chance-of-gain moved -9pp overnight (now 59%)",
-        "30d chance-of-gain moved +17pp overnight (now 76%)",
-        "50d forecast moved -5.6pp overnight (now -0.3%)",
-        "50d chance-of-gain moved +11pp overnight (now 65%)",
-        "200d chance-of-gain moved -17pp overnight (now 53%)"
-      ]
-    },
-    {
-      "ticker": "SPGM",
-      "name": "State Street SPDR Portfolio MSCI Global Stock Market ETF",
-      "price": 82.92,
-      "day_chg_pct": 0.23,
-      "notes": [
-        "10d chance-of-gain moved -15pp overnight (now 51%)",
-        "15d forecast moved -4.2pp overnight (now -1.0%)",
-        "15d chance-of-gain moved -9pp overnight (now 60%)",
-        "30d chance-of-gain moved +16pp overnight (now 78%)",
-        "50d forecast moved -5.9pp overnight (now +0.1%)",
-        "50d chance-of-gain moved +10pp overnight (now 67%)",
-        "200d chance-of-gain moved -14pp overnight (now 56%)"
-      ]
-    },
-    {
-      "ticker": "SCHX",
-      "name": "Schwab U.S. Large-Cap ETF",
-      "price": 28.93,
-      "day_chg_pct": 0.347,
-      "notes": [
-        "10d chance-of-gain moved -14pp overnight (now 50%)",
-        "15d forecast moved -4.3pp overnight (now -0.9%)",
-        "15d chance-of-gain moved -11pp overnight (now 60%)",
-        "30d chance-of-gain moved +10pp overnight (now 64%)",
-        "50d forecast moved -5.9pp overnight (now -0.2%)",
-        "50d chance-of-gain moved +9pp overnight (now 61%)",
-        "200d chance-of-gain moved -13pp overnight (now 56%)"
-      ]
-    },
-    {
-      "ticker": "SCHG",
-      "name": "Schwab U.S. Large-Cap Growth ETF",
-      "price": 33.14,
-      "day_chg_pct": 1.006,
-      "notes": [
-        "10d chance-of-gain moved -14pp overnight (now 49%)",
-        "15d forecast moved -4.0pp overnight (now -0.8%)",
-        "30d chance-of-gain moved +11pp overnight (now 65%)",
-        "50d forecast moved -6.1pp overnight (now +0.7%)",
-        "50d chance-of-gain moved +13pp overnight (now 71%)",
-        "200d forecast moved +5.2pp overnight (now +8.7%)",
-        "200d chance-of-gain moved -11pp overnight (now 57%)"
-      ]
-    },
-    {
-      "ticker": "VUG",
-      "name": "Vanguard Morningstar Growth ETF",
-      "price": 82.17,
-      "day_chg_pct": 0.909,
-      "notes": [
-        "10d chance-of-gain moved -15pp overnight (now 49%)",
-        "15d forecast moved -4.0pp overnight (now -0.8%)",
-        "30d chance-of-gain moved +11pp overnight (now 64%)",
-        "50d forecast moved -5.9pp overnight (now +0.0%)",
-        "50d chance-of-gain moved +8pp overnight (now 71%)",
-        "200d forecast moved +8.8pp overnight (now +5.6%)",
-        "200d chance-of-gain moved -9pp overnight (now 54%)"
-      ]
-    },
-    {
-      "ticker": "IVW",
-      "name": "iShares S&P 500 Growth ETF",
-      "price": 129.63,
-      "day_chg_pct": 0.942,
-      "notes": [
-        "10d chance-of-gain moved -15pp overnight (now 51%)",
-        "15d forecast moved -4.0pp overnight (now -0.7%)",
-        "15d chance-of-gain moved -10pp overnight (now 58%)",
-        "30d chance-of-gain moved +11pp overnight (now 63%)",
-        "50d forecast moved -6.6pp overnight (now +0.8%)",
-        "200d forecast moved +7.4pp overnight (now +5.3%)",
-        "notably positive headlines (score +0.38)"
-      ]
-    },
-    {
-      "ticker": "BND",
-      "name": "Vanguard Total Bond Market Index Fund ETF Shares",
-      "price": 71.59,
-      "day_chg_pct": -0.084,
-      "notes": [
-        "5d chance-of-gain moved -10pp overnight (now 36%)",
-        "10d chance-of-gain moved -11pp overnight (now 45%)",
-        "15d forecast moved -3.9pp overnight (now -0.8%)",
-        "15d chance-of-gain moved -10pp overnight (now 44%)",
-        "50d forecast moved -5.8pp overnight (now -2.4%)",
-        "50d chance-of-gain moved -10pp overnight (now 53%)",
-        "200d chance-of-gain moved -15pp overnight (now 29%)"
-      ]
-    },
-    {
-      "ticker": "AGG",
-      "name": "iShares Core U.S. Aggregate Bond ETF",
-      "price": 96.55,
-      "day_chg_pct": -0.072,
-      "notes": [
-        "5d chance-of-gain moved -9pp overnight (now 36%)",
-        "10d chance-of-gain moved -11pp overnight (now 46%)",
-        "15d forecast moved -3.9pp overnight (now -0.9%)",
-        "15d chance-of-gain moved -9pp overnight (now 44%)",
-        "50d forecast moved -6.0pp overnight (now -2.6%)",
-        "50d chance-of-gain moved -10pp overnight (now 53%)",
-        "200d chance-of-gain moved -15pp overnight (now 29%)"
-      ]
-    },
-    {
-      "ticker": "MGC",
-      "name": "Vanguard Morningstar Mega Cap ETF",
-      "price": 269.29,
-      "day_chg_pct": 0.44,
-      "notes": [
-        "10d chance-of-gain moved -13pp overnight (now 51%)",
-        "15d forecast moved -4.2pp overnight (now -0.8%)",
-        "15d chance-of-gain moved -10pp overnight (now 59%)",
-        "30d chance-of-gain moved +11pp overnight (now 70%)",
-        "50d forecast moved -5.9pp overnight (now -0.2%)",
-        "50d chance-of-gain moved +9pp overnight (now 70%)",
-        "200d chance-of-gain moved -15pp overnight (now 50%)"
-      ]
-    },
-    {
-      "ticker": "VOOG",
-      "name": "Vanguard S&P 500 Growth Index Fund ETF Shares",
-      "price": 77.88,
-      "day_chg_pct": 0.907,
-      "notes": [
-        "10d chance-of-gain moved -15pp overnight (now 51%)",
-        "15d forecast moved -4.0pp overnight (now -0.7%)",
-        "15d chance-of-gain moved -10pp overnight (now 58%)",
-        "30d chance-of-gain moved +10pp overnight (now 63%)",
-        "50d forecast moved -6.6pp overnight (now +0.7%)",
-        "200d forecast moved +7.9pp overnight (now +5.9%)",
-        "notably positive headlines (score +0.54)"
-      ]
-    },
-    {
-      "ticker": "ARKX",
-      "name": "ARK Space & Defense Innovation ETF",
-      "price": 28.42,
-      "day_chg_pct": 5.084,
-      "notes": [
-        "5d chance-of-gain moved -16pp overnight (now 34%)",
-        "10d chance-of-gain moved -15pp overnight (now 44%)",
-        "15d forecast moved -4.4pp overnight (now -1.4%)",
-        "15d chance-of-gain moved -23pp overnight (now 46%)",
-        "50d forecast moved -11.9pp overnight (now -1.8%)",
-        "200d forecast moved +14.1pp overnight (now +4.2%)",
-        "200d chance-of-gain moved -28pp overnight (now 43%)"
-      ]
-    },
-    {
-      "ticker": "DRAM",
-      "name": "Roundhill Memory ETF",
-      "price": 39.29,
-      "day_chg_pct": 6.161,
-      "notes": [
-        "5d forecast moved -5.0pp overnight (now -2.1%)",
-        "5d chance-of-gain moved -15pp overnight (now 41%)",
-        "10d forecast moved -4.7pp overnight (now +1.6%)",
-        "10d chance-of-gain moved -14pp overnight (now 54%)",
-        "15d chance-of-gain moved -15pp overnight (now 53%)",
-        "50d forecast moved -19.9pp overnight (now -3.3%)",
-        "200d chance-of-gain moved -12pp overnight (now 19%)"
-      ]
-    },
-    {
-      "ticker": "IHI",
-      "name": "iShares U.S. Medical Devices ETF",
-      "price": 57.59,
-      "day_chg_pct": -2.439,
-      "notes": [
-        "5d chance-of-gain moved -10pp overnight (now 44%)",
-        "10d chance-of-gain moved -14pp overnight (now 46%)",
-        "15d forecast moved -4.2pp overnight (now -1.2%)",
-        "15d chance-of-gain moved -20pp overnight (now 43%)",
-        "30d chance-of-gain moved -13pp overnight (now 50%)",
-        "50d forecast moved -3.5pp overnight (now -2.2%)",
-        "200d forecast moved +6.6pp overnight (now +9.2%)"
-      ]
-    },
-    {
-      "ticker": "PJP",
-      "name": "Invesco Pharmaceuticals ETF",
-      "price": 126.78,
-      "day_chg_pct": 0.253,
-      "notes": [
-        "10d chance-of-gain moved -16pp overnight (now 61%)",
-        "15d forecast moved -3.8pp overnight (now -0.7%)",
-        "15d chance-of-gain moved -19pp overnight (now 55%)",
-        "50d forecast moved -4.6pp overnight (now -0.3%)",
-        "50d chance-of-gain moved +11pp overnight (now 59%)",
-        "200d forecast moved +3.1pp overnight (now +4.9%)",
-        "200d chance-of-gain moved -11pp overnight (now 48%)"
-      ]
-    },
-    {
-      "ticker": "VDE",
-      "name": "Vanguard Energy Index Fund ETF Shares",
-      "price": 171.28,
-      "day_chg_pct": 0.123,
-      "notes": [
-        "15d forecast moved -3.1pp overnight (now +0.4%)",
-        "15d chance-of-gain moved -12pp overnight (now 69%)",
-        "30d chance-of-gain moved +19pp overnight (now 82%)",
-        "50d forecast moved -4.9pp overnight (now +3.0%)",
-        "50d chance-of-gain moved +17pp overnight (now 76%)",
-        "200d forecast moved -4.0pp overnight (now +7.7%)",
-        "200d chance-of-gain moved -15pp overnight (now 58%)"
-      ]
-    },
-    {
-      "ticker": "AAPL",
-      "name": "Apple Inc.",
-      "price": 342.37,
-      "day_chg_pct": -0.523,
-      "notes": [
-        "5d chance-of-gain moved -13pp overnight (now 55%)",
-        "10d chance-of-gain moved -15pp overnight (now 56%)",
-        "15d forecast moved -4.0pp overnight (now -0.4%)",
-        "15d chance-of-gain moved -14pp overnight (now 58%)",
-        "30d chance-of-gain moved +9pp overnight (now 67%)",
-        "50d forecast moved -7.3pp overnight (now -0.4%)"
-      ]
-    },
-    {
-      "ticker": "MSFT",
-      "name": "Microsoft Corporation",
-      "price": 530.61,
-      "day_chg_pct": -0.993,
-      "notes": [
-        "5d chance-of-gain moved -12pp overnight (now 50%)",
-        "10d chance-of-gain moved -12pp overnight (now 52%)",
-        "15d forecast moved -4.1pp overnight (now -0.6%)",
-        "15d chance-of-gain moved -16pp overnight (now 55%)",
-        "50d forecast moved -7.9pp overnight (now -0.9%)",
-        "200d forecast moved -4.0pp overnight (now +8.3%)"
-      ]
-    },
-    {
-      "ticker": "GOOGL",
-      "name": "Alphabet Inc.",
-      "price": 284.78,
-      "day_chg_pct": 0.782,
-      "notes": [
-        "5d chance-of-gain moved -13pp overnight (now 45%)",
-        "10d chance-of-gain moved -10pp overnight (now 56%)",
-        "15d forecast moved -4.9pp overnight (now -1.9%)",
-        "15d chance-of-gain moved -13pp overnight (now 49%)",
-        "50d forecast moved -8.6pp overnight (now -1.3%)",
-        "200d forecast moved +20.1pp overnight (now +4.5%)"
-      ]
-    },
-    {
-      "ticker": "GOOG",
-      "name": "Alphabet Inc.",
-      "price": 283.93,
-      "day_chg_pct": 0.777,
-      "notes": [
-        "5d chance-of-gain moved -13pp overnight (now 45%)",
-        "10d chance-of-gain moved -9pp overnight (now 56%)",
-        "15d forecast moved -4.5pp overnight (now -1.5%)",
-        "15d chance-of-gain moved -11pp overnight (now 55%)",
-        "50d forecast moved -8.8pp overnight (now -0.6%)",
-        "200d forecast moved +10.1pp overnight (now +13.0%)"
-      ]
-    },
-    {
-      "ticker": "META",
-      "name": "Meta Platforms, Inc.",
-      "price": 610.15,
-      "day_chg_pct": 0.838,
-      "notes": [
-        "10d chance-of-gain moved -16pp overnight (now 53%)",
-        "15d forecast moved -5.2pp overnight (now -1.5%)",
-        "15d chance-of-gain moved -14pp overnight (now 49%)",
-        "30d chance-of-gain moved +12pp overnight (now 63%)",
-        "50d forecast moved -7.6pp overnight (now -2.0%)",
-        "200d forecast moved +19.5pp overnight (now -1.1%)"
-      ]
-    },
-    {
-      "ticker": "NVDA",
-      "name": "NVIDIA Corporation",
-      "price": 186.64,
-      "day_chg_pct": 2.775,
-      "notes": [
-        "5d chance-of-gain moved -16pp overnight (now 38%)",
-        "10d chance-of-gain moved -13pp overnight (now 45%)",
-        "15d forecast moved -4.5pp overnight (now +0.0%)",
-        "15d chance-of-gain moved -16pp overnight (now 53%)",
-        "50d forecast moved -10.5pp overnight (now +1.0%)",
-        "200d chance-of-gain moved -14pp overnight (now 33%)"
-      ]
-    },
-    {
-      "ticker": "AVGO",
-      "name": "Broadcom Inc.",
-      "price": 293.69,
-      "day_chg_pct": 0.741,
-      "notes": [
-        "5d chance-of-gain moved -14pp overnight (now 33%)",
-        "10d chance-of-gain moved -16pp overnight (now 40%)",
-        "15d forecast moved -3.9pp overnight (now -0.3%)",
-        "15d chance-of-gain moved -20pp overnight (now 46%)",
-        "50d forecast moved -15.0pp overnight (now +0.8%)",
-        "200d chance-of-gain moved -25pp overnight (now 13%)"
-      ]
-    },
-    {
-      "ticker": "ORCL",
-      "name": "Oracle Corporation",
-      "price": 116.1,
-      "day_chg_pct": 0.816,
-      "notes": [
-        "5d chance-of-gain moved -14pp overnight (now 32%)",
-        "10d chance-of-gain moved -15pp overnight (now 40%)",
-        "15d forecast moved -4.7pp overnight (now -1.2%)",
-        "15d chance-of-gain moved -17pp overnight (now 49%)",
-        "50d forecast moved -17.9pp overnight (now -6.5%)",
-        "200d chance-of-gain moved -10pp overnight (now 24%)"
-      ]
-    },
-    {
-      "ticker": "IBM",
-      "name": "International Business Machines Corporation",
-      "price": 245.0,
-      "day_chg_pct": -0.854,
-      "notes": [
-        "5d chance-of-gain moved -10pp overnight (now 48%)",
-        "10d chance-of-gain moved -12pp overnight (now 53%)",
-        "15d forecast moved -3.5pp overnight (now -1.4%)",
-        "15d chance-of-gain moved -11pp overnight (now 49%)",
-        "50d forecast moved -7.4pp overnight (now -2.7%)",
-        "200d forecast moved -5.9pp overnight (now +9.2%)"
-      ]
-    },
-    {
-      "ticker": "TSM",
-      "name": "Taiwan Semiconductor Manufacturing Company Limited",
-      "price": 375.44,
-      "day_chg_pct": 6.327,
-      "notes": [
-        "5d chance-of-gain moved -13pp overnight (now 46%)",
-        "10d chance-of-gain moved -11pp overnight (now 56%)",
-        "15d forecast moved -4.2pp overnight (now -1.7%)",
-        "15d chance-of-gain moved -14pp overnight (now 55%)",
-        "50d forecast moved -11.9pp overnight (now +0.9%)",
-        "200d forecast moved +9.5pp overnight (now -1.1%)"
-      ]
-    },
-    {
-      "ticker": "ASML",
-      "name": "ASML Holding N.V.",
-      "price": 1424.75,
-      "day_chg_pct": 5.02,
-      "notes": [
-        "5d chance-of-gain moved -13pp overnight (now 49%)",
-        "10d chance-of-gain moved -9pp overnight (now 59%)",
-        "15d forecast moved -5.6pp overnight (now -0.1%)",
-        "15d chance-of-gain moved -15pp overnight (now 60%)",
-        "50d forecast moved -14.2pp overnight (now +3.0%)",
-        "200d forecast moved +10.5pp overnight (now +4.6%)"
-      ]
-    },
-    {
-      "ticker": "ON",
-      "name": "ON Semiconductor Corporation",
-      "price": 63.31,
-      "day_chg_pct": 0.476,
-      "notes": [
-        "5d chance-of-gain moved -15pp overnight (now 40%)",
-        "10d chance-of-gain moved -14pp overnight (now 50%)",
-        "15d forecast moved -4.0pp overnight (now -0.1%)",
-        "15d chance-of-gain moved -12pp overnight (now 53%)",
-        "50d forecast moved -15.5pp overnight (now -3.9%)",
-        "200d chance-of-gain moved -15pp overnight (now 36%)"
-      ]
-    },
-    {
-      "ticker": "AMS",
-      "name": "American Shared Hospital Services",
-      "price": 1.16,
-      "day_chg_pct": -0.855,
-      "notes": [
-        "5d chance-of-gain moved -10pp overnight (now 36%)",
-        "15d forecast moved -3.7pp overnight (now +2.5%)",
-        "50d forecast moved -9.3pp overnight (now +5.1%)",
-        "200d forecast moved +7.9pp overnight (now +20.3%)",
-        "200d chance-of-gain moved -9pp overnight (now 43%)",
-        "earnings in 6 days"
-      ]
-    },
-    {
-      "ticker": "IPGP",
-      "name": "IPG Photonics Corporation",
-      "price": 65.31,
-      "day_chg_pct": 5.288,
-      "notes": [
-        "5d chance-of-gain moved -10pp overnight (now 34%)",
-        "10d chance-of-gain moved -13pp overnight (now 47%)",
-        "15d forecast moved -4.0pp overnight (now -0.4%)",
-        "15d chance-of-gain moved -14pp overnight (now 50%)",
-        "50d forecast moved -13.0pp overnight (now -3.0%)",
-        "200d forecast moved +26.1pp overnight (now +13.8%)"
-      ]
-    },
-    {
-      "ticker": "QS",
-      "name": "QuantumScape Corporation",
-      "price": 4.28,
-      "day_chg_pct": 4.136,
-      "notes": [
-        "5d chance-of-gain moved -12pp overnight (now 26%)",
-        "10d chance-of-gain moved -13pp overnight (now 38%)",
-        "15d forecast moved -5.6pp overnight (now -1.5%)",
-        "15d chance-of-gain moved -18pp overnight (now 41%)",
-        "50d forecast moved -13.0pp overnight (now +7.9%)",
-        "200d forecast moved +6.5pp overnight (now +34.0%)"
-      ]
-    },
-    {
-      "ticker": "CRM",
-      "name": "Salesforce, Inc.",
-      "price": 213.65,
-      "day_chg_pct": -3.939,
-      "notes": [
-        "10d chance-of-gain moved -9pp overnight (now 63%)",
-        "15d forecast moved -4.1pp overnight (now +2.6%)",
-        "15d chance-of-gain moved -12pp overnight (now 68%)",
-        "30d forecast moved +3.1pp overnight (now +13.1%)",
-        "200d forecast moved -10.9pp overnight (now +15.4%)",
-        "200d chance-of-gain moved -25pp overnight (now 51%)"
-      ]
-    },
-    {
-      "ticker": "DT",
-      "name": "Dynatrace, Inc.",
-      "price": 43.44,
-      "day_chg_pct": -0.595,
-      "notes": [
-        "5d chance-of-gain moved -16pp overnight (now 42%)",
-        "10d chance-of-gain moved -10pp overnight (now 62%)",
-        "15d forecast moved -3.2pp overnight (now +1.5%)",
-        "15d chance-of-gain moved -13pp overnight (now 61%)",
-        "50d forecast moved -13.2pp overnight (now +1.1%)",
-        "200d forecast moved -8.0pp overnight (now +9.7%)"
-      ]
-    },
-    {
-      "ticker": "RDWR",
-      "name": "Radware Ltd.",
-      "price": 29.84,
-      "day_chg_pct": -1.127,
-      "notes": [
-        "5d chance-of-gain moved -18pp overnight (now 39%)",
-        "10d chance-of-gain moved -16pp overnight (now 51%)",
-        "15d forecast moved -3.9pp overnight (now -0.5%)",
-        "15d chance-of-gain moved -14pp overnight (now 53%)",
-        "50d forecast moved -11.0pp overnight (now -2.5%)",
-        "200d chance-of-gain moved -13pp overnight (now 45%)"
-      ]
-    },
-    {
-      "ticker": "CHKP",
-      "name": "Check Point Software Technologies Ltd.",
-      "price": 144.17,
-      "day_chg_pct": -2.706,
-      "notes": [
-        "5d chance-of-gain moved -17pp overnight (now 41%)",
-        "10d chance-of-gain moved -12pp overnight (now 54%)",
-        "15d forecast moved -5.2pp overnight (now -1.2%)",
-        "15d chance-of-gain moved -13pp overnight (now 49%)",
-        "50d forecast moved -7.1pp overnight (now -1.9%)",
-        "notably positive headlines (score +0.35)"
-      ]
-    },
-    {
-      "ticker": "WDAY",
-      "name": "Workday, Inc.",
-      "price": 192.9,
-      "day_chg_pct": -3.632,
-      "notes": [
-        "5d chance-of-gain moved -14pp overnight (now 49%)",
-        "10d chance-of-gain moved -15pp overnight (now 53%)",
-        "15d forecast moved -4.2pp overnight (now +1.4%)",
-        "15d chance-of-gain moved -13pp overnight (now 59%)",
-        "50d forecast moved -6.9pp overnight (now +4.1%)",
-        "200d chance-of-gain moved -19pp overnight (now 52%)"
-      ]
-    },
-    {
-      "ticker": "ADBE",
-      "name": "Adobe Inc.",
-      "price": 239.3,
-      "day_chg_pct": -2.897,
-      "notes": [
-        "5d chance-of-gain moved -19pp overnight (now 40%)",
-        "10d chance-of-gain moved -13pp overnight (now 49%)",
-        "15d forecast moved -4.6pp overnight (now -0.5%)",
-        "50d forecast moved -6.1pp overnight (now +1.7%)",
-        "200d forecast moved -3.7pp overnight (now +14.1%)",
-        "200d chance-of-gain moved -16pp overnight (now 54%)"
-      ]
-    },
-    {
-      "ticker": "TWLO",
-      "name": "Twilio Inc.",
-      "price": 202.02,
-      "day_chg_pct": 0.527,
-      "notes": [
-        "5d chance-of-gain moved -12pp overnight (now 48%)",
-        "10d forecast moved -3.1pp overnight (now +2.4%)",
-        "10d chance-of-gain moved -10pp overnight (now 65%)",
-        "15d forecast moved -6.9pp overnight (now -0.5%)",
-        "15d chance-of-gain moved -20pp overnight (now 57%)",
-        "50d forecast moved -16.1pp overnight (now +6.5%)"
-      ]
-    },
-    {
-      "ticker": "PLTR",
-      "name": "Palantir Technologies Inc.",
-      "price": 160.38,
-      "day_chg_pct": 3.478,
-      "notes": [
-        "5d chance-of-gain moved -9pp overnight (now 52%)",
-        "15d forecast moved -4.4pp overnight (now +0.8%)",
-        "15d chance-of-gain moved -11pp overnight (now 62%)",
-        "50d forecast moved -13.7pp overnight (now +1.4%)",
-        "200d forecast moved -6.1pp overnight (now -1.8%)",
-        "200d chance-of-gain moved -15pp overnight (now 42%)"
-      ]
-    },
-    {
-      "ticker": "DRO.AX",
-      "name": "DroneShield Limited",
-      "price": 1.275,
-      "day_chg_pct": -2.672,
-      "notes": [
-        "5d chance-of-gain moved -11pp overnight (now 25%)",
-        "10d chance-of-gain moved -12pp overnight (now 39%)",
-        "15d forecast moved -4.0pp overnight (now -1.4%)",
-        "15d chance-of-gain moved -13pp overnight (now 42%)",
-        "50d forecast moved -14.9pp overnight (now +0.3%)",
-        "200d chance-of-gain moved -21pp overnight (now 40%)"
-      ]
-    },
-    {
-      "ticker": "JOBY",
-      "name": "Joby Aviation, Inc.",
-      "price": 5.93,
-      "day_chg_pct": 11.887,
-      "notes": [
-        "15d forecast moved -8.0pp overnight (now -0.7%)",
-        "15d chance-of-gain moved -14pp overnight (now 48%)",
-        "30d forecast moved +3.2pp overnight (now +4.4%)",
-        "50d forecast moved -13.2pp overnight (now -2.1%)",
-        "200d forecast moved -10.3pp overnight (now +12.4%)",
-        "200d chance-of-gain moved -17pp overnight (now 33%)"
-      ]
-    },
-    {
-      "ticker": "CEG",
-      "name": "Constellation Energy Corporation",
-      "price": 249.95,
-      "day_chg_pct": 4.298,
-      "notes": [
-        "5d chance-of-gain moved -13pp overnight (now 35%)",
-        "15d forecast moved -5.5pp overnight (now -1.5%)",
-        "15d chance-of-gain moved -14pp overnight (now 48%)",
-        "50d forecast moved -13.1pp overnight (now -2.7%)",
-        "200d chance-of-gain moved -9pp overnight (now 40%)",
-        "earnings in 3 days"
-      ]
-    },
-    {
-      "ticker": "SU",
-      "name": "Suncor Energy Inc.",
-      "price": 68.74,
-      "day_chg_pct": -0.463,
-      "notes": [
-        "5d chance-of-gain moved -11pp overnight (now 49%)",
-        "15d forecast moved -3.9pp overnight (now +1.0%)",
-        "15d chance-of-gain moved -12pp overnight (now 64%)",
-        "30d chance-of-gain moved +9pp overnight (now 72%)",
-        "50d forecast moved -6.7pp overnight (now +3.2%)",
-        "50d chance-of-gain moved +8pp overnight (now 62%)"
-      ]
-    },
-    {
-      "ticker": "XYL",
-      "name": "Xylem Inc.",
-      "price": 97.83,
-      "day_chg_pct": -2.219,
-      "notes": [
-        "5d chance-of-gain moved -19pp overnight (now 30%)",
-        "10d chance-of-gain moved -10pp overnight (now 47%)",
-        "15d forecast moved -4.5pp overnight (now -1.7%)",
-        "15d chance-of-gain moved -13pp overnight (now 46%)",
-        "50d forecast moved -11.8pp overnight (now -1.9%)",
-        "200d forecast moved -5.2pp overnight (now +4.9%)"
-      ]
-    },
-    {
-      "ticker": "ECL",
-      "name": "Ecolab Inc.",
-      "price": 300.68,
-      "day_chg_pct": -1.684,
-      "notes": [
-        "5d chance-of-gain moved -10pp overnight (now 51%)",
-        "10d chance-of-gain moved -15pp overnight (now 51%)",
-        "15d forecast moved -4.1pp overnight (now -1.3%)",
-        "15d chance-of-gain moved -9pp overnight (now 50%)",
-        "50d forecast moved -6.9pp overnight (now -4.2%)",
-        "200d chance-of-gain moved -14pp overnight (now 51%)"
-      ]
-    },
-    {
-      "ticker": "NEE",
-      "name": "NextEra Energy, Inc.",
-      "price": 86.95,
-      "day_chg_pct": -1.473,
-      "notes": [
-        "5d chance-of-gain moved -10pp overnight (now 46%)",
-        "10d chance-of-gain moved -15pp overnight (now 50%)",
-        "15d forecast moved -4.7pp overnight (now -1.6%)",
-        "15d chance-of-gain moved -11pp overnight (now 51%)",
-        "50d forecast moved -8.2pp overnight (now -4.5%)",
-        "200d chance-of-gain moved -10pp overnight (now 55%)"
-      ]
-    },
-    {
-      "ticker": "APH",
-      "name": "Amphenol Corporation",
-      "price": 74.59,
-      "day_chg_pct": 4.118,
-      "notes": [
-        "5d chance-of-gain moved -14pp overnight (now 39%)",
-        "10d chance-of-gain moved -15pp overnight (now 49%)",
-        "15d forecast moved -5.1pp overnight (now -0.9%)",
-        "15d chance-of-gain moved -22pp overnight (now 49%)",
-        "50d forecast moved -15.3pp overnight (now -0.5%)",
-        "200d forecast moved +3.6pp overnight (now +11.7%)"
-      ]
-    },
-    {
-      "ticker": "CARR",
-      "name": "Carrier Global Corporation",
-      "price": 52.38,
-      "day_chg_pct": -1.56,
-      "notes": [
-        "5d chance-of-gain moved -12pp overnight (now 39%)",
-        "10d chance-of-gain moved -11pp overnight (now 49%)",
-        "15d forecast moved -5.4pp overnight (now -0.7%)",
-        "15d chance-of-gain moved -11pp overnight (now 60%)",
-        "50d forecast moved -9.4pp overnight (now -0.2%)",
-        "200d chance-of-gain moved -9pp overnight (now 56%)"
-      ]
-    },
-    {
-      "ticker": "CAT",
-      "name": "Caterpillar Inc.",
-      "price": 558.63,
-      "day_chg_pct": 0.901,
-      "notes": [
-        "5d chance-of-gain moved -11pp overnight (now 41%)",
-        "10d chance-of-gain moved -12pp overnight (now 55%)",
-        "15d forecast moved -3.4pp overnight (now -0.2%)",
-        "15d chance-of-gain moved -9pp overnight (now 55%)",
-        "50d forecast moved -11.8pp overnight (now -0.2%)",
-        "200d forecast moved +13.9pp overnight (now +14.3%)"
-      ]
-    },
-    {
-      "ticker": "EME",
-      "name": "EMCOR Group, Inc.",
-      "price": 608.45,
-      "day_chg_pct": 2.206,
-      "notes": [
-        "5d chance-of-gain moved -16pp overnight (now 33%)",
-        "10d chance-of-gain moved -17pp overnight (now 46%)",
-        "15d forecast moved -4.6pp overnight (now -0.7%)",
-        "15d chance-of-gain moved -16pp overnight (now 53%)",
-        "50d forecast moved -12.6pp overnight (now +2.2%)",
-        "200d forecast moved +10.5pp overnight (now +4.3%)"
-      ]
-    },
-    {
-      "ticker": "FIX",
-      "name": "Comfort Systems USA, Inc.",
-      "price": 1017.5,
-      "day_chg_pct": 5.447,
-      "notes": [
-        "5d chance-of-gain moved -13pp overnight (now 37%)",
-        "10d forecast moved -3.9pp overnight (now +1.6%)",
-        "10d chance-of-gain moved -18pp overnight (now 47%)",
-        "15d chance-of-gain moved -14pp overnight (now 47%)",
-        "50d forecast moved -17.2pp overnight (now -2.3%)",
-        "200d chance-of-gain moved -10pp overnight (now 26%)"
-      ]
-    },
-    {
-      "ticker": "GNRC",
-      "name": "Generac Holdings Inc.",
-      "price": 176.78,
-      "day_chg_pct": 2.582,
-      "notes": [
-        "5d chance-of-gain moved -17pp overnight (now 35%)",
-        "10d chance-of-gain moved -19pp overnight (now 46%)",
-        "15d forecast moved -4.5pp overnight (now -1.2%)",
-        "15d chance-of-gain moved -21pp overnight (now 46%)",
-        "50d forecast moved -14.4pp overnight (now -2.2%)",
-        "200d forecast moved +7.1pp overnight (now +0.5%)"
-      ]
-    },
-    {
-      "ticker": "KBR",
-      "name": "KBR, Inc.",
-      "price": 37.17,
-      "day_chg_pct": -2.287,
-      "notes": [
-        "5d chance-of-gain moved -12pp overnight (now 42%)",
-        "10d chance-of-gain moved -15pp overnight (now 52%)",
-        "15d forecast moved -3.6pp overnight (now -0.3%)",
-        "15d chance-of-gain moved -17pp overnight (now 54%)",
-        "50d forecast moved -6.6pp overnight (now -0.5%)",
-        "200d chance-of-gain moved -11pp overnight (now 56%)"
-      ]
-    },
-    {
-      "ticker": "SOFI",
-      "name": "SoFi Technologies, Inc.",
-      "price": 16.21,
-      "day_chg_pct": 1.06,
-      "notes": [
-        "5d chance-of-gain moved -13pp overnight (now 31%)",
-        "10d chance-of-gain moved -10pp overnight (now 41%)",
-        "15d forecast moved -5.4pp overnight (now -2.2%)",
-        "15d chance-of-gain moved -15pp overnight (now 43%)",
-        "50d forecast moved -12.6pp overnight (now -8.5%)",
-        "200d forecast moved +11.3pp overnight (now +7.0%)"
-      ]
-    },
-    {
-      "ticker": "HOOD",
-      "name": "Robinhood Markets, Inc.",
-      "price": 80.91,
-      "day_chg_pct": 3.215,
-      "notes": [
-        "5d chance-of-gain moved -17pp overnight (now 37%)",
-        "10d chance-of-gain moved -19pp overnight (now 47%)",
-        "15d forecast moved -5.3pp overnight (now -1.8%)",
-        "15d chance-of-gain moved -22pp overnight (now 43%)",
-        "50d forecast moved -16.5pp overnight (now -2.0%)",
-        "200d forecast moved +12.5pp overnight (now +2.9%)"
-      ]
-    },
-    {
-      "ticker": "V",
-      "name": "Visa Inc.",
-      "price": 422.65,
-      "day_chg_pct": 0.014,
-      "notes": [
-        "10d chance-of-gain moved -11pp overnight (now 54%)",
-        "15d forecast moved -4.1pp overnight (now -1.3%)",
-        "15d chance-of-gain moved -12pp overnight (now 58%)",
-        "50d forecast moved -5.3pp overnight (now -2.8%)",
-        "200d chance-of-gain moved -8pp overnight (now 48%)",
-        "notably positive headlines (score +0.43)"
-      ]
-    },
-    {
-      "ticker": "XPEV",
-      "name": "XPeng Inc.",
-      "price": 10.24,
-      "day_chg_pct": 6.667,
-      "notes": [
-        "5d chance-of-gain moved -12pp overnight (now 33%)",
-        "10d chance-of-gain moved -8pp overnight (now 42%)",
-        "15d forecast moved -6.9pp overnight (now +0.2%)",
-        "50d forecast moved -16.4pp overnight (now -1.4%)",
-        "200d forecast moved -4.2pp overnight (now +29.1%)",
-        "200d chance-of-gain moved -13pp overnight (now 49%)"
-      ]
-    },
-    {
-      "ticker": "OSCR",
-      "name": "Oscar Health, Inc.",
-      "price": 30.65,
-      "day_chg_pct": -7.625,
-      "notes": [
-        "5d chance-of-gain moved -15pp overnight (now 40%)",
-        "15d forecast moved -5.2pp overnight (now +4.1%)",
-        "15d chance-of-gain moved -12pp overnight (now 63%)",
-        "30d forecast moved +8.4pp overnight (now +19.1%)",
-        "50d forecast moved -12.9pp overnight (now +24.0%)",
-        "200d forecast moved +26.7pp overnight (now +84.5%)"
-      ]
-    },
-    {
-      "ticker": "RIOT",
-      "name": "Riot Platforms, Inc.",
-      "price": 16.71,
-      "day_chg_pct": 13.211,
-      "notes": [
-        "10d forecast moved -3.4pp overnight (now -1.7%)",
-        "15d forecast moved -7.5pp overnight (now -5.1%)",
-        "15d chance-of-gain moved -12pp overnight (now 41%)",
-        "50d forecast moved -23.1pp overnight (now -4.9%)",
-        "200d forecast moved -5.1pp overnight (now -23.6%)",
-        "200d chance-of-gain moved -13pp overnight (now 21%)"
-      ]
-    },
-    {
-      "ticker": "UNH",
-      "name": "UnitedHealth Group Incorporated",
-      "price": 394.15,
-      "day_chg_pct": -0.397,
-      "notes": [
-        "10d chance-of-gain moved -8pp overnight (now 60%)",
-        "15d forecast moved -4.3pp overnight (now -0.8%)",
-        "15d chance-of-gain moved -13pp overnight (now 56%)",
-        "50d forecast moved -5.2pp overnight (now +1.4%)",
-        "200d forecast moved +4.1pp overnight (now +8.1%)",
-        "200d chance-of-gain moved -11pp overnight (now 58%)"
-      ]
-    },
-    {
-      "ticker": "LLY",
-      "name": "Eli Lilly and Company",
-      "price": 1354.0,
-      "day_chg_pct": -0.786,
-      "notes": [
-        "5d chance-of-gain moved -9pp overnight (now 52%)",
-        "10d chance-of-gain moved -9pp overnight (now 53%)",
-        "15d forecast moved -4.8pp overnight (now -1.1%)",
-        "15d chance-of-gain moved -10pp overnight (now 61%)",
-        "30d chance-of-gain moved +9pp overnight (now 68%)",
-        "50d forecast moved -8.8pp overnight (now -1.7%)"
       ]
     },
     {
@@ -3401,96 +422,25 @@
       "price": 276.22,
       "day_chg_pct": 1.432,
       "notes": [
-        "10d chance-of-gain moved -17pp overnight (now 52%)",
-        "15d forecast moved -4.4pp overnight (now -0.7%)",
-        "15d chance-of-gain moved -15pp overnight (now 59%)",
-        "50d forecast moved -6.8pp overnight (now -0.8%)",
-        "200d chance-of-gain moved -12pp overnight (now 61%)",
         "within 0.8% of its all-time high"
       ]
     },
     {
-      "ticker": "NVO",
-      "name": "Novo Nordisk A/S",
-      "price": 40.31,
-      "day_chg_pct": 0.025,
+      "ticker": "MRNA",
+      "name": "Moderna, Inc.",
+      "price": 254.19,
+      "day_chg_pct": 5.272,
       "notes": [
-        "5d chance-of-gain moved -14pp overnight (now 36%)",
-        "10d chance-of-gain moved -18pp overnight (now 46%)",
-        "15d forecast moved -5.7pp overnight (now -0.5%)",
-        "15d chance-of-gain moved -15pp overnight (now 50%)",
-        "50d forecast moved -9.0pp overnight (now -2.1%)",
-        "200d chance-of-gain moved -14pp overnight (now 40%)"
+        "earnings in 0 days"
       ]
     },
     {
-      "ticker": "RXRX",
-      "name": "Recursion Pharmaceuticals, Inc.",
-      "price": 3.52,
-      "day_chg_pct": 0.571,
+      "ticker": "MPLX",
+      "name": "MPLX LP",
+      "price": 55.91,
+      "day_chg_pct": 1.032,
       "notes": [
-        "10d chance-of-gain moved -14pp overnight (now 45%)",
-        "15d forecast moved -3.2pp overnight (now -2.3%)",
-        "15d chance-of-gain moved -18pp overnight (now 43%)",
-        "50d forecast moved -13.1pp overnight (now -1.1%)",
-        "200d forecast moved +3.8pp overnight (now +40.8%)",
-        "200d chance-of-gain moved -10pp overnight (now 46%)"
-      ]
-    },
-    {
-      "ticker": "ANET",
-      "name": "Arista Networks, Inc.",
-      "price": 170.8,
-      "day_chg_pct": 7.313,
-      "notes": [
-        "5d chance-of-gain moved -16pp overnight (now 46%)",
-        "10d chance-of-gain moved -14pp overnight (now 57%)",
-        "15d forecast moved -6.2pp overnight (now -2.2%)",
-        "15d chance-of-gain moved -17pp overnight (now 55%)",
-        "50d forecast moved -14.8pp overnight (now -0.8%)",
-        "200d forecast moved +13.9pp overnight (now +2.6%)"
-      ]
-    },
-    {
-      "ticker": "SPGI",
-      "name": "S&P Global Inc.",
-      "price": 467.8,
-      "day_chg_pct": -0.976,
-      "notes": [
-        "5d chance-of-gain moved -12pp overnight (now 51%)",
-        "10d chance-of-gain moved -12pp overnight (now 52%)",
-        "15d forecast moved -4.4pp overnight (now -1.6%)",
-        "15d chance-of-gain moved -10pp overnight (now 53%)",
-        "50d forecast moved -6.6pp overnight (now -2.8%)",
-        "200d chance-of-gain moved -13pp overnight (now 42%)"
-      ]
-    },
-    {
-      "ticker": "WM",
-      "name": "Waste Management, Inc.",
-      "price": 236.26,
-      "day_chg_pct": -2.077,
-      "notes": [
-        "5d chance-of-gain moved -14pp overnight (now 50%)",
-        "10d chance-of-gain moved -22pp overnight (now 45%)",
-        "15d forecast moved -4.3pp overnight (now -1.5%)",
-        "15d chance-of-gain moved -12pp overnight (now 45%)",
-        "50d forecast moved -7.3pp overnight (now -5.1%)",
-        "200d chance-of-gain moved -11pp overnight (now 42%)"
-      ]
-    },
-    {
-      "ticker": "JPM",
-      "name": "JPMorgan Chase & Co.",
-      "price": 334.49,
-      "day_chg_pct": -0.845,
-      "notes": [
-        "10d chance-of-gain moved -20pp overnight (now 46%)",
-        "15d forecast moved -4.6pp overnight (now -1.8%)",
-        "15d chance-of-gain moved -10pp overnight (now 52%)",
-        "50d forecast moved -7.1pp overnight (now -1.9%)",
-        "200d forecast moved +9.8pp overnight (now +2.0%)",
-        "200d chance-of-gain moved -11pp overnight (now 52%)"
+        "notably positive headlines (score +0.37)"
       ]
     },
     {
@@ -3499,12 +449,25 @@
       "price": 1510.0,
       "day_chg_pct": -1.325,
       "notes": [
-        "5d chance-of-gain moved -12pp overnight (now 35%)",
-        "10d chance-of-gain moved -10pp overnight (now 48%)",
-        "15d forecast moved -3.5pp overnight (now -2.9%)",
-        "15d chance-of-gain moved -9pp overnight (now 54%)",
-        "50d forecast moved -15.0pp overnight (now -0.0%)",
-        "200d forecast moved +6.6pp overnight (now +8.6%)"
+        "200d forecast moved +5.8pp overnight (now +14.4%)"
+      ]
+    },
+    {
+      "ticker": "ZETA",
+      "name": "Zeta Global Holdings Corp.",
+      "price": 31.03,
+      "day_chg_pct": 5.294,
+      "notes": [
+        "earnings in 4 days"
+      ]
+    },
+    {
+      "ticker": "TE",
+      "name": "T1 Energy Inc.",
+      "price": 2.36,
+      "day_chg_pct": 3.509,
+      "notes": [
+        "earnings in 6 days"
       ]
     },
     {
@@ -3513,593 +476,16 @@
       "price": 328.86,
       "day_chg_pct": -2.273,
       "notes": [
-        "5d chance-of-gain moved -10pp overnight (now 58%)",
-        "10d chance-of-gain moved -17pp overnight (now 56%)",
-        "15d forecast moved -4.7pp overnight (now -1.1%)",
-        "50d forecast moved -7.0pp overnight (now -1.4%)",
-        "200d chance-of-gain moved -14pp overnight (now 47%)",
         "notably positive headlines (score +0.49)"
       ]
     },
     {
-      "ticker": "CMC",
-      "name": "Commercial Metals Company",
-      "price": 62.28,
-      "day_chg_pct": 0.096,
+      "ticker": "WWW",
+      "name": "Wolverine World Wide, Inc.",
+      "price": 21.33,
+      "day_chg_pct": -1.66,
       "notes": [
-        "5d chance-of-gain moved -8pp overnight (now 41%)",
-        "10d chance-of-gain moved -9pp overnight (now 47%)",
-        "15d forecast moved -4.3pp overnight (now -1.8%)",
-        "15d chance-of-gain moved -12pp overnight (now 50%)",
-        "50d forecast moved -7.9pp overnight (now -2.4%)",
-        "200d forecast moved +8.0pp overnight (now +8.5%)"
-      ]
-    },
-    {
-      "ticker": "BRK-B",
-      "name": "Berkshire Hathaway Inc.",
-      "price": 570.89,
-      "day_chg_pct": -0.252,
-      "notes": [
-        "10d chance-of-gain moved -22pp overnight (now 42%)",
-        "15d chance-of-gain moved -10pp overnight (now 46%)",
-        "200d forecast moved -6.5pp overnight (now -1.7%)",
-        "200d chance-of-gain moved -23pp overnight (now 38%)",
-        "earnings in 2 days",
-        "within 1.4% of its all-time high"
-      ]
-    },
-    {
-      "ticker": "COST",
-      "name": "Costco Wholesale Corporation",
-      "price": 1053.5601,
-      "day_chg_pct": -1.129,
-      "notes": [
-        "10d chance-of-gain moved -14pp overnight (now 41%)",
-        "15d forecast moved -4.4pp overnight (now -3.4%)",
-        "50d forecast moved -7.4pp overnight (now -6.7%)",
-        "200d forecast moved +3.6pp overnight (now -4.1%)",
-        "200d chance-of-gain moved -11pp overnight (now 33%)",
-        "notably positive headlines (score +0.36)"
-      ]
-    },
-    {
-      "ticker": "OLED",
-      "name": "OLED",
-      "price": 88.31,
-      "day_chg_pct": 1.354,
-      "notes": [
-        "5d chance-of-gain moved -17pp overnight (now 36%)",
-        "10d chance-of-gain moved -14pp overnight (now 47%)",
-        "15d forecast moved -5.5pp overnight (now -1.1%)",
-        "15d chance-of-gain moved -15pp overnight (now 49%)",
-        "50d forecast moved -8.0pp overnight (now -0.0%)",
-        "200d chance-of-gain moved -19pp overnight (now 45%)"
-      ]
-    },
-    {
-      "ticker": "GPIQ",
-      "name": "GPIQ",
-      "price": 51.26,
-      "day_chg_pct": 1.344,
-      "notes": [
-        "10d chance-of-gain moved -9pp overnight (now 49%)",
-        "15d forecast moved -3.6pp overnight (now -0.7%)",
-        "15d chance-of-gain moved -10pp overnight (now 57%)",
-        "50d forecast moved -8.0pp overnight (now -0.8%)",
-        "50d chance-of-gain moved +13pp overnight (now 69%)",
-        "200d forecast moved +8.0pp overnight (now +4.4%)"
-      ]
-    },
-    {
-      "ticker": "BTCI",
-      "name": "NEOS ETF Trust - NEOS Bitcoin High Income ETF",
-      "price": 30.15,
-      "day_chg_pct": -0.331,
-      "notes": [
-        "5d chance-of-gain moved -11pp overnight (now 40%)",
-        "10d chance-of-gain moved -8pp overnight (now 56%)",
-        "15d forecast moved -3.9pp overnight (now -0.6%)",
-        "15d chance-of-gain moved -12pp overnight (now 61%)",
-        "50d forecast moved -6.2pp overnight (now +1.9%)",
-        "notably positive headlines (score +0.61)"
-      ]
-    },
-    {
-      "ticker": "XYLD",
-      "name": "Global X S&P 500 Covered Call ETF",
-      "price": 40.19,
-      "day_chg_pct": 0.35,
-      "notes": [
-        "10d chance-of-gain moved -13pp overnight (now 62%)",
-        "15d forecast moved -4.2pp overnight (now -0.9%)",
-        "15d chance-of-gain moved -11pp overnight (now 60%)",
-        "30d chance-of-gain moved +18pp overnight (now 69%)",
-        "50d forecast moved -5.5pp overnight (now -1.1%)",
-        "200d chance-of-gain moved -12pp overnight (now 55%)"
-      ]
-    },
-    {
-      "ticker": "SCHD",
-      "name": "Schwab U.S. Dividend Equity ETF",
-      "price": 35.17,
-      "day_chg_pct": -0.706,
-      "notes": [
-        "10d chance-of-gain moved -18pp overnight (now 61%)",
-        "15d forecast moved -4.1pp overnight (now +0.1%)",
-        "15d chance-of-gain moved -11pp overnight (now 69%)",
-        "30d chance-of-gain moved +9pp overnight (now 84%)",
-        "50d forecast moved -5.9pp overnight (now +1.0%)",
-        "200d chance-of-gain moved -11pp overnight (now 62%)"
-      ]
-    },
-    {
-      "ticker": "VYM",
-      "name": "Vanguard High Dividend Yield Index Fund ETF Shares",
-      "price": 159.08,
-      "day_chg_pct": -0.451,
-      "notes": [
-        "10d chance-of-gain moved -23pp overnight (now 43%)",
-        "15d forecast moved -4.0pp overnight (now -1.1%)",
-        "15d chance-of-gain moved -10pp overnight (now 50%)",
-        "30d chance-of-gain moved +12pp overnight (now 61%)",
-        "50d forecast moved -6.1pp overnight (now -2.9%)",
-        "200d chance-of-gain moved -9pp overnight (now 58%)"
-      ]
-    },
-    {
-      "ticker": "VOO",
-      "name": "Vanguard S&P 500 ETF",
-      "price": 675.99,
-      "day_chg_pct": 0.3,
-      "notes": [
-        "10d chance-of-gain moved -16pp overnight (now 48%)",
-        "15d forecast moved -4.1pp overnight (now -0.9%)",
-        "15d chance-of-gain moved -12pp overnight (now 59%)",
-        "30d chance-of-gain moved +12pp overnight (now 68%)",
-        "50d forecast moved -5.1pp overnight (now +0.0%)",
-        "200d chance-of-gain moved -10pp overnight (now 50%)"
-      ]
-    },
-    {
-      "ticker": "IVV",
-      "name": "iShares Core S&P 500 ETF",
-      "price": 738.68,
-      "day_chg_pct": 0.335,
-      "notes": [
-        "10d chance-of-gain moved -17pp overnight (now 46%)",
-        "15d forecast moved -4.1pp overnight (now -0.9%)",
-        "15d chance-of-gain moved -11pp overnight (now 60%)",
-        "30d chance-of-gain moved +11pp overnight (now 66%)",
-        "50d forecast moved -5.1pp overnight (now +0.0%)",
-        "200d chance-of-gain moved -9pp overnight (now 50%)"
-      ]
-    },
-    {
-      "ticker": "ACWI",
-      "name": "iShares MSCI ACWI ETF",
-      "price": 152.37,
-      "day_chg_pct": -0.039,
-      "notes": [
-        "10d chance-of-gain moved -14pp overnight (now 51%)",
-        "15d forecast moved -4.2pp overnight (now -1.0%)",
-        "30d chance-of-gain moved +18pp overnight (now 77%)",
-        "50d forecast moved -5.4pp overnight (now -0.3%)",
-        "50d chance-of-gain moved +11pp overnight (now 64%)",
-        "200d chance-of-gain moved -13pp overnight (now 54%)"
-      ]
-    },
-    {
-      "ticker": "VXUS",
-      "name": "Vanguard Total International Stock Index Fund ETF Shares",
-      "price": 80.92,
-      "day_chg_pct": 0.149,
-      "notes": [
-        "10d chance-of-gain moved -14pp overnight (now 53%)",
-        "15d forecast moved -4.2pp overnight (now -0.8%)",
-        "15d chance-of-gain moved -8pp overnight (now 61%)",
-        "30d chance-of-gain moved +13pp overnight (now 78%)",
-        "50d forecast moved -6.6pp overnight (now +0.1%)",
-        "200d chance-of-gain moved -11pp overnight (now 64%)"
-      ]
-    },
-    {
-      "ticker": "IXUS",
-      "name": "iShares Core MSCI Total International Stock ETF",
-      "price": 90.56,
-      "day_chg_pct": 0.133,
-      "notes": [
-        "10d chance-of-gain moved -16pp overnight (now 52%)",
-        "15d forecast moved -4.2pp overnight (now -0.8%)",
-        "15d chance-of-gain moved -8pp overnight (now 61%)",
-        "30d chance-of-gain moved +13pp overnight (now 78%)",
-        "50d forecast moved -6.6pp overnight (now +0.1%)",
-        "200d chance-of-gain moved -12pp overnight (now 63%)"
-      ]
-    },
-    {
-      "ticker": "VTV",
-      "name": "Vanguard Morningstar Value ETF",
-      "price": 223.01,
-      "day_chg_pct": -0.389,
-      "notes": [
-        "10d chance-of-gain moved -23pp overnight (now 51%)",
-        "15d forecast moved -4.2pp overnight (now -0.9%)",
-        "15d chance-of-gain moved -13pp overnight (now 55%)",
-        "50d forecast moved -5.8pp overnight (now -1.5%)",
-        "50d chance-of-gain moved +10pp overnight (now 60%)",
-        "200d chance-of-gain moved -9pp overnight (now 58%)"
-      ]
-    },
-    {
-      "ticker": "SPYG",
-      "name": "State Street SPDR Portfolio S&P 500 Growth ETF",
-      "price": 112.18,
-      "day_chg_pct": 0.909,
-      "notes": [
-        "10d chance-of-gain moved -15pp overnight (now 51%)",
-        "15d forecast moved -4.0pp overnight (now -0.7%)",
-        "15d chance-of-gain moved -10pp overnight (now 58%)",
-        "30d chance-of-gain moved +10pp overnight (now 63%)",
-        "50d forecast moved -6.6pp overnight (now +0.7%)",
-        "200d forecast moved +7.9pp overnight (now +5.8%)"
-      ]
-    },
-    {
-      "ticker": "SPYV",
-      "name": "State Street SPDR Portfolio S&P 500 Value ETF",
-      "price": 63.07,
-      "day_chg_pct": -0.395,
-      "notes": [
-        "10d chance-of-gain moved -23pp overnight (now 44%)",
-        "15d forecast moved -4.0pp overnight (now -1.1%)",
-        "15d chance-of-gain moved -11pp overnight (now 48%)",
-        "30d chance-of-gain moved +13pp overnight (now 60%)",
-        "50d forecast moved -5.8pp overnight (now -2.8%)",
-        "200d chance-of-gain moved -9pp overnight (now 58%)"
-      ]
-    },
-    {
-      "ticker": "MGK",
-      "name": "Vanguard Morningstar Mega Cap Growth ETF",
-      "price": 83.64,
-      "day_chg_pct": 1.124,
-      "notes": [
-        "15d forecast moved -4.0pp overnight (now -0.2%)",
-        "15d chance-of-gain moved -16pp overnight (now 63%)",
-        "30d chance-of-gain moved +9pp overnight (now 72%)",
-        "50d forecast moved -6.2pp overnight (now +2.6%)",
-        "200d forecast moved +7.6pp overnight (now +6.4%)",
-        "notably positive headlines (score +0.47)"
-      ]
-    },
-    {
-      "ticker": "VONE",
-      "name": "Vanguard Russell 1000 Index Fund ETF Shares",
-      "price": 332.95,
-      "day_chg_pct": 0.434,
-      "notes": [
-        "10d chance-of-gain moved -15pp overnight (now 50%)",
-        "15d forecast moved -4.1pp overnight (now -0.9%)",
-        "15d chance-of-gain moved -11pp overnight (now 60%)",
-        "30d chance-of-gain moved +14pp overnight (now 71%)",
-        "50d forecast moved -5.0pp overnight (now +0.1%)",
-        "200d chance-of-gain moved -13pp overnight (now 51%)"
-      ]
-    },
-    {
-      "ticker": "AIQ",
-      "name": "Global X Artificial Intelligence & Technology ETF",
-      "price": 56.89,
-      "day_chg_pct": 1.318,
-      "notes": [
-        "5d chance-of-gain moved -9pp overnight (now 45%)",
-        "15d forecast moved -3.3pp overnight (now +0.1%)",
-        "15d chance-of-gain moved -10pp overnight (now 60%)",
-        "50d forecast moved -8.3pp overnight (now +1.7%)",
-        "200d forecast moved +11.1pp overnight (now +8.5%)",
-        "200d chance-of-gain moved -9pp overnight (now 57%)"
-      ]
-    },
-    {
-      "ticker": "PPA",
-      "name": "Invesco Aerospace & Defense ETF",
-      "price": 153.19,
-      "day_chg_pct": 1.524,
-      "notes": [
-        "10d chance-of-gain moved -8pp overnight (now 51%)",
-        "15d forecast moved -3.5pp overnight (now -0.8%)",
-        "15d chance-of-gain moved -11pp overnight (now 53%)",
-        "30d forecast moved -3.4pp overnight (now +1.5%)",
-        "50d forecast moved -7.9pp overnight (now -1.8%)",
-        "200d chance-of-gain moved -13pp overnight (now 64%)"
-      ]
-    },
-    {
-      "ticker": "SOXX",
-      "name": "iShares Semiconductor ETF",
-      "price": 136.53,
-      "day_chg_pct": 3.51,
-      "notes": [
-        "5d chance-of-gain moved -19pp overnight (now 37%)",
-        "10d forecast moved -3.7pp overnight (now +0.8%)",
-        "10d chance-of-gain moved -11pp overnight (now 56%)",
-        "15d chance-of-gain moved -10pp overnight (now 59%)",
-        "50d forecast moved -16.9pp overnight (now -0.9%)",
-        "200d forecast moved +8.1pp overnight (now -24.0%)"
-      ]
-    },
-    {
-      "ticker": "NFLX",
-      "name": "Netflix, Inc.",
-      "price": 63.41,
-      "day_chg_pct": -3.279,
-      "notes": [
-        "5d chance-of-gain moved -13pp overnight (now 36%)",
-        "15d forecast moved -5.0pp overnight (now -1.6%)",
-        "15d chance-of-gain moved -11pp overnight (now 54%)",
-        "30d chance-of-gain moved +9pp overnight (now 67%)",
-        "50d forecast moved -8.9pp overnight (now -2.7%)"
-      ]
-    },
-    {
-      "ticker": "BABA",
-      "name": "Alibaba Group Holding Limited",
-      "price": 109.45,
-      "day_chg_pct": 1.277,
-      "notes": [
-        "15d forecast moved -6.7pp overnight (now -0.4%)",
-        "15d chance-of-gain moved -9pp overnight (now 51%)",
-        "50d forecast moved -8.8pp overnight (now -3.2%)",
-        "200d forecast moved +5.9pp overnight (now +7.0%)",
-        "notably positive headlines (score +0.41)"
-      ]
-    },
-    {
-      "ticker": "AIXA.DE",
-      "name": "AIXTRON SE",
-      "price": 30.41,
-      "day_chg_pct": 5.116,
-      "notes": [
-        "5d chance-of-gain moved -9pp overnight (now 42%)",
-        "15d forecast moved -5.9pp overnight (now -0.2%)",
-        "15d chance-of-gain moved -10pp overnight (now 51%)",
-        "50d forecast moved -10.7pp overnight (now +3.4%)",
-        "200d chance-of-gain moved -16pp overnight (now 36%)"
-      ]
-    },
-    {
-      "ticker": "GTLB",
-      "name": "GitLab Inc.",
-      "price": 48.09,
-      "day_chg_pct": -1.837,
-      "notes": [
-        "5d chance-of-gain moved -17pp overnight (now 41%)",
-        "15d forecast moved -4.5pp overnight (now +3.0%)",
-        "15d chance-of-gain moved -10pp overnight (now 65%)",
-        "50d forecast moved -16.4pp overnight (now +9.2%)",
-        "200d chance-of-gain moved -17pp overnight (now 54%)"
-      ]
-    },
-    {
-      "ticker": "CRWD",
-      "name": "CrowdStrike Holdings, Inc.",
-      "price": 216.9,
-      "day_chg_pct": -0.138,
-      "notes": [
-        "5d forecast moved -3.3pp overnight (now -0.8%)",
-        "5d chance-of-gain moved -15pp overnight (now 44%)",
-        "10d chance-of-gain moved -8pp overnight (now 53%)",
-        "50d forecast moved -4.1pp overnight (now +15.3%)",
-        "200d chance-of-gain moved -15pp overnight (now 41%)"
-      ]
-    },
-    {
-      "ticker": "ADP",
-      "name": "Automatic Data Processing, Inc.",
-      "price": 303.35,
-      "day_chg_pct": -1.234,
-      "notes": [
-        "5d chance-of-gain moved -10pp overnight (now 58%)",
-        "10d chance-of-gain moved -16pp overnight (now 56%)",
-        "15d forecast moved -4.8pp overnight (now -1.2%)",
-        "50d forecast moved -7.7pp overnight (now -2.3%)",
-        "200d chance-of-gain moved -13pp overnight (now 61%)"
-      ]
-    },
-    {
-      "ticker": "SHOP",
-      "name": "Shopify Inc.",
-      "price": 148.91,
-      "day_chg_pct": 3.59,
-      "notes": [
-        "5d chance-of-gain moved -13pp overnight (now 43%)",
-        "10d chance-of-gain moved -15pp overnight (now 48%)",
-        "15d forecast moved -3.3pp overnight (now -1.0%)",
-        "15d chance-of-gain moved -19pp overnight (now 51%)",
-        "50d forecast moved -12.0pp overnight (now -2.0%)"
-      ]
-    },
-    {
-      "ticker": "ADSK",
-      "name": "Autodesk, Inc.",
-      "price": 261.72,
-      "day_chg_pct": -2.764,
-      "notes": [
-        "5d chance-of-gain moved -17pp overnight (now 40%)",
-        "10d chance-of-gain moved -8pp overnight (now 42%)",
-        "15d forecast moved -3.8pp overnight (now -1.2%)",
-        "50d forecast moved -4.1pp overnight (now -3.4%)",
-        "200d chance-of-gain moved -11pp overnight (now 44%)"
-      ]
-    },
-    {
-      "ticker": "U",
-      "name": "Unity Software Inc.",
-      "price": 51.49,
-      "day_chg_pct": 5.512,
-      "notes": [
-        "15d forecast moved -8.9pp overnight (now +1.9%)",
-        "15d chance-of-gain moved -14pp overnight (now 58%)",
-        "50d forecast moved -23.0pp overnight (now +18.6%)",
-        "200d forecast moved -45.6pp overnight (now +43.2%)",
-        "notably positive headlines (score +0.61)"
-      ]
-    },
-    {
-      "ticker": "PATH",
-      "name": "UiPath, Inc.",
-      "price": 13.0,
-      "day_chg_pct": -0.077,
-      "notes": [
-        "10d chance-of-gain moved -10pp overnight (now 56%)",
-        "15d forecast moved -3.9pp overnight (now +0.7%)",
-        "15d chance-of-gain moved -12pp overnight (now 60%)",
-        "50d forecast moved -7.3pp overnight (now +5.5%)",
-        "200d chance-of-gain moved -15pp overnight (now 53%)"
-      ]
-    },
-    {
-      "ticker": "RTX",
-      "name": "RTX Corporation",
-      "price": 189.53,
-      "day_chg_pct": -1.225,
-      "notes": [
-        "10d chance-of-gain moved -16pp overnight (now 48%)",
-        "15d forecast moved -4.3pp overnight (now -1.0%)",
-        "15d chance-of-gain moved -13pp overnight (now 49%)",
-        "50d forecast moved -7.4pp overnight (now -3.6%)",
-        "200d chance-of-gain moved -10pp overnight (now 55%)"
-      ]
-    },
-    {
-      "ticker": "GD",
-      "name": "General Dynamics Corporation",
-      "price": 354.06,
-      "day_chg_pct": -0.643,
-      "notes": [
-        "10d chance-of-gain moved -12pp overnight (now 49%)",
-        "15d forecast moved -3.8pp overnight (now -1.6%)",
-        "15d chance-of-gain moved -12pp overnight (now 52%)",
-        "50d forecast moved -5.6pp overnight (now -3.9%)",
-        "200d chance-of-gain moved -15pp overnight (now 46%)"
-      ]
-    },
-    {
-      "ticker": "CMI",
-      "name": "Cummins Inc.",
-      "price": 450.07,
-      "day_chg_pct": 0.332,
-      "notes": [
-        "5d chance-of-gain moved -12pp overnight (now 40%)",
-        "15d forecast moved -3.9pp overnight (now -0.3%)",
-        "30d chance-of-gain moved +10pp overnight (now 66%)",
-        "50d forecast moved -8.6pp overnight (now -1.0%)",
-        "200d forecast moved +8.9pp overnight (now +6.6%)"
-      ]
-    },
-    {
-      "ticker": "DUK",
-      "name": "Duke Energy Corporation",
-      "price": 127.78,
-      "day_chg_pct": -1.768,
-      "notes": [
-        "10d chance-of-gain moved -16pp overnight (now 46%)",
-        "15d forecast moved -4.5pp overnight (now -1.2%)",
-        "50d forecast moved -4.6pp overnight (now -3.9%)",
-        "200d chance-of-gain moved -20pp overnight (now 42%)",
-        "notably positive headlines (score +0.45)"
-      ]
-    },
-    {
-      "ticker": "ETR",
-      "name": "Entergy Corporation",
-      "price": 110.55,
-      "day_chg_pct": 0.227,
-      "notes": [
-        "10d chance-of-gain moved -18pp overnight (now 53%)",
-        "15d forecast moved -4.4pp overnight (now -0.6%)",
-        "15d chance-of-gain moved -14pp overnight (now 57%)",
-        "50d forecast moved -6.7pp overnight (now -1.8%)",
-        "200d chance-of-gain moved -14pp overnight (now 50%)"
-      ]
-    },
-    {
-      "ticker": "MA",
-      "name": "Mastercard Incorporated",
-      "price": 652.7,
-      "day_chg_pct": -0.491,
-      "notes": [
-        "5d chance-of-gain moved -12pp overnight (now 53%)",
-        "10d chance-of-gain moved -11pp overnight (now 49%)",
-        "15d forecast moved -4.0pp overnight (now -1.4%)",
-        "50d forecast moved -5.9pp overnight (now -3.3%)",
-        "200d chance-of-gain moved -15pp overnight (now 39%)"
-      ]
-    },
-    {
-      "ticker": "CPNG",
-      "name": "Coupang, Inc.",
-      "price": 16.29,
-      "day_chg_pct": -0.792,
-      "notes": [
-        "10d chance-of-gain moved -15pp overnight (now 46%)",
-        "15d forecast moved -5.0pp overnight (now +0.5%)",
-        "50d forecast moved -12.7pp overnight (now -3.9%)",
-        "200d forecast moved -3.7pp overnight (now +26.0%)",
-        "200d chance-of-gain moved -9pp overnight (now 60%)"
-      ]
-    },
-    {
-      "ticker": "UBER",
-      "name": "Uber Technologies, Inc.",
-      "price": 68.59,
-      "day_chg_pct": -0.276,
-      "notes": [
-        "10d chance-of-gain moved -13pp overnight (now 49%)",
-        "15d forecast moved -4.6pp overnight (now -0.4%)",
-        "15d chance-of-gain moved -10pp overnight (now 55%)",
-        "50d forecast moved -7.3pp overnight (now -1.0%)",
-        "200d chance-of-gain moved -8pp overnight (now 67%)"
-      ]
-    },
-    {
-      "ticker": "ISRG",
-      "name": "Intuitive Surgical, Inc.",
-      "price": 452.8,
-      "day_chg_pct": -3.355,
-      "notes": [
-        "5d chance-of-gain moved -17pp overnight (now 42%)",
-        "15d forecast moved -5.2pp overnight (now -1.8%)",
-        "15d chance-of-gain moved -12pp overnight (now 50%)",
-        "50d forecast moved -6.7pp overnight (now -3.5%)",
-        "200d chance-of-gain moved -15pp overnight (now 42%)"
-      ]
-    },
-    {
-      "ticker": "LOAR",
-      "name": "Loar Holdings Inc.",
-      "price": 75.3,
-      "day_chg_pct": 3.165,
-      "notes": [
-        "15d forecast moved -6.3pp overnight (now -0.2%)",
-        "15d chance-of-gain moved -15pp overnight (now 56%)",
-        "50d forecast moved -5.2pp overnight (now -1.0%)",
-        "50d chance-of-gain moved -16pp overnight (now 44%)",
-        "200d forecast moved +11.5pp overnight (now +19.9%)"
-      ]
-    },
-    {
-      "ticker": "ABG",
-      "name": "Asbury Automotive Group, Inc.",
-      "price": 202.65,
-      "day_chg_pct": -2.116,
-      "notes": [
-        "5d chance-of-gain moved -22pp overnight (now 38%)",
-        "10d chance-of-gain moved -15pp overnight (now 46%)",
-        "15d forecast moved -5.9pp overnight (now -2.3%)",
-        "15d chance-of-gain moved -11pp overnight (now 47%)",
-        "50d forecast moved -8.4pp overnight (now -3.4%)"
+        "earnings in 6 days"
       ]
     },
     {
@@ -4108,50 +494,34 @@
       "price": 58.22,
       "day_chg_pct": -0.291,
       "notes": [
-        "10d chance-of-gain moved -18pp overnight (now 38%)",
-        "15d forecast moved -3.9pp overnight (now -1.3%)",
-        "50d forecast moved -5.7pp overnight (now -3.1%)",
-        "50d chance-of-gain moved -9pp overnight (now 59%)",
         "within 0.8% of its all-time high"
       ]
     },
     {
-      "ticker": "FTAI",
-      "name": "FTAI Aviation Ltd.",
-      "price": 180.27,
-      "day_chg_pct": 10.97,
+      "ticker": "CVX",
+      "name": "Chevron Corporation",
+      "price": 212.61,
+      "day_chg_pct": -0.15,
       "notes": [
-        "10d chance-of-gain moved -11pp overnight (now 47%)",
-        "15d forecast moved -6.6pp overnight (now -1.9%)",
-        "15d chance-of-gain moved -17pp overnight (now 42%)",
-        "50d forecast moved -21.1pp overnight (now -6.2%)",
-        "200d forecast moved +11.4pp overnight (now +4.9%)"
+        "notably positive headlines (score +0.38)"
       ]
     },
     {
-      "ticker": "ABBNY",
-      "name": "ABB Ltd",
-      "price": 81.28,
-      "day_chg_pct": -0.098,
+      "ticker": "SGI",
+      "name": "Somnigroup International Inc.",
+      "price": 64.17,
+      "day_chg_pct": -5.452,
       "notes": [
-        "5d chance-of-gain moved -11pp overnight (now 42%)",
-        "10d chance-of-gain moved -12pp overnight (now 53%)",
-        "15d forecast moved -5.2pp overnight (now -1.4%)",
-        "15d chance-of-gain moved -13pp overnight (now 51%)",
-        "50d forecast moved -9.1pp overnight (now +4.2%)"
+        "earnings in 3 days"
       ]
     },
     {
-      "ticker": "JEPI",
-      "name": "JPMorgan Equity Premium Income ETF",
-      "price": 56.43,
-      "day_chg_pct": 0.071,
+      "ticker": "BTCI",
+      "name": "NEOS ETF Trust - NEOS Bitcoin High Income ETF",
+      "price": 30.15,
+      "day_chg_pct": -0.331,
       "notes": [
-        "10d chance-of-gain moved -19pp overnight (now 50%)",
-        "15d forecast moved -4.0pp overnight (now -1.0%)",
-        "30d chance-of-gain moved +10pp overnight (now 59%)",
-        "50d forecast moved -6.0pp overnight (now -3.3%)",
-        "200d chance-of-gain moved -13pp overnight (now 51%)"
+        "notably positive headlines (score +0.61)"
       ]
     },
     {
@@ -4160,209 +530,61 @@
       "price": 79.8,
       "day_chg_pct": -0.561,
       "notes": [
-        "10d chance-of-gain moved -27pp overnight (now 46%)",
-        "15d forecast moved -3.8pp overnight (now -0.9%)",
-        "15d chance-of-gain moved -12pp overnight (now 52%)",
-        "50d forecast moved -5.7pp overnight (now -1.9%)",
         "notably positive headlines (score +0.36)"
       ]
     },
     {
-      "ticker": "SDY",
-      "name": "State Street SPDR S&P Dividend ETF",
-      "price": 160.87,
-      "day_chg_pct": -1.107,
+      "ticker": "IVW",
+      "name": "iShares S&P 500 Growth ETF",
+      "price": 129.63,
+      "day_chg_pct": 0.942,
       "notes": [
-        "10d chance-of-gain moved -26pp overnight (now 49%)",
-        "15d forecast moved -4.0pp overnight (now -1.2%)",
-        "15d chance-of-gain moved -15pp overnight (now 53%)",
-        "50d forecast moved -5.2pp overnight (now -2.1%)",
-        "200d chance-of-gain moved -14pp overnight (now 53%)"
+        "notably positive headlines (score +0.38)"
       ]
     },
     {
-      "ticker": "DGRW",
-      "name": "WisdomTree U.S. Quality Dividend Growth Fund",
-      "price": 96.4,
-      "day_chg_pct": -0.041,
+      "ticker": "MGK",
+      "name": "Vanguard Morningstar Mega Cap Growth ETF",
+      "price": 83.64,
+      "day_chg_pct": 1.124,
       "notes": [
-        "10d chance-of-gain moved -15pp overnight (now 48%)",
-        "15d forecast moved -3.9pp overnight (now -0.9%)",
-        "30d chance-of-gain moved +17pp overnight (now 64%)",
-        "50d forecast moved -3.8pp overnight (now -0.6%)",
-        "200d chance-of-gain moved -12pp overnight (now 54%)"
+        "notably positive headlines (score +0.47)"
       ]
     },
     {
-      "ticker": "SCHF",
-      "name": "Schwab International Equity ETF",
-      "price": 26.39,
-      "day_chg_pct": -0.34,
+      "ticker": "VONG",
+      "name": "Vanguard Russell 1000 Growth Index Fund ETF Shares",
+      "price": 115.03,
+      "day_chg_pct": 1.268,
       "notes": [
-        "10d chance-of-gain moved -20pp overnight (now 51%)",
-        "15d forecast moved -4.3pp overnight (now -0.5%)",
-        "30d chance-of-gain moved +11pp overnight (now 71%)",
-        "50d forecast moved -6.5pp overnight (now +1.0%)",
-        "200d chance-of-gain moved -8pp overnight (now 69%)"
+        "notably positive headlines (score +0.50)"
       ]
     },
     {
-      "ticker": "SCHV",
-      "name": "Schwab U.S. Large-Cap Value ETF",
-      "price": 33.94,
-      "day_chg_pct": -0.323,
+      "ticker": "VOOG",
+      "name": "Vanguard S&P 500 Growth Index Fund ETF Shares",
+      "price": 77.88,
+      "day_chg_pct": 0.907,
       "notes": [
-        "10d chance-of-gain moved -20pp overnight (now 50%)",
-        "15d forecast moved -4.1pp overnight (now -0.8%)",
-        "15d chance-of-gain moved -14pp overnight (now 51%)",
-        "50d forecast moved -5.5pp overnight (now -1.4%)",
-        "200d chance-of-gain moved -11pp overnight (now 60%)"
+        "notably positive headlines (score +0.54)"
       ]
     },
     {
-      "ticker": "IVE",
-      "name": "iShares S&P 500 Value ETF",
-      "price": 235.53,
-      "day_chg_pct": -0.402,
+      "ticker": "FBT",
+      "name": "First Trust NYSE Arca Biotechnology Index Fund",
+      "price": 266.18,
+      "day_chg_pct": 0.29,
       "notes": [
-        "10d chance-of-gain moved -23pp overnight (now 43%)",
-        "15d forecast moved -4.1pp overnight (now -1.2%)",
-        "15d chance-of-gain moved -10pp overnight (now 49%)",
-        "30d chance-of-gain moved +11pp overnight (now 59%)",
-        "50d forecast moved -6.0pp overnight (now -3.0%)"
+        "notably positive headlines (score +0.47)"
       ]
     },
     {
-      "ticker": "VO",
-      "name": "Vanguard Morningstar Mid-Cap ETF",
-      "price": 79.38,
-      "day_chg_pct": -0.138,
+      "ticker": "VCR",
+      "name": "Vanguard Consumer Discretionary Index Fund ETF Shares",
+      "price": 391.31,
+      "day_chg_pct": -0.13,
       "notes": [
-        "10d chance-of-gain moved -15pp overnight (now 48%)",
-        "15d forecast moved -4.0pp overnight (now -1.1%)",
-        "30d chance-of-gain moved +16pp overnight (now 63%)",
-        "50d forecast moved -5.8pp overnight (now -2.1%)",
-        "200d chance-of-gain moved -9pp overnight (now 60%)"
-      ]
-    },
-    {
-      "ticker": "BLOK",
-      "name": "Amplify Blockchain Technology ETF",
-      "price": 49.22,
-      "day_chg_pct": 3.208,
-      "notes": [
-        "5d chance-of-gain moved -10pp overnight (now 36%)",
-        "15d forecast moved -4.5pp overnight (now -1.2%)",
-        "15d chance-of-gain moved -20pp overnight (now 45%)",
-        "50d forecast moved -10.3pp overnight (now +0.6%)",
-        "200d forecast moved +13.8pp overnight (now +4.5%)"
-      ]
-    },
-    {
-      "ticker": "VGT",
-      "name": "Vanguard Information Technology Index Fund ETF Shares",
-      "price": 108.51,
-      "day_chg_pct": 1.354,
-      "notes": [
-        "15d forecast moved -3.7pp overnight (now +0.1%)",
-        "15d chance-of-gain moved -14pp overnight (now 59%)",
-        "50d forecast moved -7.5pp overnight (now +2.5%)",
-        "200d forecast moved +10.7pp overnight (now +7.2%)",
-        "200d chance-of-gain moved -17pp overnight (now 49%)"
-      ]
-    },
-    {
-      "ticker": "IREN",
-      "name": "IREN Limited",
-      "price": 21.64,
-      "day_chg_pct": 20.022,
-      "notes": [
-        "30d forecast moved +5.0pp overnight (now +7.1%)",
-        "50d forecast moved -8.1pp overnight (now +4.8%)",
-        "200d forecast moved +12.3pp overnight (now -2.6%)",
-        "200d chance-of-gain moved -17pp overnight (now 22%)"
-      ]
-    },
-    {
-      "ticker": "SAP",
-      "name": "SAP SE",
-      "price": 233.45,
-      "day_chg_pct": -4.139,
-      "notes": [
-        "5d chance-of-gain moved -8pp overnight (now 59%)",
-        "10d chance-of-gain moved -13pp overnight (now 59%)",
-        "15d forecast moved -4.7pp overnight (now -0.6%)",
-        "50d forecast moved -5.8pp overnight (now -1.0%)"
-      ]
-    },
-    {
-      "ticker": "INTU",
-      "name": "Intuit Inc.",
-      "price": 341.5,
-      "day_chg_pct": -3.759,
-      "notes": [
-        "5d chance-of-gain moved -19pp overnight (now 34%)",
-        "15d forecast moved -4.7pp overnight (now -3.5%)",
-        "50d forecast moved -5.3pp overnight (now -9.0%)",
-        "200d chance-of-gain moved -17pp overnight (now 38%)"
-      ]
-    },
-    {
-      "ticker": "AWK",
-      "name": "American Water Works Company, Inc.",
-      "price": 150.29,
-      "day_chg_pct": -1.397,
-      "notes": [
-        "5d chance-of-gain moved -12pp overnight (now 50%)",
-        "15d forecast moved -5.6pp overnight (now -0.7%)",
-        "50d forecast moved -6.3pp overnight (now -4.2%)",
-        "200d chance-of-gain moved -11pp overnight (now 43%)"
-      ]
-    },
-    {
-      "ticker": "BAC",
-      "name": "Bank of America Corporation",
-      "price": 49.42,
-      "day_chg_pct": -0.683,
-      "notes": [
-        "10d chance-of-gain moved -14pp overnight (now 51%)",
-        "15d forecast moved -5.2pp overnight (now -1.8%)",
-        "50d forecast moved -7.9pp overnight (now -1.1%)",
-        "200d forecast moved +14.9pp overnight (now +6.2%)"
-      ]
-    },
-    {
-      "ticker": "VYMI",
-      "name": "Vanguard International High Dividend Yield Index Fund ETF Shares",
-      "price": 100.46,
-      "day_chg_pct": -0.839,
-      "notes": [
-        "10d chance-of-gain moved -24pp overnight (now 56%)",
-        "15d forecast moved -4.0pp overnight (now -0.4%)",
-        "15d chance-of-gain moved -11pp overnight (now 60%)",
-        "50d forecast moved -6.0pp overnight (now +0.7%)"
-      ]
-    },
-    {
-      "ticker": "ROK",
-      "name": "Rockwell Automation, Inc.",
-      "price": 375.86,
-      "day_chg_pct": -1.362,
-      "notes": [
-        "5d chance-of-gain moved -17pp overnight (now 35%)",
-        "50d forecast moved -13.9pp overnight (now -2.3%)",
-        "200d chance-of-gain moved -25pp overnight (now 40%)"
-      ]
-    },
-    {
-      "ticker": "PKB",
-      "name": "Invesco Building & Construction ETF",
-      "price": 85.81,
-      "day_chg_pct": 0.222,
-      "notes": [
-        "15d forecast moved -4.3pp overnight (now -0.9%)",
-        "50d forecast moved -6.8pp overnight (now -0.5%)",
-        "50d chance-of-gain moved +10pp overnight (now 64%)"
+        "notably positive headlines (score +0.37)"
       ]
     }
   ],
@@ -4374,6 +596,14 @@
       "mean_abs_error_pp": 4.8,
       "mean_predicted_pct": -1.54,
       "mean_actual_pct": -0.64
+    },
+    "10": {
+      "n_resolved": 210,
+      "direction_accuracy": 0.452,
+      "classifier_accuracy": 0.624,
+      "mean_abs_error_pp": 9.74,
+      "mean_predicted_pct": 0.06,
+      "mean_actual_pct": -6.76
     }
   },
   "track_record_pending": 1722,
@@ -4434,24 +664,6 @@
         "avg_rank": 6.5
       },
       {
-        "ticker": "DDOG",
-        "name": "Datadog, Inc.",
-        "price": 179.04,
-        "horizons": [
-          5,
-          10
-        ],
-        "pred_return_pct": [
-          1.051,
-          5.705
-        ],
-        "prob_up": [
-          0.5048,
-          0.637
-        ],
-        "avg_rank": 7.0
-      },
-      {
         "ticker": "LITE",
         "name": "Lumentum Holdings Inc.",
         "price": 538.59,
@@ -4466,6 +678,24 @@
         "prob_up": [
           0.4503,
           0.6528
+        ],
+        "avg_rank": 7.5
+      },
+      {
+        "ticker": "DDOG",
+        "name": "Datadog, Inc.",
+        "price": 179.04,
+        "horizons": [
+          5,
+          10
+        ],
+        "pred_return_pct": [
+          1.051,
+          5.705
+        ],
+        "prob_up": [
+          0.5048,
+          0.637
         ],
         "avg_rank": 7.5
       }
@@ -4512,10 +742,10 @@
         "horizon": 200,
         "pred_return_pct": 15.369,
         "prob_up": 0.5068,
-        "avg_rank": 18.166666666666668,
+        "avg_rank": 18.5,
         "rank_by_horizon": {
           "5": 12,
-          "10": 33,
+          "10": 35,
           "15": 13,
           "30": 3,
           "50": 6,
@@ -4529,10 +759,10 @@
         "horizon": 200,
         "pred_return_pct": 62.169,
         "prob_up": 0.6918,
-        "avg_rank": 19.333333333333332,
+        "avg_rank": 19.5,
         "rank_by_horizon": {
           "5": 51,
-          "10": 41,
+          "10": 42,
           "15": 7,
           "30": 4,
           "50": 8,
@@ -4540,24 +770,24 @@
         }
       },
       {
-        "ticker": "OSCR",
-        "name": "Oscar Health, Inc.",
-        "price": 30.65,
+        "ticker": "AAOI",
+        "name": "Applied Optoelectronics, Inc.",
+        "price": 50.13,
         "horizon": 200,
-        "pred_return_pct": 84.519,
-        "prob_up": 0.8144,
-        "avg_rank": 20.0,
+        "pred_return_pct": 79.969,
+        "prob_up": 0.5554,
+        "avg_rank": 20.333333333333332,
         "rank_by_horizon": {
-          "5": 90,
-          "10": 11,
-          "15": 12,
-          "30": 2,
-          "50": 2,
-          "200": 3
+          "5": 9,
+          "10": 4,
+          "15": 22,
+          "30": 67,
+          "50": 13,
+          "200": 7
         }
       }
     ],
-    "universe_size": 286,
+    "universe_size": 287,
     "short_horizons": [
       5,
       10
